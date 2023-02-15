@@ -15,7 +15,6 @@ html {
 @layer base {
   body {
     @apply bg-[#bec4c9] text-[#252525];
-    font-family: ;
   }
 
   h1,
@@ -24,7 +23,7 @@ html {
   h4,
   h5,
   h6 {
-    @apply font-bold;
+    @apply font-bold tracking-wide;
   }
 
   h1 {
