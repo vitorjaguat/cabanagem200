@@ -5,6 +5,7 @@ export default function References() {
     <div className='w-full pt-[120px]'>
       <div className='max-w-[1240px] mx-auto'>
         <h2 className=''>References</h2>
+        <p>test</p>
       </div>
     </div>
   );
