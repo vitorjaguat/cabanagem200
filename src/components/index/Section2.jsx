@@ -1,6 +1,6 @@
 export default function Section2() {
   return (
-    <div className='py-20 px-10'>
+    <div className='py-20 mx-auto max-w-[900px]'>
       <div className='columns-2 gap-8'>
         <p>
           <span className='tracking-wider font-stanleybold text-[15px]'>

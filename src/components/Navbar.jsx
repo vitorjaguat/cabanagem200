@@ -33,8 +33,8 @@ export default function Navbar() {
       <div
         className={
           shadow
-            ? 'fixed w-full h-16 shadow-lg z-[100] ease-in duration-300 bg-[#ffffff90]'
-            : 'fixed w-full h-16 shadow-md z-[100] ease-in duration-200 bg-[#ffffff90]'
+            ? 'fixed w-full h-16 shadow-lg z-[100] ease-in duration-300 bg-[#ffffff99]'
+            : 'fixed w-full h-16 shadow-md z-[100] ease-in duration-200 bg-[#ffffff99]'
         }
       >
         <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16 max-w-[1240px] mx-auto'>
@@ -44,7 +44,7 @@ export default function Navbar() {
             </div>
           </Link>
 
-          <ul className='hidden md:flex md:justify-between md:text-xs'>
+          <ul className='hidden md:flex md:justify-between md:text-xs ml-[-20px] tracking-widest'>
             <Link href='/' scroll={false}>
               <li className='uppercase hover:border-b'>{t('navbar.home')}</li>
             </Link>
