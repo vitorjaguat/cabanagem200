@@ -39,7 +39,7 @@ export default function Navbar() {
       >
         <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16 max-w-[1240px] mx-auto'>
           <Link href='/' scroll={false}>
-            <div className='px-1 text-sm font-stanleybold tracking-widest'>
+            <div className='px-1 text-[15px] font-stanleybold tracking-widest'>
               cabanagem200
             </div>
           </Link>
