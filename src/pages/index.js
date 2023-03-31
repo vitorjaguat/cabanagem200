@@ -20,10 +20,7 @@ export default function Home() {
           name='author'
           content='Giseli Vasconcelos / Pedro Victor Brandão'
         />
-        <meta
-          name='description'
-          content='Cabanagem 200 é um site que mostra de forma permanente arquivos do conjunto de trabalhos Nheenga Cabana, apresentando com destaque a edição extraordinária do Jornal Pessoal de Lúcio Flávio Pinto'
-        />
+
         <meta
           name='keywords'
           content='giselivasconcelos, pedrovictorbrandão, cabanagem'
