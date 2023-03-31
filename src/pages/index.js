@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import Hero from '@/components/index/Hero';
 
 export default function Home() {
   return (
@@ -47,6 +48,7 @@ export default function Home() {
         <meta property='og:type' content='article' />
         <meta property='og:locale' content='en_US' />
       </Head>
+      <Hero />
     </>
   );
 }
