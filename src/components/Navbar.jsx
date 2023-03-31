@@ -33,8 +33,8 @@ export default function Navbar() {
       <div
         className={
           shadow
-            ? 'fixed w-full h-16 shadow-lg z-[100] ease-in duration-300 bg-slate-500'
-            : 'fixed w-full h-16 shadow-md z-[100] ease-in duration-200 bg-slate-500'
+            ? 'fixed w-full h-16 shadow-lg z-[100] ease-in duration-300 bg-[#ffffff90]'
+            : 'fixed w-full h-16 shadow-md z-[100] ease-in duration-200 bg-[#ffffff90]'
         }
       >
         <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16 max-w-[1240px] mx-auto'>
@@ -48,7 +48,7 @@ export default function Navbar() {
             <Link href='/' scroll={false}>
               <li className='uppercase hover:border-b'>{t('navbar.home')}</li>
             </Link>
-            <Link href='/references' scroll={false}>
+            {/* <Link href='/references' scroll={false}>
               <li className='ml-8 uppercase hover:border-b'>
                 {t('navbar.references')}
               </li>
@@ -57,7 +57,7 @@ export default function Navbar() {
               <li className='ml-8 uppercase hover:border-b'>
                 {t('navbar.glossary')}
               </li>
-            </Link>
+            </Link> */}
             <Link href='/press' scroll={false}>
               <li className='ml-8 uppercase hover:border-b'>
                 {t('navbar.press')}
