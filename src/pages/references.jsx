@@ -1,5 +1,14 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
+const DUMMY = [
+  {
+    id: '1',
+    title: 'Testing',
+    text: `# Hello
+    I am *me*`,
+  },
+];
+
 export default function References() {
   return (
     <div className='w-full pt-[120px]'>
@@ -12,6 +21,7 @@ export default function References() {
 }
 
 export async function getStaticProps({ locale }) {
+  // const res = await
   return {
     props: {
       ...(await serverSideTranslations(locale, ['common'])),

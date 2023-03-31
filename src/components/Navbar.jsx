@@ -59,18 +59,18 @@ export default function Navbar() {
                   {t('navbar.references')}
                 </li>
               </Link>
-              <Link href='/#skills' scroll={false}>
+              <Link href='/glossary' scroll={false}>
                 <li className='ml-8 text-sm uppercase hover:border-b text-[#999999]'>
                   {t('navbar.glossary')}
                 </li>
               </Link>
-              <Link href='/#projects' scroll={false}>
+              <Link href='/press' scroll={false}>
                 <li className='ml-8 text-sm uppercase hover:border-b text-[#999999]'>
                   {t('navbar.press')}
                 </li>
               </Link>
 
-              <Link href='/#contact' scroll={false}>
+              <Link href='/about' scroll={false}>
                 <li className='ml-8 text-sm uppercase hover:border-b text-[#999999]'>
                   {t('navbar.about')}
                 </li>
@@ -117,34 +117,34 @@ export default function Navbar() {
             </div>
             <div className='py-4 flex flex-col'>
               <ul className='uppercase'>
-                <Link href='/#home' scroll={false}>
+                <Link href='/' scroll={false}>
                   <li onClick={() => setNav(false)} className='py-4 text-sm'>
                     {t('navbar.home')}
                   </li>
                 </Link>
-                <Link href='/#about' scroll={false}>
+                <Link href='/references' scroll={false}>
                   <li onClick={() => setNav(false)} className='py-4 text-sm'>
                     {t('navbar.references')}
                   </li>
                 </Link>
-                <Link href='/#skills' scroll={false}>
+                <Link href='/glossary' scroll={false}>
                   <li onClick={() => setNav(false)} className='py-4 text-sm'>
                     {t('navbar.glossary')}
                   </li>
                 </Link>
-                <Link href='/#projects' scroll={false}>
+                <Link href='/press' scroll={false}>
                   <li onClick={() => setNav(false)} className='py-4 text-sm'>
                     {t('navbar.press')}
                   </li>
                 </Link>
-                <Link href='/#contact' scroll={false}>
+                <Link href='/about' scroll={false}>
                   <li onClick={() => setNav(false)} className='py-4 text-sm'>
                     {t('navbar.about')}
                   </li>
                 </Link>
               </ul>
               <div className='pt-40'>
-                <p className='uppercase tracking-widest text-[#5651e5]'>
+                {/* <p className='uppercase tracking-widest text-[#5651e5]'>
                   Let's connect
                 </p>
                 <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
@@ -160,7 +160,7 @@ export default function Navbar() {
                   <div className='rounded-full shadow-lg p-3 cursor-pointer hover:scale-105 ease-in duration-500'>
                     <BsFillPersonLinesFill />
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
