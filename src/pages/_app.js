@@ -5,11 +5,19 @@ import localFont from '@next/font/local';
 
 const stanley = localFont({
   src: '../../public/assets/fonts/stanley-regular.woff2',
+  variable: '--stanley-font',
+  display: 'block',
+});
+
+const stanleybold = localFont({
+  src: '../../public/assets/fonts/stanley-bold.woff2',
+  variable: '--stanleybold-font',
+  display: 'block',
 });
 
 const App = ({ Component, pageProps }) => {
   return (
-    <div className={stanley.className}>
+    <div className={`${stanley.variable} ${stanleybold.variable} font-stanley`}>
       <Navbar />
       <Component {...pageProps} />
     </div>

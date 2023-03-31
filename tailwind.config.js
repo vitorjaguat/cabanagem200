@@ -8,6 +8,10 @@ module.exports = {
         secondary: '#909090',
         tertiary: '#242424',
       },
+      fontFamily: {
+        stanley: ['var(--stanley-font)'],
+        stanleybold: ['var(--stanleybold-font)'],
+      },
     },
   },
   plugins: [],
