@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <Head>
         <title>cabanagem200</title>
-        <meta charset='utf-8' />
+        <meta charSet='utf-8' />
         <meta name='viewport' content='width=device-width' />
         <meta
           name='description'

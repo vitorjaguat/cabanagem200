@@ -1,9 +1,9 @@
 export default function Section2() {
   return (
-    <div className='py-20 mx-auto max-w-[900px]'>
-      <div className='columns-2 gap-8'>
+    <div className='py-20 px-10 md:px-0 mx-auto max-w-[900px]'>
+      <div className='md:columns-2 gap-8'>
         <p>
-          <span className='tracking-wider font-stanleybold text-[15px]'>
+          <span className='tracking-[1.5px] font-stanleybold text-[15px]'>
             cabanagem200
           </span>{' '}
           apresenta <span className='font-bold'>Nheenga Cabana</span>, um
@@ -11,8 +11,7 @@ export default function Section2() {
           trata da Revolução da Cabanagem ocorrida no período regencial, quando
           insurgências eclodiram no Brasil durante o século XIX. O projeto se
           deu a partir da leitura dos escritos e arquivos sobre a Cabanagem do
-          jornalista e sociólogo paraense Lúcio Flávio Pinto, postados nos
-          blog&nbsp;
+          jornalista e sociólogo paraense Lúcio Flávio Pinto, postados no blog{' '}
           <a
             className='text-slate-700 tracking-tight font-stanley'
             href='https://cabanagem180.wordpress.com'
