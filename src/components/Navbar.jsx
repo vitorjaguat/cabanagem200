@@ -33,18 +33,18 @@ export default function Navbar() {
       <div
         className={
           shadow
-            ? 'fixed w-full h-16 shadow-lg z-[100] ease-in duration-300 bg-[#e1e1e1]'
-            : 'fixed w-full h-16 shadow-md z-[100] ease-in duration-200 bg-[#e1e1e1]'
+            ? 'fixed w-full h-14 shadow-lg z-[100] ease-in duration-300 bg-[#e1e1e1]'
+            : 'fixed w-full h-14 shadow-md z-[100] ease-in duration-200 bg-[#e1e1e1]'
         }
       >
-        <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16 max-w-[1240px] mx-auto'>
+        <div className='flex justify-between md:justify-center items-center w-full h-full px-2 2xl:px-16 mx-auto'>
           <Link href='/' scroll={false}>
-            <div className='px-1 text-[15px] font-stanleybold tracking-[2px]'>
+            <div className='w-[100px] md:w-[200px] px-1 text-[12px] md:text-[15px] font-stanleybold tracking-widest md:tracking-[2.5px]'>
               cabanagem200
             </div>
           </Link>
 
-          <ul className='hidden md:flex md:justify-between text-xs md:text-sm ml-[-20px] tracking-widest'>
+          <ul className='hidden md:flex md:justify-between text-xs md:text-[13px] mx-auto tracking-widest'>
             <Link href='/' scroll={false}>
               <li className='uppercase hover:border-b'>{t('navbar.home')}</li>
             </Link>
@@ -71,11 +71,14 @@ export default function Navbar() {
             </Link>
           </ul>
 
-          <div className=''>
+          <div className='md:w-[200px] flex justify-end'>
             <LanguageToggle />
           </div>
-          <div onClick={handleNav} className='md:hidden pl-10'>
-            <AiOutlineMenu size={25} />
+          <div
+            onClick={handleNav}
+            className='w-[100px] flex justify-end md:hidden pl-10'
+          >
+            <AiOutlineMenu size={21} />
           </div>
         </div>
 

@@ -28,7 +28,7 @@ const LanguageToggle = () => {
   //locale - Optional string, indicates locale of the new page
 
   return (
-    <div className='flex justify-center font-stanleybold'>
+    <div className='flex justify-center items-center font-stanleybold text-[10px] md:text-xs'>
       <Link
         href={{
           pathname: router.pathname,
@@ -42,7 +42,7 @@ const LanguageToggle = () => {
         scroll={false}
       >
         <div
-          className='mr-1 text-xs font-bold cursor-pointer px-1 hover:border-b hover:border-[#a1a1a1]'
+          className='mr-1 font-bold cursor-pointer px-1 hover:border-b hover:border-[#a1a1a1]'
           // onClick={() => handleLanguageChange('pt')}
         >
           PT
@@ -82,7 +82,7 @@ const LanguageToggle = () => {
         scroll={false}
       >
         <div
-          className='text-xs cursor-pointer px-1 hover:border-b hover:border-[#a1a1a1]'
+          className='cursor-pointer px-1 hover:border-b hover:border-[#a1a1a1]'
           // onClick={() => handleLanguageChange('en')}
         >
           EN
