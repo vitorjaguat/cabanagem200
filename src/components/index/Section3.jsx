@@ -77,7 +77,7 @@ export default function Section3() {
           </div>
 
           <div
-            className='bg-[#00000050] py-2 pr-3 pl-4 max-w-[200px] text-slate-100 tracking-wide rounded-sm absolute cursor-none'
+            className='bg-[#00000090] py-2 pr-3 pl-4 max-w-[200px] text-slate-200 tracking-wide rounded-sm absolute cursor-none'
             style={{
               display: mousePosition.x !== 0 ? 'block' : 'none',
               top: mousePosition.y,
