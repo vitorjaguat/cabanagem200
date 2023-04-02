@@ -72,7 +72,7 @@ export default function Section3() {
             <Image src={inst1Img} alt='7 de Janeiro de 1835' />
           </div>
 
-          <div className=' cursor-none'>
+          <div className='pr-4 cursor-none'>
             <Image src={obr1Img} alt='7 de Janeiro de 1835' />
           </div>
 
