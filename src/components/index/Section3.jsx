@@ -63,16 +63,16 @@ export default function Section3() {
 
       <div className='h-[3000px] w-full flex flex-col items-center pt-6'>
         <div
-          className='flex gap-4 relative'
+          className='flex gap-4 relative cursor-none'
           ref={img1Ref}
           onMouseMove={handleMouseEnter1}
           onMouseLeave={() => setMousePosition({ x: 0, y: 0 })}
         >
-          <div className=' '>
+          <div className=' cursor-none'>
             <Image src={inst1Img} alt='7 de Janeiro de 1835' />
           </div>
 
-          <div className=''>
+          <div className=' cursor-none'>
             <Image src={obr1Img} alt='7 de Janeiro de 1835' />
           </div>
 
