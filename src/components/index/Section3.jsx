@@ -51,7 +51,7 @@ export default function Section3() {
   return (
     <div className='flex'>
       <div
-        className='w-14 md:w-20 h-[calc(100vh-3.5rem)] pt-6 flex items-center sticky top-14'
+        className='w-14 md:w-20 h-[calc(100vh-3rem)] pt-6 flex items-center sticky top-14'
         style={{ writingMode: 'vertical-rl', height: 'calc(100vh-20px)' }}
       >
         <div className='min-h-[350px] max-h-[350px] md:max-h-[500px] md:min-h-[500px] text-xs md:text-sm'>
@@ -77,20 +77,22 @@ export default function Section3() {
           </div>
 
           <div
-            className='text-xs max-w-[200px] text-slate-50 absolute cursor-none'
+            className='bg-[#00000050] py-2 pr-3 pl-4 max-w-[200px] text-slate-100 tracking-wide rounded-sm absolute cursor-none'
             style={{
               display: mousePosition.x !== 0 ? 'block' : 'none',
               top: mousePosition.y,
               left: mousePosition.x,
             }}
           >
-            <p className='font-stanleybold'>7 de Janeiro de 1835</p>
-            <p className='leading-3'>
+            <p className='font-stanleybold text-[13px] leading-5'>
+              7 de Janeiro de 1835
+            </p>
+            <p className='leading-4 text-[13px]'>
               Impressão em jato de tinta sobre papel de algodão a partir de
               imagens geradas por aprendizagem de máquina
             </p>
-            <p>110x110cm</p>
-            <p>2022</p>
+            <p className='text-[13px] leading-4'>110x110cm</p>
+            <p className='text-[13px] leading-4'>2022</p>
           </div>
         </div>
       </div>

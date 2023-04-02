@@ -33,8 +33,8 @@ export default function Navbar() {
       <div
         className={
           shadow
-            ? 'fixed w-full h-14 shadow-lg z-[100] ease-in duration-300 bg-[#e1e1e1]'
-            : 'fixed w-full h-14 shadow-md z-[100] ease-in duration-200 bg-[#e1e1e1]'
+            ? 'fixed w-full h-12 shadow-lg z-[100] ease-in duration-300 bg-[#e1e1e1]'
+            : 'fixed w-full h-12 shadow-md z-[100] ease-in duration-200 bg-[#e1e1e1]'
         }
       >
         <div className='flex justify-between md:justify-center items-center w-full h-full px-2 2xl:px-16 mx-auto'>
@@ -46,7 +46,7 @@ export default function Navbar() {
 
           <ul className='hidden md:flex md:justify-between text-xs md:text-[13px] gap-14 mx-auto tracking-widest'>
             <Link href='/' scroll={false}>
-              <li className='uppercase hover:border-b'>{t('navbar.home')}</li>
+              <li className=' hover:border-b'>{t('navbar.home')}</li>
             </Link>
             {/* <Link href='/references' scroll={false}>
               <li className='ml-8 uppercase hover:border-b'>
@@ -59,11 +59,11 @@ export default function Navbar() {
               </li>
             </Link> */}
             <Link href='/press' scroll={false}>
-              <li className='uppercase hover:border-b'>{t('navbar.press')}</li>
+              <li className=' hover:border-b'>{t('navbar.press')}</li>
             </Link>
 
             <Link href='/about' scroll={false}>
-              <li className='uppercase hover:border-b'>{t('navbar.about')}</li>
+              <li className=' hover:border-b'>{t('navbar.about')}</li>
             </Link>
           </ul>
 

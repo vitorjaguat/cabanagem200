@@ -3,7 +3,7 @@ import heroImg from '../../../public/img/hero.jpg';
 
 export default function Hero() {
   return (
-    <div className='md:pt-14 overflow-hidden'>
+    <div className='md:pt-12 overflow-hidden'>
       <div
         className='relative object-cover w-[2000px] h-screen md:w-screen md:block'
         // style={{ objectPosition: '50% 100%' }}
