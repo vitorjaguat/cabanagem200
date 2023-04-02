@@ -12,7 +12,7 @@ export default function Hero() {
         <Image
           src={heroImg}
           fill
-          className=' translate-x-[-1100px] translate-y-[50px] md:translate-x-0 md:translate-y-0'
+          className=' translate-x-[-1100px] translate-y-[40px] md:translate-x-0 md:translate-y-0'
           //   style={{ transform: 'translate(-1100px, 50px)' }}
           sizes='(max-width: 768px) 300vw, (max-width: 1200px) 200vw, 100vw'
         />
