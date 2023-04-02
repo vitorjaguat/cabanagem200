@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Hero from '@/components/index/Hero';
 import Section2 from '@/components/index/Section2';
+import Section3 from '@/components/index/Section3';
 
 export default function Home() {
   return (
@@ -49,8 +50,11 @@ export default function Home() {
         <meta property='og:type' content='article' />
         <meta property='og:locale' content='en_US' />
       </Head>
-      <Hero />
-      <Section2 />
+      <main className='h-[6000px]'>
+        <Hero />
+        <Section2 />
+        <Section3 />
+      </main>
     </>
   );
 }

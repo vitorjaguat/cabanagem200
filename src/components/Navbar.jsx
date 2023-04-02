@@ -44,7 +44,7 @@ export default function Navbar() {
             </div>
           </Link>
 
-          <ul className='hidden md:flex md:justify-between text-xs md:text-[13px] mx-auto tracking-widest'>
+          <ul className='hidden md:flex md:justify-between text-xs md:text-[13px] gap-14 mx-auto tracking-widest'>
             <Link href='/' scroll={false}>
               <li className='uppercase hover:border-b'>{t('navbar.home')}</li>
             </Link>
@@ -59,15 +59,11 @@ export default function Navbar() {
               </li>
             </Link> */}
             <Link href='/press' scroll={false}>
-              <li className='ml-8 uppercase hover:border-b'>
-                {t('navbar.press')}
-              </li>
+              <li className='uppercase hover:border-b'>{t('navbar.press')}</li>
             </Link>
 
             <Link href='/about' scroll={false}>
-              <li className='ml-8 uppercase hover:border-b'>
-                {t('navbar.about')}
-              </li>
+              <li className='uppercase hover:border-b'>{t('navbar.about')}</li>
             </Link>
           </ul>
 
