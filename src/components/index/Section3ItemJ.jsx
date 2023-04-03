@@ -21,7 +21,7 @@ export default function Section3ItemJ() {
   console.log(mousePosition);
 
   return (
-    <div className='w-full flex flex-col items-center pb-16'>
+    <div className='w-full flex flex-col items-center'>
       <div
         className='flex flex-col md:flex-row gap-2 md:gap-4 relative cursor-none'
         ref={img1Ref}
