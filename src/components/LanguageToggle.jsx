@@ -42,7 +42,7 @@ const LanguageToggle = () => {
         scroll={false}
       >
         <div
-          className='mr-3 font-bold cursor-pointer px-1 hover:border-b hover:border-[#a1a1a1]'
+          className='mr-3 cursor-pointer px-1 hover:border-b hover:border-[#a1a1a1]'
           // onClick={() => handleLanguageChange('pt')}
         >
           PT
