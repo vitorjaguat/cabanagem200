@@ -7,6 +7,7 @@ import obr2Img from '../../../public/img/obr2.jpg';
 import obr3Img from '../../../public/img/obr3.jpg';
 import { useEffect, useRef, useState } from 'react';
 import Section3Item from './Section3Item';
+import Section3ItemJ from './Section3ItemJ';
 
 export default function Section3() {
   const img1Ref = useRef();
@@ -66,6 +67,7 @@ export default function Section3() {
           measure='110x110cm'
           date='2022'
         />
+        <Section3ItemJ />
         {/* <div className='w-full flex flex-col items-center'>
           <div
             className='flex flex-col md:flex-row gap-2 md:gap-4 relative cursor-none'
