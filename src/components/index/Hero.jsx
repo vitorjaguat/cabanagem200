@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <div className='md:pt-12 overflow-hidden'>
       <div
-        className='relative object-cover w-[2000px] h-screen md:w-screen md:block'
+        className='relative object-cover w-[2000px] h-screen md:h-[calc(100vh-3rem)] md:w-screen md:block'
         // style={{ objectPosition: '50% 100%' }}
         // style={{ objectFit: 'cover' }}
       >

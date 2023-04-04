@@ -131,7 +131,7 @@ export default function Navbar() {
                     {t('navbar.home')}
                   </li>
                 </Link>
-                <Link href='/references' scroll={false}>
+                {/* <Link href='/references' scroll={false}>
                   <li onClick={() => setNav(false)} className='py-4 text-sm'>
                     {t('navbar.references')}
                   </li>
@@ -140,7 +140,7 @@ export default function Navbar() {
                   <li onClick={() => setNav(false)} className='py-4 text-sm'>
                     {t('navbar.glossary')}
                   </li>
-                </Link>
+                </Link> */}
                 <Link href='/press' scroll={false}>
                   <li onClick={() => setNav(false)} className='py-4 text-sm'>
                     {t('navbar.press')}

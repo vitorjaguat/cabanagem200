@@ -4,6 +4,8 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Hero from '@/components/index/Hero';
 import Section2 from '@/components/index/Section2';
 import Section3 from '@/components/index/Section3';
+import Section4Ed from '@/components/index/Section4Ed';
+import Section5PDF from '@/components/index/Section5PDF';
 
 export default function Home() {
   return (
@@ -54,6 +56,8 @@ export default function Home() {
         <Hero />
         <Section2 />
         <Section3 />
+        <Section4Ed />
+        <Section5PDF />
       </main>
     </>
   );
