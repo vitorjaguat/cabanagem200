@@ -39,8 +39,4 @@ html {
   li {
     @apply cursor-pointer;
   }
-
-  button {
-    @apply shadow-md shadow-gray-400 rounded-lg uppercase bg-gradient-to-br from-secondary to-tertiary text-gray-300;
-  }
 }
