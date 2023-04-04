@@ -1,5 +1,9 @@
 import { pdfjs, Document, Page } from 'react-pdf';
 import { useState } from 'react';
+import { GrFormPreviousLink } from 'react-icons/gr';
+import { GrFormNextLink } from 'react-icons/gr';
+import { GrLinkPrevious } from 'react-icons/gr';
+import { GrLinkNext } from 'react-icons/gr';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 
@@ -23,7 +27,20 @@ export default function Section5PDF() {
         </div>
       </div>
 
-      <div className='w-full flex justify-center items-center'>
+      <div className='relative w-full flex justify-center items-center md:pt-4'>
+        <div className='absolute top-4 right-4'>
+          página {pageNumber} de {numPages}
+        </div>
+        <div className='mr-3 h-full flex flex-col justify-center'>
+          <button
+            className=''
+            disabled={pageNumber <= 1}
+            onClick={() => setPageNumber((curr) => curr - 1)}
+          >
+            <GrLinkPrevious size={25} />
+          </button>
+        </div>
+
         <div className='w-fit'>
           <Document
             file='/assets/jornal-pessoal-edext.pdf'
@@ -33,6 +50,7 @@ export default function Section5PDF() {
           >
             <Page
               renderTextLayer={false}
+              renderAnnotationLayer={false}
               pageNumber={pageNumber}
               pageIndex={0}
               // style={{ display: 'flex', alignItems: 'center' }}
@@ -45,20 +63,13 @@ export default function Section5PDF() {
           ></iframe> */}
         </div>
 
-        <div className='h-full flex flex-col justify-center'>
-          <button
-            className=''
-            disabled={pageNumber <= 1}
-            onClick={() => setPageNumber((curr) => curr - 1)}
-          >
-            previous page
-          </button>
+        <div className='ml-3 h-full flex flex-col justify-center'>
           <button
             className=''
             disabled={pageNumber >= numPages}
             onClick={() => setPageNumber((curr) => curr + 1)}
           >
-            next page
+            <GrLinkNext size={25} />
           </button>
         </div>
       </div>

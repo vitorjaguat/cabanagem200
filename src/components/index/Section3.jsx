@@ -41,7 +41,7 @@ export default function Section3() {
         </div>
       </div>
 
-      <div className='flex flex-col items-center'>
+      <div className='flex flex-col items-center pt-4'>
         {/* IMAGE 1 */}
         <Section3Item
           obrImg={obr1Img}
