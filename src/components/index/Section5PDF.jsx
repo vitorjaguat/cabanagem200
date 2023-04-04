@@ -19,10 +19,10 @@ export default function Section5PDF() {
     <div className='flex mt-[300px]'>
       {/* STICKY TITLE */}
       <div
-        className='w-14 md:w-20 min-h-[350px] max-h-[350px] md:max-h-[500px] md:min-h-[500px] flex items-center sticky top-14 md:pt-4'
+        className='w-14 md:w-20 h-fit flex items-center sticky top-14 md:pt-4 shrink-0'
         style={{ writingMode: 'vertical-rl', height: 'calc(100vh-20px)' }}
       >
-        <div className='min-h-[350px] max-h-[350px] md:max-h-[500px] md:min-h-[500px] text-[11px] md:text-sm px-3 md:px-4'>
+        <div className='h-fit text-[11px] md:text-sm px-3 md:px-4'>
           <span className='font-bold'>JORNAL PESSOAL</span>
         </div>
       </div>
