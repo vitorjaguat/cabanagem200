@@ -37,8 +37,14 @@ export default function Section3Item({
         <div className='cursor-none pr-2 md:pr-0'>
           <Image src={obrImg} alt='7 de Janeiro de 1835' />
         </div>
-        <div className='flex md:block pr-2 md:pr-4 cursor-none'>
-          <Image src={instImg} className='w-[200px] md:w-auto' alt={title} />
+        <div className='flex md:h-full md:flex-col md:justify-end  pr-2 md:pr-4 cursor-none shrink-0'>
+          <Image
+            src={instImg}
+            width={350}
+            // className='w-[200px] md:w-auto'
+            alt={title}
+            placeholder='blur'
+          />
           {/* Ficha técnica MOBILE */}
           <div className='md:hidden pl-2 flex flex-col justify-end'>
             <p className='font-stanleybold text-[10px] leading-tight'>

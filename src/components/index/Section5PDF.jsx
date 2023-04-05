@@ -53,7 +53,24 @@ export default function Section5PDF() {
               renderAnnotationLayer={false}
               pageNumber={pageNumber}
               pageIndex={0}
+              className='bg-transparent'
+              // canvasBackground='transparent'
               // style={{ display: 'flex', alignItems: 'center' }}
+              loading={
+                <div
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    backgroundColor: 'gray',
+                    zIndex: '10',
+                  }}
+                >
+                  Loading...
+                </div>
+              }
             />
           </Document>
           {/* <iframe
