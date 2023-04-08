@@ -149,13 +149,7 @@ export default function Press() {
           text1='Hoje à noite acontece o coquetel de pré-lançamento da exposição Atos de revolta – Outros imaginários sobre a independência, no Museu de arte Moderna, no Rio de Janeiro, aberta ao público até fevereiro. Do conjunto de peças faz parte uma edição extra do Jornal Pessoal sobre a cabanagem.'
           text2='A minha edição registrou os 150 anos da revolta, em 2018. Passados quatro anos, Giseli Vasconcelos, de Nova York, e Pedro Victor Brandão, por iniciativa própria, decidiram recriar a edição, contando para isso com uma equipe especializada, voluntários na criação de uma obra que transcende e aperfeiçoa o original.'
         />
-        <PressCard
-          link='https://www.portasvilaseca.com.br/br/pedro-victor-brandao-apresenta-obra-comissionada-no-mam-rio/'
-          img='/img/press/portas.jpeg'
-          title='Pedro Victor Brandão apresenta obra comissionada no MAM-Rio'
-          text1='Entrou em cartaz no MAM Rio a exposição coletiva “Atos de revolta: outros imaginários sobre independência”.'
-          text2='A mostra repensa o bicentenário da Independência do Brasil, abordando os diversos imaginários de país então esboçados, a partir de uma série de levantes, motins e insurreições em torno do período, como a Inconfidência Mineira, a Revolução Pernambucana, a Cabanagem, a Revolução Farroupilha, entre outras.'
-        />
+
         <PressCard
           link='https://issuu.com/thaismedeiros2/docs/jornal_pessoal_okfinal_correcoes_pagdupla'
           img='/img/press/rebus.png'

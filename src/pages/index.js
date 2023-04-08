@@ -13,7 +13,7 @@ export default function Home() {
       <Head>
         <title>cabanagem200</title>
         <meta charSet='utf-8' />
-        <meta name='viewport' content='width=device-width' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta
           name='description'
           content='Cabanagem 200 é um site que mostra de forma permanente arquivos do conjunto de trabalhos Nheenga Cabana, apresentando com destaque a edição extraordinária do Jornal Pessoal de Lúcio Flávio Pinto.'
