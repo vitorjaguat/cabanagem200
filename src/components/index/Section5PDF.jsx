@@ -22,12 +22,16 @@ export default function Section5PDF() {
   const containerRef = useRef();
 
   const hidePageCanvas = useCallback(() => {
-    const canvas = containerRef.current.querySelector('canvas');
-    if (canvas) canvas.style.visibility = 'hidden';
+    const canvas = containerRef.current.querySelectorAll('canvas');
+    if (canvas.length) {
+      canvas.forEach((cv) => (cv.style.visibility = 'hidden'));
+    }
   }, [containerRef]);
   const showPageCanvas = useCallback(() => {
-    const canvas = containerRef.current.querySelector('canvas');
-    if (canvas) canvas.style.visibility = 'visible';
+    const canvas = containerRef.current.querySelectorAll('canvas');
+    if (canvas.length) {
+      canvas.forEach((cv) => (cv.style.visibility = 'visible'));
+    }
   }, [containerRef]);
 
   const onPageLoadSuccess = useCallback(() => {
