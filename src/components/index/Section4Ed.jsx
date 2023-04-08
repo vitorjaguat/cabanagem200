@@ -11,9 +11,11 @@ export default function Section4Ed() {
         </div>
       </div>
 
-      <div className='w-full pt-4'>
-        <p className='text-4xl mx-auto max-w-[1000px] pb-[300px]'>Editorial</p>
-        <div className='mx-auto max-w-[1000px] md:columns-3 gap-8'>
+      <div className='md:w-full md:pt-4 flex flex-col items-center'>
+        <p className='w-full text-3xl md:text-4xl mx-auto max-w-[1000px] pb-[300px]'>
+          Editorial
+        </p>
+        <div className='max-w-[1000px] md:columns-2 lg:columns-3 gap-8'>
           <p>
             Esta edição extraordinária do{' '}
             <span className='font-bold'>Jornal Pessoal</span> de Lúcio Flávio

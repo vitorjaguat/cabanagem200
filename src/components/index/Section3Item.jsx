@@ -35,9 +35,9 @@ export default function Section3Item({
         onMouseLeave={() => setMousePosition({ x: 0, y: 0 })}
       >
         <div className='cursor-none pr-2 md:pr-0'>
-          <Image src={obrImg} alt='7 de Janeiro de 1835' />
+          <Image src={obrImg} alt='7 de Janeiro de 1835' placeholder='blur' />
         </div>
-        <div className='flex md:h-full md:flex-col md:justify-end  pr-2 md:pr-4 cursor-none shrink-0'>
+        <div className='flex w-full md:w-auto md:h-full md:flex-col md:justify-end  pr-2 md:pr-4 cursor-none md:shrink-0'>
           <Image
             src={instImg}
             width={350}

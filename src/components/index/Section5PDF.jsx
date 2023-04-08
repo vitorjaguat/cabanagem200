@@ -12,12 +12,11 @@ export default function Section5PDF() {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
   const mdMediaQuery = useMediaQuery('md');
+  const documentRef = useRef();
 
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
   }
-
-  console.log(mdMediaQuery);
 
   //avoiding black flickering:
   const containerRef = useRef();
@@ -41,10 +40,28 @@ export default function Section5PDF() {
     showPageCanvas();
   }, [showPageCanvas]);
 
-  console.log(pageNumber, numPages);
+  console.log(pageNumber);
+
+  const prevPage = () => {
+    if (pageNumber === numPages) {
+      setPageNumber((curr) => curr - 2);
+    } else if (pageNumber === 2) {
+      setPageNumber((curr) => curr - 1);
+    } else {
+      setPageNumber((curr) => curr - 2);
+    }
+  };
+
+  const nextPage = () => {
+    if (pageNumber === 1) {
+      setPageNumber((curr) => curr + 1);
+    } else if (pageNumber > 1) {
+      setPageNumber((curr) => curr + 2);
+    }
+  };
 
   return (
-    <div className='flex mt-[300px]'>
+    <div className='flex mt-[300px] pb-[900px]'>
       {/* STICKY TITLE */}
       <div
         className='w-14 md:w-20 h-fit flex items-center sticky top-14 md:pt-4 shrink-0'
@@ -55,41 +72,57 @@ export default function Section5PDF() {
         </div>
       </div>
 
-      <div className='relative w-full flex flex-col md:flex-row justify-center md:pt-4'>
-        <div className='hidden md:block absolute top-4 right-4 text-sm'>
+      <div className='relative flex flex-col md:flex-row justify-center md:pt-4 w-full overflow-hidden'>
+        {/* <div className='hidden md:block absolute top-4 right-4 text-sm'>
           página {pageNumber} de {numPages}
-        </div>
+        </div> */}
         <div className='hidden w-fit md:flex mr-3 h-full flex-col justify-center'>
           <button
             className=''
             disabled={pageNumber <= 1}
-            onClick={() => setPageNumber((curr) => curr - 1)}
+            onClick={() => prevPage()}
           >
             <GrLinkPrevious size={25} />
           </button>
         </div>
 
         <div
-          className='w-[350px] h-[466px] md:h-[800px] md:w-[600px]'
+          className='w-[auto] h-[466px] md:h-[733px] md:flex overflow-hidden md:overflow-auto'
+          style={{
+            width:
+              mdMediaQuery && pageNumber !== 1 && pageNumber !== numPages
+                ? '1100px'
+                : '550px',
+          }}
           ref={containerRef}
         >
           <Document
             file='/assets/jornal-pessoal-edext.pdf'
-            onLoadSuccess={onDocumentLoadSuccess}
-            // className='mx-auto'
+            onLoadSuccess={() => {
+              onDocumentLoadSuccess({ numPages: 32 });
+              if (!mdMediaQuery) {
+                documentRef.current.style.width = '350px';
+                documentRef.current.style.overflow = 'hidden';
+              }
+            }}
+            className='flex'
+            // width={mdMediaQuery ? 550 : 350}
+            inputRef={documentRef}
             // style={{ display: 'flex', alignItems: 'center' }}
             // renderMode='svg'
           >
             <Page
               // width={smScreen ? '200' : '400'}
-              width={mdMediaQuery ? 600 : 350}
+              width={mdMediaQuery ? 550 : 350}
               renderTextLayer={false}
               renderAnnotationLayer={false}
               pageNumber={pageNumber}
-              pageIndex={0}
+              // pageIndex={0}
               onLoadSuccess={onPageLoadSuccess}
               onRenderSuccess={onPageRenderSuccess}
               onRenderError={onPageRenderError}
+              className='overflow-hidden'
+              style={{ overflow: 'hidden' }}
               // className='bg-transparent'
               // canvasBackground='#a1a1a1'
               // style={{ display: 'flex', alignItems: 'center' }}
@@ -97,6 +130,25 @@ export default function Section5PDF() {
 
               // }
             />
+            {mdMediaQuery && pageNumber !== 1 && pageNumber < numPages && (
+              <Page
+                // width={smScreen ? '200' : '400'}
+                width={mdMediaQuery ? 550 : 350}
+                renderTextLayer={false}
+                renderAnnotationLayer={false}
+                pageNumber={pageNumber + 1}
+                // pageIndex={0}
+                onLoadSuccess={onPageLoadSuccess}
+                onRenderSuccess={onPageRenderSuccess}
+                onRenderError={onPageRenderError}
+                // className='bg-transparent'
+                // canvasBackground='#a1a1a1'
+                // style={{ display: 'flex', alignItems: 'center' }}
+                // loading={
+
+                // }
+              />
+            )}
           </Document>
           {/* <iframe
             src='/assets/jornal-pessoal-edext.pdf'
@@ -109,7 +161,7 @@ export default function Section5PDF() {
           <button
             className=''
             disabled={pageNumber >= numPages}
-            onClick={() => setPageNumber((curr) => curr + 1)}
+            onClick={() => nextPage()}
           >
             <GrLinkNext size={25} />
           </button>
