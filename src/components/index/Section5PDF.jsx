@@ -82,7 +82,7 @@ export default function Section5PDF() {
         </div> */}
         <div className='hidden w-fit md:flex mr-3 h-full flex-col justify-center'>
           <button
-            className=''
+            className='cursor-pointer'
             disabled={pageNumber <= 1}
             onClick={() => prevPage()}
           >
@@ -167,7 +167,7 @@ export default function Section5PDF() {
 
         <div className='hidden md:flex ml-3 h-full flex-col justify-center'>
           <button
-            className=''
+            className='cursor-pointer'
             disabled={pageNumber >= numPages}
             onClick={() => nextPage()}
           >
