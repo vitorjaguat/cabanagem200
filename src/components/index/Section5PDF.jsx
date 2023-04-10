@@ -91,7 +91,7 @@ export default function Section5PDF() {
         </div>
 
         <div
-          className='w-[auto] h-[466px] md:h-[733px] md:flex overflow-hidden md:overflow-auto'
+          className='h-[466px] md:h-[733px] md:flex overflow-hidden md:overflow-auto'
           style={{
             width:
               mdMediaQuery && pageNumber !== 1 && pageNumber !== numPages
@@ -105,8 +105,10 @@ export default function Section5PDF() {
             onLoadSuccess={() => {
               onDocumentLoadSuccess({ numPages: 32 });
               if (!mdMediaQuery) {
+                console.log(documentRef);
                 documentRef.current.style.width = '350px';
                 documentRef.current.style.overflow = 'hidden';
+                documentRef.current.style.margin = 0;
               }
             }}
             className='flex'
@@ -127,6 +129,7 @@ export default function Section5PDF() {
               onRenderError={onPageRenderError}
               className='overflow-hidden'
               style={{ overflow: 'hidden' }}
+              loading={''}
               // className='bg-transparent'
               // canvasBackground='#a1a1a1'
               // style={{ display: 'flex', alignItems: 'center' }}
@@ -145,6 +148,7 @@ export default function Section5PDF() {
                 onLoadSuccess={onPageLoadSuccess}
                 onRenderSuccess={onPageRenderSuccess}
                 onRenderError={onPageRenderError}
+                loading={''}
                 // className='bg-transparent'
                 // canvasBackground='#a1a1a1'
                 // style={{ display: 'flex', alignItems: 'center' }}

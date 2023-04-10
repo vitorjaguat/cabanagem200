@@ -18,13 +18,6 @@ export default function Section3() {
     y: 0,
   });
 
-  const handleMouseEnter1 = (e) => {
-    if (e.currentTarget !== img1Ref.current) return;
-    setMousePosition({
-      x: e.clientX - img1Ref.current.getBoundingClientRect().left,
-      y: e.clientY - img1Ref.current.getBoundingClientRect().top,
-    });
-  };
   // console.log(mousePosition);
 
   return (
@@ -42,7 +35,7 @@ export default function Section3() {
       </div>
 
       <div className='flex flex-col items-center md:pt-4'>
-        {/* IMAGE 1 */}
+        {/* IMAGES */}
         <Section3Item
           obrImg={obr1Img}
           instImg={inst1Img}
@@ -50,6 +43,8 @@ export default function Section3() {
           media='Impressão em jato de tinta sobre papel de algodão a partir de imagens geradas por aprendizagem de máquina'
           measure='110x110cm'
           date='2022'
+          modalNumber1={0}
+          modalNumber2={1}
         />
         <Section3Item
           obrImg={obr2Img}
@@ -58,6 +53,8 @@ export default function Section3() {
           media='Impressão em jato de tinta sobre papel de algodão a partir de imagens geradas por aprendizagem de máquina'
           measure='110x110cm'
           date='2022'
+          modalNumber1={2}
+          modalNumber2={3}
         />
         <Section3Item
           obrImg={obr3Img}
@@ -66,6 +63,8 @@ export default function Section3() {
           media='Impressão em jato de tinta sobre papel de algodão a partir de imagens geradas por aprendizagem de máquina'
           measure='110x110cm'
           date='2022'
+          modalNumber1={4}
+          modalNumber2={5}
         />
         <Section3ItemJ />
         {/* <div className='w-full flex flex-col items-center'>

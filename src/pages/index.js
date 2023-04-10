@@ -10,7 +10,7 @@ import Section5PDF from '@/components/index/Section5PDF';
 export default function Home() {
   return (
     <>
-      <main className=''>
+      <main className='bg-[#e1e1e1]'>
         <Hero />
         <Section2 />
         <Section3 />

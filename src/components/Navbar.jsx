@@ -33,8 +33,8 @@ export default function Navbar() {
       <div
         className={
           shadow
-            ? 'fixed w-full h-10 md:h-12 shadow-lg z-[100] ease-in duration-300 bg-[#e1e1e1]'
-            : 'fixed w-full h-10 md:h-12 shadow-md z-[100] ease-in duration-300 bg-[#e1e1e1]'
+            ? 'fixed w-full h-10 md:h-12 z-[100] ease-in duration-300 bg-[#d5d5d5] border-b-[1px] border-[#00000000]'
+            : 'fixed w-full h-10 border-none md:h-12 z-[100] ease-in duration-300 bg-[#e1e1e1]'
         }
       >
         <div className='flex justify-between items-center w-full h-full px-1 md:px-4 2xl:px-16 mx-auto'>
