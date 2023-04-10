@@ -42,7 +42,7 @@ const LanguageToggle = () => {
         scroll={false}
       >
         <div
-          className='mr-3 cursor-pointer px-1 hover:border-b hover:border-[#a1a1a1]'
+          className='mr-3 cursor-pointer px-1 hover:text-slate-500'
           // onClick={() => handleLanguageChange('pt')}
         >
           PT
@@ -82,7 +82,7 @@ const LanguageToggle = () => {
         scroll={false}
       >
         <div
-          className='cursor-pointer px-1 hover:border-b hover:border-[#a1a1a1]'
+          className='cursor-pointer px-1 hover:text-slate-500'
           // onClick={() => handleLanguageChange('en')}
         >
           EN

@@ -47,7 +47,9 @@ export default function Navbar() {
           <div className='flex gap-16'>
             <ul className='hidden md:flex md:justify-between text-xs md:text-[13px] gap-14 mx-auto tracking-widest'>
               <Link href='/' scroll={false}>
-                <li className='uppercase hover:border-b'>{t('navbar.home')}</li>
+                <li className='uppercase hover:text-slate-500'>
+                  {t('navbar.home')}
+                </li>
               </Link>
               {/* <Link href='/references' scroll={false}>
               <li className='ml-8 uppercase hover:border-b'>
@@ -60,13 +62,13 @@ export default function Navbar() {
               </li>
             </Link> */}
               <Link href='/press' scroll={false}>
-                <li className='uppercase hover:border-b'>
+                <li className='uppercase hover:text-slate-500'>
                   {t('navbar.press')}
                 </li>
               </Link>
 
               <Link href='/about' scroll={false}>
-                <li className='uppercase hover:border-b'>
+                <li className='uppercase hover:text-slate-500'>
                   {t('navbar.about')}
                 </li>
               </Link>
