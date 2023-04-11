@@ -9,6 +9,57 @@ import { useEffect, useRef, useState } from 'react';
 import Section3Item from './Section3Item';
 import Section3ItemJ from './Section3ItemJ';
 
+const imgSrcArr = [
+  {
+    src: '/img/obr1.jpg',
+    title: '7 de Janeiro de 1835',
+    media:
+      'Impressão em jato de tinta sobre papel de algodão a partir de imagens geradas por aprendizagem de máquina',
+    measure: '110x110cm',
+    year: '2022',
+  },
+  {
+    src: '/img/inst1.jpg',
+    title: '7 de Janeiro de 1835',
+    media:
+      'Impressão em jato de tinta sobre papel de algodão a partir de imagens geradas por aprendizagem de máquina',
+    measure: '110x110cm',
+    year: '2022',
+  },
+  {
+    src: '/img/obr2.jpg',
+    title: '256 cabanxs',
+    media:
+      'Impressão em jato de tinta sobre papel de algodão a partir de imagens geradas por aprendizagem de máquina',
+    measure: '110x110cm',
+    year: '2022',
+  },
+  {
+    src: '/img/inst2.jpg',
+    title: '256 cabanxs',
+    media:
+      'Impressão em jato de tinta sobre papel de algodão a partir de imagens geradas por aprendizagem de máquina',
+    measure: '110x110cm',
+    year: '2022',
+  },
+  {
+    src: '/img/obr3.jpg',
+    title: 'Sonho Cabano',
+    media:
+      'Impressão em jato de tinta sobre papel de algodão a partir de imagens geradas por aprendizagem de máquina',
+    measure: '110x110cm',
+    year: '2022',
+  },
+  {
+    src: '/img/inst3.jpg',
+    title: 'Sonho Cabano',
+    media:
+      'Impressão em jato de tinta sobre papel de algodão a partir de imagens geradas por aprendizagem de máquina',
+    measure: '110x110cm',
+    year: '2022',
+  },
+];
+
 export default function Section3() {
   const img1Ref = useRef();
   const [showTitle1, setShowTitle1] = useState(false);

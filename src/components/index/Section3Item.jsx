@@ -66,6 +66,7 @@ export default function Section3Item({
           <div className='cursor-none pr-2 md:pr-0'>
             <Image
               width={1050}
+              height={1050}
               src={obrImg}
               alt={title}
               placeholder='blur'
