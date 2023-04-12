@@ -17,7 +17,7 @@ export default function Section3Item({
   const img1Ref = useRef();
   const [showTitle1, setShowTitle1] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const [modalInitialImage, setModalInitialImage] = useState(null);
+  const [modalInitialImage, setModalInitialImage] = useState(0);
 
   const [mousePosition, setMousePosition] = useState({
     x: 0,
@@ -48,12 +48,12 @@ export default function Section3Item({
   return (
     <>
       {/* MODAL */}
-      {showModal && (
-        <Section3Modal
-          initialImage={modalInitialImage}
-          handleHideModal={handleHideModal}
-        />
-      )}
+
+      <Section3Modal
+        initialImage={modalInitialImage}
+        handleHideModal={handleHideModal}
+        animateShowModal={showModal}
+      />
 
       {/* SEC3ITEM */}
       <div className='w-full flex flex-col items-center pb-16'>

@@ -54,7 +54,11 @@ const imgSrcArr = [
   },
 ];
 
-export default function Section3Modal({ initialImage, handleHideModal }) {
+export default function Section3Modal({
+  initialImage,
+  handleHideModal,
+  animateShowModal,
+}) {
   const [clickedImage, setClickedImage] = useState(initialImage);
   const img1Ref = useRef();
   const [mousePosition, setMousePosition] = useState({
@@ -89,9 +93,14 @@ export default function Section3Modal({ initialImage, handleHideModal }) {
   return (
     <div
       className={
-        'fixed top-0 left-0 w-screen h-screen z-[100] flex justify-between items-center'
+        animateShowModal
+          ? 'visible fixed top-0 left-0 w-screen h-screen z-[100] flex justify-between items-center duration-600'
+          : 'collapse fixed top-0 left-0 w-screen h-screen z-[100] justify-between items-center duration-600'
       }
-      style={{ background: 'rgba(0,0,0,0.93' }}
+      style={{
+        background: animateShowModal ? 'rgba(0,0,0,0.93' : 'transparent',
+        transition: 'all 1s',
+      }}
       onClick={handleHideModal}
       onMouseMove={handleMouseEnter}
       onMouseLeave={() => setMousePosition({ x: 0, y: 0 })}
