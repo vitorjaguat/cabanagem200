@@ -80,7 +80,7 @@ export default function Section3Item({
           <div className='flex w-full max-w-[calc(100vw-7.5rem)] md:max-w-none md:w-auto md:h-full md:flex-col md:justify-end  pr-2 md:pr-4 cursor-none md:shrink-0'>
             <Image
               src={instImg}
-              width={350}
+              height={350}
               className='md:h-full md:w-auto'
               alt={title}
               placeholder='blur'
