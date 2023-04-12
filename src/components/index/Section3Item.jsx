@@ -24,7 +24,7 @@ export default function Section3Item({
     y: 0,
   });
 
-  const handleMouseEnter1 = (e) => {
+  const handleMouseEnter = (e) => {
     if (e.currentTarget !== img1Ref.current) return;
     setMousePosition({
       x: e.clientX - img1Ref.current.getBoundingClientRect().left,
@@ -60,7 +60,7 @@ export default function Section3Item({
         <div
           className='flex flex-col md:w-full md:flex-row md:justify-between gap-2 md:gap-4 relative cursor-none '
           ref={img1Ref}
-          onMouseMove={handleMouseEnter1}
+          onMouseMove={handleMouseEnter}
           onMouseLeave={() => setMousePosition({ x: 0, y: 0 })}
         >
           <div className='cursor-none pr-2 md:pr-0'>
@@ -69,7 +69,7 @@ export default function Section3Item({
               height={1050}
               src={obrImg}
               alt={title}
-              placeholder='blur'
+              // placeholder='blur'
               onClick={() => {
                 setModalInitialImage(modalNumber1);
                 setShowModal(true);

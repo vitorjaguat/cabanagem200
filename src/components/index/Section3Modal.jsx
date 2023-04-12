@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 import { AiOutlineRight, AiOutlineLeft } from 'react-icons/ai';
 
@@ -56,7 +56,11 @@ const imgSrcArr = [
 
 export default function Section3Modal({ initialImage, handleHideModal }) {
   const [clickedImage, setClickedImage] = useState(initialImage);
-  //   const [hideModal, setHideModal] = useState(false);
+  const img1Ref = useRef();
+  const [mousePosition, setMousePosition] = useState({
+    x: 0,
+    y: 0,
+  });
 
   const nextImage = () => {
     if (clickedImage >= imgSrcArr.length - 1) {
@@ -72,7 +76,15 @@ export default function Section3Modal({ initialImage, handleHideModal }) {
       setClickedImage((curr) => curr - 1);
     }
   };
-  //   console.log(clickedImage);
+
+  const handleMouseEnter = (e) => {
+    // if (e.currentTarget !== img1Ref.current) return;
+    setMousePosition({
+      x: e.clientX - img1Ref.current.getBoundingClientRect().left,
+      y: e.clientY - img1Ref.current.getBoundingClientRect().top,
+    });
+    console.log(e.target, mousePosition.x);
+  };
 
   return (
     <div
@@ -81,6 +93,8 @@ export default function Section3Modal({ initialImage, handleHideModal }) {
       }
       style={{ background: 'rgba(0,0,0,0.93' }}
       onClick={handleHideModal}
+      onMouseMove={handleMouseEnter}
+      onMouseLeave={() => setMousePosition({ x: 0, y: 0 })}
     >
       <div className='flex items-center justify-center h-full w-20'>
         <button
@@ -90,14 +104,39 @@ export default function Section3Modal({ initialImage, handleHideModal }) {
           <AiOutlineLeft size={30} />
         </button>
       </div>
-      <div className=''>
+      <div className='w-fit relative' ref={img1Ref}>
         <Image
           alt={imgSrcArr[clickedImage].title}
           src={imgSrcArr[clickedImage].src}
           width={650}
           height={650}
         />
+        {/* Ficha técnica DESKTOP */}
+        <div
+          className='bg-[#00000090] md:py-2 md:pr-3 pl-4 h-0 md:h-auto md:max-w-[200px] md:min-w-[200px] text-slate-200 tracking-wide rounded-sm absolute overflow-hidden select-none'
+          style={{
+            display: mousePosition.x !== 0 ? 'block' : 'none',
+            top: mousePosition.y,
+            left: mousePosition.x,
+            pointerEvents: 'none',
+          }}
+          // onClick={alert('clicked')}
+        >
+          <p className='font-stanleybold text-[13px] leading-5'>
+            {imgSrcArr[clickedImage].title}
+          </p>
+          <p className='leading-4 text-[13px]'>
+            {imgSrcArr[clickedImage].media}
+          </p>
+          <p className='text-[13px] leading-4'>
+            {imgSrcArr[clickedImage].measure}
+          </p>
+          <p className='text-[13px] leading-4'>
+            {imgSrcArr[clickedImage].year}
+          </p>
+        </div>
       </div>
+
       <div className='flex items-center justify-center h-full w-20'>
         <button
           className='p-2 text-[#717171] duration-100 hover:text-white'

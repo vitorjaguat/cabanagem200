@@ -11,6 +11,7 @@ export default function Hero() {
       >
         <Image
           src={heroImg}
+          alt='cabanagem200'
           fill
           className=' translate-x-[-1100px] translate-y-[40px] md:translate-x-0 md:translate-y-0'
           //   style={{ transform: 'translate(-1100px, 50px)' }}
