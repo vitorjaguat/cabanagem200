@@ -150,7 +150,7 @@ export default function Section3Modal({ initialImage, handleHideModal }) {
       </div>
 
       {/* Prev/Next buttons (MOBILE) */}
-      <div className='absolute bottom-[10%] flex justify-center gap-6'>
+      <div className='md:hidden absolute bottom-[10%] flex justify-center gap-6'>
         <button
           className='p-2 text-[#717171] duration-100 hover:text-white'
           onClick={prevImage}
