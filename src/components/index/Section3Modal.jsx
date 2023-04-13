@@ -79,16 +79,23 @@ export default function Section3Modal({ initialImage, handleHideModal }) {
 
   const handleMouseEnter = (e) => {
     // if (e.currentTarget !== img1Ref.current) return;
-    setMousePosition({
-      x: e.clientX - img1Ref.current.getBoundingClientRect().left,
-      y: e.clientY - img1Ref.current.getBoundingClientRect().top,
-    });
-    console.log(e.target, mousePosition.x);
+    if (
+      e.target.classList.contains('button') ||
+      e.target.tagName.toLowerCase() === 'svg' ||
+      e.target.tagName.toLowerCase() === 'path'
+    ) {
+      setMousePosition({ x: 0, y: 0 });
+    } else {
+      setMousePosition({
+        x: e.clientX - img1Ref.current.getBoundingClientRect().left,
+        y: e.clientY - img1Ref.current.getBoundingClientRect().top,
+      });
+    }
   };
 
   return (
     <div
-      className='fixed top-0 left-0 w-screen h-screen z-[100] flex flex-col md:flex-row justify-center md:justify-between items-center duration-600'
+      className='fixed top-0 left-0 w-screen h-screen z-[100] flex flex-col md:flex-row justify-center md:justify-between items-center duration-600 cursor-none '
       style={{
         background: 'rgba(0,0,0,0.93)',
         transition: 'all 1s',
@@ -100,7 +107,7 @@ export default function Section3Modal({ initialImage, handleHideModal }) {
       {/* Prev image button (DESKTOP) */}
       <div className='hidden md:flex items-center justify-center h-full w-20'>
         <button
-          className='p-2 text-[#717171] duration-100 hover:text-white'
+          className='button p-2 text-[#717171] duration-100 hover:text-white'
           onClick={prevImage}
         >
           <AiOutlineLeft size={30} />
@@ -150,18 +157,22 @@ export default function Section3Modal({ initialImage, handleHideModal }) {
       </div>
 
       {/* Prev/Next buttons (MOBILE) */}
-      <div className='md:hidden absolute bottom-[10%] flex justify-center gap-6'>
+      <div className='button md:hidden absolute bottom-[10%] flex justify-center gap-6'>
         <button
-          className='p-2 text-[#717171] duration-100 hover:text-white'
+          className='button p-2 text-[#717171] duration-100 hover:text-white'
           onClick={prevImage}
         >
-          <AiOutlineLeft size={34} />
+          <AiOutlineLeft className='button' size={34} />
         </button>
         <button
-          className='p-2 text-[#717171] duration-100 hover:text-white'
+          className='button p-2 text-[#717171] duration-100 hover:text-white'
           onClick={nextImage}
         >
-          <AiOutlineRight size={34} style={{ zIndex: '1000' }} />
+          <AiOutlineRight
+            className='button'
+            size={34}
+            // style={{ zIndex: '1000' }}
+          />
         </button>
       </div>
     </div>

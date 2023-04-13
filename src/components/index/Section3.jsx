@@ -72,7 +72,7 @@ export default function Section3() {
   // console.log(mousePosition);
 
   return (
-    <div className='flex'>
+    <div className='flex w-screen'>
       {/* STICKY TITLE */}
       <div
         className='w-14 md:w-20 min-h-[350px] max-h-[350px] md:max-h-[500px] md:min-h-[500px] flex items-center sticky top-14 md:pt-4 shrink-0'
@@ -88,8 +88,8 @@ export default function Section3() {
       <div className='flex flex-col items-center md:pt-4'>
         {/* IMAGES */}
         <Section3Item
-          // obrImg={obr1Img}
-          obrImg='/img/obr1.jpg'
+          obrImg={obr1Img}
+          // obrImg='/img/obr1.jpg'
           instImg={inst1Img}
           title='7 de Janeiro de 1835'
           media='Impressão em jato de tinta sobre papel de algodão a partir de imagens geradas por aprendizagem de máquina'
