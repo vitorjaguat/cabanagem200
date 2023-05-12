@@ -57,15 +57,15 @@ export default function Section3Item({
       )}
 
       {/* SEC3ITEM */}
-      <div className='w-full flex flex-col items-center pb-16'>
+      <div className='w-full flex flex-col items-center'>
         <div
-          className='flex flex-col  md:flex-row md:justify-between gap-2 md:gap-4 relative cursor-none '
+          className='flex flex-col mb-4 md:mb-8 lg:mb-16 md:flex-row md:justify-end relative cursor-none'
           ref={img1Ref}
           onMouseMove={handleMouseEnter}
           onMouseLeave={() => setMousePosition({ x: 0, y: 0 })}
         >
           {/* FRENTE */}
-          <div className='cursor-none pr-2 md:pr-0'>
+          <div className='cursor-none mx-2 md:mx-4 lg:mx-16'>
             <Image
               width={1050}
               height={1050}
@@ -80,7 +80,7 @@ export default function Section3Item({
             />
           </div>
           {/* VERSO */}
-          <div className='cursor-none pr-2 md:pr-0'>
+          <div className='cursor-none mx-2 md:mx-4 lg:mx-16'>
             <Image
               width={1050}
               height={1050}

@@ -117,7 +117,7 @@ export default function Section3() {
           modalNumber1={4}
           modalNumber2={5}
         />
-        <Section3ItemJ />
+        {/* <Section3ItemJ /> */}
         {/* <div className='w-full flex flex-col items-center'>
           <div
             className='flex flex-col md:flex-row gap-2 md:gap-4 relative cursor-none'

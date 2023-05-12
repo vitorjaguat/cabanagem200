@@ -14,8 +14,8 @@ export default function Home() {
         <Hero />
         <Section2 />
         <Section3 />
-        <Section4Ed />
         <Section5PDF />
+        <Section4Ed />
       </main>
     </>
   );

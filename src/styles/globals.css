@@ -11,6 +11,7 @@ html {
 
 * {
   font-family: inherit;
+  box-sizing: border-box;
 }
 
 /* custom global styles: */

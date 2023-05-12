@@ -32,14 +32,20 @@ export default function Navbar() {
       {/* <div className='fixed z-[99] shadow-md bg-slate-600 w-full h-[95px]'></div> */}
       <div
         className={
-          shadow
-            ? 'fixed w-full h-10 md:h-12 z-[100] ease-in duration-300 bg-[#d5d5d5] border-b-[1px] border-[#00000000]'
-            : 'fixed w-full h-10 border-none md:h-12 z-[100] ease-in duration-300 bg-[#e1e1e1]'
+          !shadow
+            ? 'fixed w-full h-10 border-none md:h-[4.5rem] z-[100] ease-in duration-300 bg-[#e1e1e1]'
+            : 'fixed w-full h-10 md:h-12 z-[100] ease-in duration-300 bg-[#d5d5d5]/90'
         }
       >
         <div className='flex justify-between items-center w-full h-full px-1 md:px-4 2xl:px-16 mx-auto'>
           <Link href='/' scroll={false}>
-            <div className='w-[100px] md:w-[200px] px-1 text-[12px] md:text-[15px] font-stanleybold tracking-widest md:tracking-[2.5px]'>
+            <div
+              className={
+                !shadow
+                  ? 'w-[100px] md:w-[200px] px-1 text-[12px] uppercase md:text-3xl tracking-widest md:tracking-[2.5px] duration-300 ease-in'
+                  : 'w-[100px] md:w-[200px] px-1 text-[12px] md:text-[15px] font-stanleybold tracking-widest md:tracking-[2.5px] duration-300 ease-in'
+              }
+            >
               cabanagem200
             </div>
           </Link>
