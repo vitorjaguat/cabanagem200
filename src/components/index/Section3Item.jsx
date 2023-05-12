@@ -64,6 +64,7 @@ export default function Section3Item({
           onMouseMove={handleMouseEnter}
           onMouseLeave={() => setMousePosition({ x: 0, y: 0 })}
         >
+          {/* FRENTE */}
           <div className='cursor-none pr-2 md:pr-0'>
             <Image
               width={1050}
@@ -78,10 +79,11 @@ export default function Section3Item({
               className='md:max-h-[calc(100vh-4rem)] md:max-w-[calc(100vh-4rem)]'
             />
           </div>
+          {/* VERSO */}
           <div className='flex w-full max-w-[calc(100vw-7.5rem)] md:max-w-none md:w-auto md:h-full md:flex-col md:justify-end  pr-2 md:pr-4 cursor-none md:shrink-0'>
             <Image
-              src={instImg}
-              height={350}
+              src={obrImg}
+              height={1050}
               className='md:h-full md:w-auto'
               alt={title}
               placeholder='blur'
