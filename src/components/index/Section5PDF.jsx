@@ -101,7 +101,7 @@ export default function Section5PDF() {
           ref={containerRef}
         >
           <Document
-            file='/assets/jornal-pessoal-edext.pdf'
+            file='/assets/jornal_pessoal_web.pdf'
             onLoadSuccess={() => {
               onDocumentLoadSuccess({ numPages: 32 });
               if (!mdMediaQuery) {
