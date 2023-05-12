@@ -1,6 +1,6 @@
 export default function Section4Ed() {
   return (
-    <div className='flex mt-[300px]'>
+    <div className='flex py-20'>
       {/* STICKY TITLE */}
       <div
         className='w-14 md:w-20 h-fit flex items-center sticky top-14 md:pt-4 shrink-0'

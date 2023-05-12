@@ -65,7 +65,7 @@ export default function Section5PDF() {
   };
 
   return (
-    <div className='flex mt-[300px] pb-[900px]'>
+    <div className='flex my-40'>
       {/* STICKY TITLE */}
       <div
         className='w-14 md:w-20 h-fit flex items-center sticky top-14 md:pt-4 shrink-0'

@@ -12,13 +12,14 @@ export default function Hero() {
       >
         <div className='h-full flex flex-col justify-end'>
           <div className='grid grid-cols-3 h-full'>
-            <div className='w-full h-full col-span-1 bg-black/20'> ,</div>
+            <div className='w-full h-full col-span-1 bg-black/20'></div>
             <div className='w-full h-full col-span-1 bg-black/30'></div>
             <div className='w-full h-full col-span-1 bg-black/10'></div>
           </div>
           <div className='min-h-[4.5rem] bg-[#e1e1e1] flex items-center'>
-            <Marquee speed={100} className='text-5xl tracking-wider'>
-              O POVO EM ARMAS NA AMAZÔNIA&nbsp;&nbsp;&nbsp;
+            <Marquee speed={100} className='text-5xl tracking-wider uppercase'>
+              estoura insurreição popular na Amazônia durante a
+              madrugada&nbsp;&nbsp;&nbsp;
             </Marquee>
           </div>
         </div>

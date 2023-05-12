@@ -33,8 +33,8 @@ export default function Navbar() {
       <div
         className={
           !shadow
-            ? 'fixed w-full h-10 border-none md:h-[4.5rem] z-[100] ease-in duration-300 bg-[#e1e1e1]'
-            : 'fixed w-full h-10 md:h-12 z-[100] ease-in duration-300 bg-[#d5d5d5]/90'
+            ? 'fixed w-full h-10 border-none md:h-[4.5rem] z-[100] ease-in-out duration-700 bg-[#e1e1e1]'
+            : 'fixed w-full h-10 md:h-12 z-[100] ease-in-out duration-700 bg-[#d5d5d5]/90'
         }
       >
         <div className='flex justify-between items-center w-full h-full px-1 md:px-4 2xl:px-16 mx-auto'>
@@ -42,8 +42,8 @@ export default function Navbar() {
             <div
               className={
                 !shadow
-                  ? 'w-[100px] md:w-[200px] px-1 text-[12px] uppercase md:text-3xl tracking-widest md:tracking-[2.5px] duration-300 ease-in'
-                  : 'w-[100px] md:w-[200px] px-1 text-[12px] md:text-[15px] font-stanleybold tracking-widest md:tracking-[2.5px] duration-300 ease-in'
+                  ? 'w-[100px] md:w-[200px] px-1 text-[12px] md:text-3xl uppercase tracking-widest md:tracking-[2.5px] duration-700 ease-in-out'
+                  : 'w-[100px] md:w-[200px] px-1 text-[12px] md:text-[15px] uppercase font-stanleybold tracking-widest md:tracking-[2.5px] duration-700 ease-in-out'
               }
             >
               cabanagem200
