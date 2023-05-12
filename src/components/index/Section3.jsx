@@ -89,7 +89,6 @@ export default function Section3() {
         {/* IMAGES */}
         <Section3Item
           obrImg={obr1Img}
-          // obrImg='/img/obr1.jpg'
           instImg={inst1Img}
           title='7 de Janeiro de 1835'
           media='Impressão em jato de tinta sobre papel de algodão a partir de imagens geradas por aprendizagem de máquina'

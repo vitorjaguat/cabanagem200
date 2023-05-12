@@ -59,7 +59,7 @@ export default function Section3Item({
       {/* SEC3ITEM */}
       <div className='w-full flex flex-col items-center pb-16'>
         <div
-          className='flex flex-col md:w-full md:flex-row md:justify-between gap-2 md:gap-4 relative cursor-none '
+          className='flex flex-col  md:flex-row md:justify-between gap-2 md:gap-4 relative cursor-none '
           ref={img1Ref}
           onMouseMove={handleMouseEnter}
           onMouseLeave={() => setMousePosition({ x: 0, y: 0 })}
@@ -76,11 +76,25 @@ export default function Section3Item({
                 setModalInitialImage(modalNumber1);
                 setShowModal(true);
               }}
-              className='md:max-h-[calc(100vh-4rem)] md:max-w-[calc(100vh-4rem)]'
+              // className='md:max-h-[calc(100vh-4rem)] md:max-w-[calc(100vh-4rem)]'
             />
           </div>
           {/* VERSO */}
-          <div className='flex w-full max-w-[calc(100vw-7.5rem)] md:max-w-none md:w-auto md:h-full md:flex-col md:justify-end  pr-2 md:pr-4 cursor-none md:shrink-0'>
+          <div className='cursor-none pr-2 md:pr-0'>
+            <Image
+              width={1050}
+              height={1050}
+              src={instImg}
+              alt={title}
+              // placeholder='blur'
+              onClick={() => {
+                setModalInitialImage(modalNumber2);
+                setShowModal(true);
+              }}
+              // className='md:max-h-[calc(100vh-4rem)] md:max-w-[calc(100vh-4rem)]'
+            />
+          </div>
+          {/* <div className='flex w-full max-w-[calc(100vw-7.5rem)] md:max-w-none md:w-auto md:h-full md:flex-col md:justify-end  pr-2 md:pr-4 cursor-none md:shrink-0'>
             <Image
               src={obrImg}
               height={1050}
@@ -92,7 +106,7 @@ export default function Section3Item({
                 setShowModal(true);
               }}
             />
-            {/* Ficha técnica MOBILE */}
+            Ficha técnica MOBILE
             <div className='md:hidden pl-2 flex flex-col justify-end'>
               <p className='font-stanleybold text-[10px] leading-tight'>
                 {title}
@@ -101,7 +115,7 @@ export default function Section3Item({
               <p className='text-[9px] leading-tight'>{measure}</p>
               <p className='text-[9px] leading-tight'>{date}</p>
             </div>
-          </div>
+          </div> */}
 
           {/* Ficha técnica DESKTOP */}
           <div
