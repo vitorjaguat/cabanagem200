@@ -6,18 +6,21 @@ export default function Hero() {
   return (
     <div className='overflow-hidden'>
       <div
-        className='flex items-center justify-center h-screen md:w-screen mt-[4.5rem] md:h-[calc(100vh-4.5rem)]'
+        className='flex items-center justify-center md:w-screen mt-[3.5rem] md:mt-[4.5rem] h-[calc(100vh-3.5rem)] md:h-[calc(100vh-4.5rem)]'
         // style={{ objectPosition: '50% 100%' }}
         // style={{ objectFit: 'cover' }}
       >
         <div className='h-full flex flex-col justify-end'>
-          <div className='grid grid-cols-3 h-full'>
-            <div className='w-full h-full col-span-1 bg-black/20'></div>
-            <div className='w-full h-full col-span-1 bg-black/30'></div>
-            <div className='w-full h-full col-span-1 bg-black/10'></div>
+          <div className='grid grid-rows-3 md:grid-cols-3 h-full'>
+            <div className='w-full h-full md:h-[calc(100vh-4.5rem)] row-span-1 md:col-span-1 bg-black/20'></div>
+            <div className='w-full h-full md:h-[calc(100vh-4.5rem)] row-span-1 md:col-span-1 bg-black/30'></div>
+            <div className='w-full h-full md:h-[calc(100vh-4.5rem)] row-span-1 md:col-span-1 bg-black/10'></div>
           </div>
-          <div className='min-h-[4.5rem] bg-[#e1e1e1] flex items-center'>
-            <Marquee speed={100} className='text-5xl tracking-wider uppercase'>
+          <div className='min-h-[3.5rem] md:min-h-[4.5rem] bg-[#e1e1e1] flex items-center'>
+            <Marquee
+              speed={100}
+              className='text-3xl md:text-4xl tracking-wider uppercase h-[2.5rem] md:h-[3rem]'
+            >
               estoura insurreição popular na Amazônia durante a
               madrugada&nbsp;&nbsp;&nbsp;
             </Marquee>

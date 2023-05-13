@@ -41,3 +41,7 @@ html {
     @apply cursor-pointer;
   }
 }
+
+/* .marquee-container {
+  height: fit-content !important;
+} */
