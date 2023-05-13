@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function Press() {
   return (
     <div className='pt-10 md:pt-12 h-full bg-[#e1e1e1]'>
-      <div className='w-screen h-[60vh] flex justify-end items-end text-4xl pr-4 pb-4 bg-slate-400'>
+      <div className='w-screen h-[60vh] flex justify-end items-end text-4xl pr-4 pb-4 bg-black/20'>
         IMPRENSA
       </div>
       <div className='max-w-[1000px] py-20 mx-auto flex flex-col gap-12'>
@@ -48,6 +48,53 @@ export default function Press() {
               </p>
               <a
                 href='https://www.youtube.com/watch?v=flvwX8yCCKs&ab_channel=MAMRio'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <div className='font-stanleybold absolute -bottom-2 right-0 text-2xl'>
+                  +
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className='p-5 flex flex-col md:flex-row justify-between gap-6 border-[0.5px] border-black'>
+          <div className=' order-last md:order-1 w-[300px] h-[250px] relative md:overflow-hidden shrink-0 mt-auto mx-auto md:mx-0'>
+            <iframe
+              width='300'
+              height='250'
+              src='https://www.youtube.com/embed/behnWq0W__8'
+              frameBorder='0'
+              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+              allowFullScreen
+              title='Embedded youtube'
+            />
+          </div>
+          <div className='relative flex flex-col justify-between'>
+            <a
+              href='https://www.youtube.com/watch?v=behnWq0W__8&ab_channel=MAMRio'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <p className='text-3xl mb-4'>
+                Atos de revolta | panorama da exposição | Pablo Lafuente
+              </p>
+            </a>
+            <div className='flex flex-col justify-end'>
+              <p className='text-sm text-justify'>
+                Neste vídeo, o diretor artístico do MAM Rio, Pablo Lafuente, faz
+                um panorama da exposição “Atos de revolta: outros imaginários
+                sobre independência”, em cartaz no segundo andar do museu.
+              </p>
+              <p className='text-sm text-justify'>
+                A mostra reúne um time de 16 nomes da arte contemporânea
+                brasileira em diálogo com peças dos séculos 18 e 19 vindas do
+                acervo do Convento Santo Antônio, Museu da Inconfidência e do
+                Museu Histórico Nacional.
+              </p>
+              <a
+                href='https://www.youtube.com/watch?v=behnWq0W__8&ab_channel=MAMRio'
                 target='_blank'
                 rel='noopener noreferrer'
               >
