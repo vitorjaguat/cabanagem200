@@ -1,8 +1,23 @@
 import Image from 'next/image';
 import heroImg from '../../../public/img/hero.jpg';
 import Marquee from 'react-fast-marquee';
+import { useState, useEffect } from 'react';
+
+const headlines = [
+  'estoura insurreição popular na Amazônia durante a madrugada',
+  'cabanos fazem barricadas de fogo em praça pública de Belém',
+  'Império fracassa mais uma vez na contenção da revolta armada',
+  'indígenas unem força com a insurreição popular amazônica',
+];
 
 export default function Hero() {
+  const [headline, setHeadline] = useState('');
+  useEffect(() => {
+    const headlineContent =
+      headlines[Math.floor(Math.random() * headlines.length)];
+    console.log(headlineContent);
+  }, []);
+
   return (
     <div className='overflow-hidden'>
       <div
@@ -21,8 +36,9 @@ export default function Hero() {
               speed={100}
               className='text-3xl md:text-4xl tracking-wider uppercase h-[2.5rem] md:h-[3rem]'
             >
-              estoura insurreição popular na Amazônia durante a
-              madrugada&nbsp;&nbsp;&nbsp;
+              {headlines[Math.floor(Math.random() * headlines.length)] ||
+                'estoura insurreição popular na Amazônia durante a madrugada'}
+              &nbsp;&nbsp;&nbsp;
             </Marquee>
           </div>
         </div>
