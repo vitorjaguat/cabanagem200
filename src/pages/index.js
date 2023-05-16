@@ -27,7 +27,7 @@ export default function Home({ images }) {
 }
 
 export async function getStaticProps({ locale }) {
-  const imagesStr = [
+  let imagesStr = [
     'public/assets/percurso/001_percurso.png',
     'public/assets/percurso/002_percurso.png',
     'public/assets/percurso/003_percurso.png',
@@ -40,6 +40,7 @@ export async function getStaticProps({ locale }) {
     'public/assets/percurso/010_percurso.png',
     'public/assets/percurso/026_percurso.png',
     'public/assets/percurso/027_percurso.png',
+    'public/assets/percurso/028_percurso.png',
     'public/assets/percurso/029_percurso.png',
     'public/assets/percurso/030_percurso.png',
     'public/assets/percurso/031_percurso.png',
@@ -48,6 +49,18 @@ export async function getStaticProps({ locale }) {
     'public/assets/percurso/034_percurso.png',
     'public/assets/percurso/035_percurso.png',
   ];
+
+  // imagesStr = Array.from(Array(200), (el, i) => {
+  //   if (i < 9) {
+  //     return 'public/assets/percurso/00' + (i + 1) + '_percurso.png';
+  //   } else if (i < 99) {
+  //     return 'public/assets/percurso/0' + (i + 1) + '_percurso.png';
+  //   } else {
+  //     return 'public/assets/percurso/' + (i + 1) + '_percurso.png';
+  //   }
+  // });
+
+  console.log(imagesStr);
 
   const images = imagesStr.map((string) => ({
     url: string,

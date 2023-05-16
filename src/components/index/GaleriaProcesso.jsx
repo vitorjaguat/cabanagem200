@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Gallery } from 'react-grid-gallery';
 import PhotoAlbum from 'react-photo-album';
 import Lightbox from 'react-spring-lightbox';
-import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
+import { IoIosArrowBack, IoIosArrowForward, IoClose } from 'react-icons/io';
 
 // const images = [
 //   {
@@ -175,7 +175,7 @@ export default function GaleriaProcesso({ images }) {
 const PrevButton = ({ gotoPrevious }) => {
   return (
     <div
-      className='absolute top-[50%] left-0 p-4 z-[10] cursor-pointer'
+      className='absolute top-[50%] -translate-y-[50%] left-0 p-4 z-[10] cursor-pointer hidden sm:block'
       onClick={gotoPrevious}
     >
       <IoIosArrowBack size={40} color={'#d1d1d1'} />
@@ -185,7 +185,7 @@ const PrevButton = ({ gotoPrevious }) => {
 const NextButton = ({ gotoNext }) => {
   return (
     <div
-      className='absolute top-[50%] right-0 p-4 z-[10] cursor-pointer'
+      className='absolute top-[50%] -translate-y-[50%] right-0 p-4 z-[10] cursor-pointer hidden sm:block'
       onClick={gotoNext}
     >
       <IoIosArrowForward size={40} color={'#d1d1d1'} />
@@ -197,6 +197,13 @@ const Overlay = ({ setIsOpen }) => {
     <div
       className='fixed right-0 top-0 bg-black/80 w-screen h-screen z-[-100]'
       //   onClick={setIsOpen(false)}`
-    ></div>
+    >
+      <div
+        className='top-4 right-4 absolute text-[#d1d1d1] sm:hidden'
+        onClick={() => setIsOpen(false)}
+      >
+        x
+      </div>
+    </div>
   );
 };
