@@ -80,9 +80,9 @@ export default function Navbar() {
               </Link>
             </ul>
 
-            <div className='flex justify-end'>
+            {/* <div className='flex justify-end'>
               <LanguageToggle />
-            </div>
+            </div> */}
           </div>
 
           <div
