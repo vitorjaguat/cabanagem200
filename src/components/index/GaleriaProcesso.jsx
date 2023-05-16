@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Gallery } from 'react-grid-gallery';
 import PhotoAlbum from 'react-photo-album';
 import Lightbox from 'react-spring-lightbox';
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
 // const images = [
 //   {
@@ -172,27 +173,27 @@ export default function GaleriaProcesso({ images }) {
 const PrevButton = ({ gotoPrevious }) => {
   return (
     <div
-      className='absolute top-[50%] left-0 bg-slate-50 p-4 z-[10]'
+      className='absolute top-[50%] left-0 p-4 z-[10] cursor-pointer'
       onClick={gotoPrevious}
     >
-      prev
+      <IoIosArrowBack size={40} color={'#d1d1d1'} />
     </div>
   );
 };
 const NextButton = ({ gotoNext }) => {
   return (
     <div
-      className='absolute top-[50%] right-0 bg-slate-50 p-4 z-[10]'
+      className='absolute top-[50%] right-0 p-4 z-[10] cursor-pointer'
       onClick={gotoNext}
     >
-      next
+      <IoIosArrowForward size={40} color={'#d1d1d1'} />
     </div>
   );
 };
 const Overlay = ({ setIsOpen }) => {
   return (
     <div
-      className='fixed right-0 top-0 bg-black/40 w-screen h-screen z-[-100]'
+      className='fixed right-0 top-0 bg-black/80 w-screen h-screen z-[-100]'
       //   onClick={setIsOpen(false)}`
     ></div>
   );
