@@ -121,6 +121,7 @@ export default function GaleriaProcesso({ images }) {
     src: image.url.slice(6),
     width: image.size.width,
     height: image.size.height,
+    alt: 'Nheenga Cabana | Imagem de percurso',
   }));
   console.log(currentImageIndex);
 
@@ -149,6 +150,7 @@ export default function GaleriaProcesso({ images }) {
           setCurrentImageIndex(index);
           setIsOpen(true);
         }}
+        defaultContainerWidth={1920}
       />
       <Lightbox
         isOpen={isOpen}

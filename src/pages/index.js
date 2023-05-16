@@ -40,7 +40,6 @@ export async function getStaticProps({ locale }) {
     'public/assets/percurso/010_percurso.png',
     'public/assets/percurso/026_percurso.png',
     'public/assets/percurso/027_percurso.png',
-    'public/assets/percurso/028_percurso.png',
     'public/assets/percurso/029_percurso.png',
     'public/assets/percurso/030_percurso.png',
     'public/assets/percurso/031_percurso.png',
