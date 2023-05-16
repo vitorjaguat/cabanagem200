@@ -122,6 +122,7 @@ export default function GaleriaProcesso({ images }) {
     width: image.size.width,
     height: image.size.height,
     alt: 'Nheenga Cabana | Imagem de percurso',
+    loading: 'lazy',
   }));
   console.log(currentImageIndex);
 
@@ -166,7 +167,9 @@ export default function GaleriaProcesso({ images }) {
         renderNextButton={({ canNext }) =>
           canNext && <NextButton gotoNext={gotoNext} />
         }
-        renderImageOverlay={() => <Overlay setIsOpen={setIsOpen} />}
+        renderImageOverlay={() => (
+          <Overlay isOpen={isOpen} setIsOpen={setIsOpen} />
+        )}
       />
     </div>
   );
@@ -185,18 +188,19 @@ const PrevButton = ({ gotoPrevious }) => {
 const NextButton = ({ gotoNext }) => {
   return (
     <div
-      className='absolute top-[50%] -translate-y-[50%] right-0 p-4 z-[10] cursor-pointer hidden sm:block'
+      className='absolute top-[50%] -translate-y-[50%] right-0 p-4 z-[10] cursor-pointer hidden sm:block select-none'
       onClick={gotoNext}
     >
       <IoIosArrowForward size={40} color={'#d1d1d1'} />
     </div>
   );
 };
-const Overlay = ({ setIsOpen }) => {
+const Overlay = ({ setIsOpen, isOpen }) => {
   return (
     <div
       className='fixed right-0 top-0 bg-black/80 w-screen h-screen z-[-100]'
-      //   onClick={setIsOpen(false)}`
+      //   style={{ display: isOpen ? 'block' : 'hidden' }}
+      onClick={() => setIsOpen(false)}
     >
       <div
         className='top-4 right-4 absolute text-[#d1d1d1] sm:hidden'

@@ -50,15 +50,15 @@ export async function getStaticProps({ locale }) {
     'public/assets/percurso/035_percurso.png',
   ];
 
-  // imagesStr = Array.from(Array(200), (el, i) => {
-  //   if (i < 9) {
-  //     return 'public/assets/percurso/00' + (i + 1) + '_percurso.png';
-  //   } else if (i < 99) {
-  //     return 'public/assets/percurso/0' + (i + 1) + '_percurso.png';
-  //   } else {
-  //     return 'public/assets/percurso/' + (i + 1) + '_percurso.png';
-  //   }
-  // });
+  imagesStr = Array.from(Array(200), (el, i) => {
+    if (i < 9) {
+      return 'public/assets/percurso/00' + (i + 1) + '_percurso.png';
+    } else if (i < 99) {
+      return 'public/assets/percurso/0' + (i + 1) + '_percurso.png';
+    } else {
+      return 'public/assets/percurso/' + (i + 1) + '_percurso.png';
+    }
+  });
 
   console.log(imagesStr);
 
