@@ -44,7 +44,7 @@ export default function Section5PDF() {
     showPageCanvas();
   }, [showPageCanvas]);
 
-  console.log(pageNumber);
+  // console.log(pageNumber);
 
   const prevPage = () => {
     if (pageNumber === numPages) {
@@ -105,7 +105,7 @@ export default function Section5PDF() {
             onLoadSuccess={() => {
               onDocumentLoadSuccess({ numPages: 32 });
               if (!mdMediaQuery) {
-                console.log(documentRef);
+                // console.log(documentRef);
                 documentRef.current.style.width = '350px';
                 documentRef.current.style.overflow = 'hidden';
                 documentRef.current.style.margin = 0;

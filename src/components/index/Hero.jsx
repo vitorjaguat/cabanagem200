@@ -11,12 +11,12 @@ const headlines = [
 ];
 
 export default function Hero() {
-  const [headline, setHeadline] = useState('');
-  useEffect(() => {
-    const headlineContent =
-      headlines[Math.floor(Math.random() * headlines.length)];
-    console.log(headlineContent);
-  }, []);
+  // const [headline, setHeadline] = useState('');
+  // useEffect(() => {
+  //   const headlineContent =
+  //     headlines[Math.floor(Math.random() * headlines.length)];
+  //   console.log(headlineContent);
+  // }, []);
 
   return (
     <div className='overflow-hidden'>
