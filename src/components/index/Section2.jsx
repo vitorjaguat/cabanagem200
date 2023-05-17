@@ -1,7 +1,7 @@
 export default function Section2() {
   return (
     <div className='py-[50vh] px-10 md:px-0 mx-auto max-w-[800px]'>
-      <div className='md:columns-2 gap-8 '>
+      <div className='md:columns-2 gap-8'>
         <p>
           <span className='tracking-[1.5px] font-stanleybold text-[15px]'>
             cabanagem200

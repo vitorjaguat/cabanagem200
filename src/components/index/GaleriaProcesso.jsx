@@ -4,6 +4,7 @@ import { Gallery } from 'react-grid-gallery';
 import PhotoAlbum from 'react-photo-album';
 import Lightbox from 'react-spring-lightbox';
 import { IoIosArrowBack, IoIosArrowForward, IoClose } from 'react-icons/io';
+import Image from 'next/image';
 
 // const images = [
 //   {
@@ -147,11 +148,14 @@ export default function GaleriaProcesso({ images }) {
       <PhotoAlbum
         layout='masonry'
         photos={imagesData}
+        renderPhoto={NextJSImage}
         onClick={({ index }) => {
           setCurrentImageIndex(index);
           setIsOpen(true);
         }}
         defaultContainerWidth={1920}
+        // setCurrentImageIndex={setCurrentImageIndex}
+        // setIsOpen={setIsOpen}
       />
       <Lightbox
         isOpen={isOpen}
@@ -165,7 +169,7 @@ export default function GaleriaProcesso({ images }) {
           canPrev && <PrevButton gotoPrevious={gotoPrevious} />
         }
         renderNextButton={({ canNext }) =>
-          canNext && <NextButton gotoNext={gotoNext} />
+          canNext && <NextButton setIsOpen={setIsOpen} gotoNext={gotoNext} />
         }
         renderImageOverlay={() => (
           <Overlay isOpen={isOpen} setIsOpen={setIsOpen} />
@@ -185,14 +189,22 @@ const PrevButton = ({ gotoPrevious }) => {
     </div>
   );
 };
-const NextButton = ({ gotoNext }) => {
+const NextButton = ({ gotoNext, setIsOpen }) => {
   return (
-    <div
-      className='absolute top-[50%] -translate-y-[50%] right-0 p-4 z-[10] cursor-pointer hidden sm:block select-none'
-      onClick={gotoNext}
-    >
-      <IoIosArrowForward size={40} color={'#d1d1d1'} />
-    </div>
+    <>
+      <div
+        className='absolute top-[50%] -translate-y-[50%] right-0 p-4 z-[10] cursor-pointer hidden sm:block select-none'
+        onClick={gotoNext}
+      >
+        <IoIosArrowForward size={40} color={'#d1d1d1'} />
+      </div>
+      <div
+        className='top-4 right-4 absolute text-[#d1d1d1] sm:hidden'
+        onClick={() => setIsOpen(false)}
+      >
+        x
+      </div>
+    </>
   );
 };
 const Overlay = ({ setIsOpen, isOpen }) => {
@@ -201,13 +213,35 @@ const Overlay = ({ setIsOpen, isOpen }) => {
       className='fixed right-0 top-0 bg-black/80 w-screen h-screen z-[-100]'
       //   style={{ display: isOpen ? 'block' : 'hidden' }}
       onClick={() => setIsOpen(false)}
-    >
-      <div
-        className='top-4 right-4 absolute text-[#d1d1d1] sm:hidden'
-        onClick={() => setIsOpen(false)}
-      >
-        x
-      </div>
+    ></div>
+  );
+};
+
+//NextJS Image in PhotoAlbum:
+const NextJSImage = ({
+  setCurrentImageIndex,
+  setIsOpen,
+  photo,
+  imageProps: { src, alt, onClick },
+  wrapperStyle,
+  //   onClick,
+}) => {
+  return (
+    <div style={{ ...wrapperStyle, position: 'relative' }}>
+      <Image
+        fill
+        src={src}
+        alt={alt}
+        sizes={{
+          size: 'calc(100vw - 240px)',
+          sizes: [{ viewport: '(max-width: 960px)', size: '100vw' }],
+        }}
+        // onClick={({ index }) => {
+        //   setCurrentImageIndex(index);
+        //   setIsOpen(true);
+        // }}
+        onClick={onClick}
+      />
     </div>
   );
 };
