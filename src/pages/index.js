@@ -15,7 +15,7 @@ export default function Home({ images }) {
   return (
     <>
       <main className='bg-[#e1e1e1]'>
-        <Hero />
+        <Hero images={images} />
         <GaleriaProcesso images={images} />
         <Section2 />
         <Section3 />
@@ -60,7 +60,7 @@ export async function getStaticProps({ locale }) {
     }
   });
 
-  console.log(imagesStr);
+  // console.log(imagesStr);
 
   const images = imagesStr.map((string) => ({
     url: string,

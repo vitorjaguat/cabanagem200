@@ -118,14 +118,13 @@ export default function GaleriaProcesso({ images }) {
   //   const handleMoveNext = () => setIndex(nextIndex);
 
   //constructing image data:
-  const imagesData = images.map((image, i) => ({
+  const imagesData = images.map((image) => ({
     src: image.url.slice(6),
     width: image.size.width,
     height: image.size.height,
     alt: 'Nheenga Cabana | Imagem de percurso',
     loading: 'lazy',
   }));
-  console.log(currentImageIndex);
 
   //Lightbox:
   const gotoPrevious = () =>
@@ -148,7 +147,7 @@ export default function GaleriaProcesso({ images }) {
       <PhotoAlbum
         layout='masonry'
         photos={imagesData}
-        renderPhoto={NextJSImage}
+        // renderPhoto={NextJSImage}
         onClick={({ index }) => {
           setCurrentImageIndex(index);
           setIsOpen(true);
