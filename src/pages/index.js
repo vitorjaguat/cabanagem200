@@ -10,12 +10,14 @@ import GaleriaProcesso from '@/components/index/GaleriaProcesso';
 import probe from 'probe-image-size';
 import fs from 'fs';
 import path from 'path';
+import GaleriaPrompts from '@/components/index/GaleriaPrompts';
 
 export default function Home({ images }) {
   return (
     <>
       <main className='bg-[#e1e1e1]'>
         <Hero images={images} />
+        <GaleriaPrompts />
         <GaleriaProcesso images={images} />
         <Section2 />
         <Section3 />

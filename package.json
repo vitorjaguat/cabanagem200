@@ -25,6 +25,7 @@
     "react-intersection-observer": "^9.4.3",
     "react-pdf": "^6.2.2",
     "react-photo-album": "^2.2.2",
+    "react-responsive-masonry": "^2.1.7",
     "react-spring-lightbox": "^1.7.1"
   },
   "devDependencies": {
