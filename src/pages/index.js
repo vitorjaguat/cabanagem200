@@ -17,12 +17,12 @@ export default function Home({ images }) {
     <>
       <main className='bg-[#e1e1e1]'>
         <Hero images={images} />
-        <GaleriaPrompts />
-        <GaleriaProcesso images={images} />
         <Section2 />
         <Section3 />
         <Section5PDF />
         <Section4Ed />
+        <GaleriaProcesso images={images} />
+        <GaleriaPrompts />
       </main>
     </>
   );
