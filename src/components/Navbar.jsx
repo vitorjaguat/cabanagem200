@@ -103,8 +103,8 @@ export default function Navbar() {
           <div
             className={
               nav
-                ? 'fixed left-0 top-0 w-[75%] sm:w-[50%] md:w-[40%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500'
-                : 'fixed left-[-100%] p-10 top-0 h-screen ease-in duration-500'
+                ? 'fixed left-0 top-0 w-[75%] sm:w-[50%] md:w-[40%] h-full bg-[#ecf0f3] p-10 ease-in duration-500'
+                : 'fixed left-[-100%] p-10 top-0 h-full ease-in duration-500'
             }
           >
             <div>

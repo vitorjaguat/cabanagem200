@@ -69,7 +69,7 @@ export default function Section5PDF() {
       {/* STICKY TITLE */}
       <div
         className='w-14 md:w-20 h-fit flex items-center sticky top-14 md:pt-4 shrink-0'
-        style={{ writingMode: 'vertical-rl', height: 'calc(100vh-20px)' }}
+        style={{ writingMode: 'vertical-rl', height: 'calc(100%-20px)' }}
       >
         <div className='h-fit text-[11px] md:text-sm px-3 md:px-4'>
           <span className='font-bold'>JORNAL PESSOAL</span>

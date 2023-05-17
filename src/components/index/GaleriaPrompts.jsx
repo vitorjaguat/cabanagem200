@@ -311,8 +311,8 @@ const prompts = [
 
 export default function GaleriaPrompts() {
   return (
-    <div className='w-screen'>
-      <div className='w-screen'>
+    <div className='w-full'>
+      <div className='w-full'>
         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
           <Masonry>
             {prompts.map((prompt) => {

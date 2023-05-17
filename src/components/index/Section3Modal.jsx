@@ -95,7 +95,7 @@ export default function Section3Modal({ initialImage, handleHideModal }) {
 
   return (
     <div
-      className='fixed top-0 left-0 w-screen h-screen z-[100] flex flex-col md:flex-row justify-center md:justify-between items-center duration-600 cursor-none '
+      className='fixed top-0 left-0 w-full h-screen z-[100] flex flex-col md:flex-row justify-center md:justify-between items-center duration-600 cursor-none '
       style={{
         background: 'rgba(0,0,0,0.93)',
         transition: 'all 1s',

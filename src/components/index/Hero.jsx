@@ -33,9 +33,9 @@ export default function Hero({ images }) {
   console.log(image1);
 
   return (
-    <div className='overflow-hidden h-screen w-screen'>
+    <div className='overflow-hidden h-screen w-full'>
       <div
-        className='w-screen h-screen md:pt-[4.5rem] pt-[3.5rem] flex flex-col'
+        className='w-full h-screen md:pt-[4.5rem] pt-[3.5rem] flex flex-col'
         // style={{ objectPosition: '50% 100%' }}
         // style={{ objectFit: 'cover' }}
       >
@@ -51,7 +51,7 @@ export default function Hero({ images }) {
                 <img
                   src={image1}
                   alt=''
-                  className='h-full w-screen object-cover'
+                  className='h-full w-full object-cover'
                 />
               )}
             </div>
@@ -60,7 +60,7 @@ export default function Hero({ images }) {
                 <img
                   src={image2}
                   alt=''
-                  className='h-full w-screen object-cover'
+                  className='h-full w-full object-cover'
                 />
               )}
             </div>
@@ -71,7 +71,7 @@ export default function Hero({ images }) {
                 <img
                   src={image3}
                   alt=''
-                  className='h-full w-screen object-cover'
+                  className='h-full w-full object-cover'
                 />
               )}
             </div>
@@ -80,7 +80,7 @@ export default function Hero({ images }) {
                 <img
                   src={image4}
                   alt=''
-                  className='h-full w-screen object-cover'
+                  className='h-full w-full object-cover'
                 />
               )}
             </div>

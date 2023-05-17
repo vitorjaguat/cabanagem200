@@ -209,7 +209,7 @@ const NextButton = ({ gotoNext, setIsOpen }) => {
 const Overlay = ({ setIsOpen, isOpen }) => {
   return (
     <div
-      className='fixed right-0 top-0 bg-black/80 w-screen h-screen z-[-100]'
+      className='fixed right-0 top-0 bg-black/80 w-full h-screen z-[-100]'
       //   style={{ display: isOpen ? 'block' : 'hidden' }}
       onClick={() => setIsOpen(false)}
     ></div>

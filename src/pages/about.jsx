@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function About() {
   return (
     <div className='pt-10 md:pt-12 h-full bg-[#e1e1e1]'>
-      <div className='w-screen h-[60vh]  bg-black/20'>
+      <div className='w-full h-[60vh]  bg-black/20'>
         <div className='flex justify-end items-end text-4xl pb-4 max-w-[1000px] w-full h-full mx-auto'>
           SOBRE
         </div>
