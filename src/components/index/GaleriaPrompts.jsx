@@ -314,33 +314,62 @@ export default function GaleriaPrompts() {
   const data = prompts.map((prompt, i) => ({
     value: prompt,
     key: i,
-    count: Math.floor(Math.random() * 30),
+    count: Math.floor(Math.random() * 10),
   }));
 
   // console.log(data);
 
+  //TagCloud custom renderer:
+  const customRenderer = (tag, size, color) => (
+    <span
+      key={tag.key}
+      style={{
+        maxWidth: '200px',
+        maxHeight: '200px',
+        width: 'content-fit',
+        height: 'content-fit',
+        padding: '2px',
+        fontSize: `${size}px`,
+        display: 'block',
+      }}
+      className='hover:scale-125 hover:text-blue-300 duration-300 hover:bg-black hover:text-[#d1d1d1]'
+      // onMouseEnter={}
+    >
+      {tag.value}
+    </span>
+  );
+
   return (
     <div className='w-full'>
       <div className='w-full'>
-        {/* <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
+        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 8 }}>
           <Masonry>
             {prompts.map((prompt) => {
               if (prompt) {
                 return (
-                  <div className='m-1 p-2 bg-white text-sm' key={prompt}>
+                  <div
+                    className=' hover:scale-[3.5] cursor-default m-1 p-2 bg-white text-[4px] duration-300'
+                    key={prompt}
+                  >
                     {prompt}
                   </div>
                 );
               }
             })}
           </Masonry>
-        </ResponsiveMasonry> */}
-        <TagCloud
-          minSize={12}
-          maxSize={35}
+        </ResponsiveMasonry>
+        {/* <TagCloud
+          minSize={4}
+          maxSize={12}
           tags={data}
-          onClick={(tag) => alert(`'${tag.value}' was selected!`)}
-        />
+          // onClick={(tag) => alert(`'${tag.value}' was selected!`)}
+          colorOptions={{
+            hue: 'monochrome',
+            // luminosity: 'dark'
+          }}
+          // className='flex flex-wrap'
+          renderer={customRenderer}
+        /> */}
       </div>
     </div>
   );

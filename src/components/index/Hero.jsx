@@ -61,7 +61,7 @@ export default function Hero({ images }) {
             <div className='w-full h-full md:h-[calc(100vh-4.5rem)] row-span-1 md:col-span-1 bg-black/30'></div>
             <div className='w-full h-full md:h-[calc(100vh-4.5rem)] row-span-1 md:col-span-1 bg-black/10'></div> */}
           <div className='row-span-1 grid grid-cols-2'>
-            <div className='col-span-1 grid grid-cols-2 shrink-0 bg-slate-100 overflow-hidden'>
+            <div className='col-span-1 grid grid-cols-2 shrink-0 overflow-hidden'>
               <div className=' col-span-1'>
                 {image1 && (
                   <img
@@ -81,7 +81,7 @@ export default function Hero({ images }) {
                 )}
               </div>
             </div>
-            <div className='col-span-1 grid grid-cols-2 shrink-0 bg-slate-200'>
+            <div className='col-span-1 grid grid-cols-2 shrink-0'>
               <div className='col-span-1'>
                 {image3 && (
                   <img
@@ -103,7 +103,7 @@ export default function Hero({ images }) {
             </div>
           </div>
           <div className='row-span-1 grid grid-cols-2'>
-            <div className='col-span-1 grid grid-cols-2 shrink-0 bg-slate-200'>
+            <div className='col-span-1 grid grid-cols-2 shrink-0'>
               <div className='col-span-1'>
                 {image5 && (
                   <img
@@ -123,8 +123,8 @@ export default function Hero({ images }) {
                 )}
               </div>
             </div>
-            <div className='col-span-1 bg-slate-400'>
-              <div className='col-span-1 h-full grid grid-cols-2 shrink-0 bg-slate-200'>
+            <div className='col-span-1'>
+              <div className='col-span-1 h-full grid grid-cols-2 shrink-0'>
                 <div className='col-span-1'>
                   {image7 && (
                     <img
