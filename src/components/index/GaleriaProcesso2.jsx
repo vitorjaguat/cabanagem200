@@ -119,14 +119,16 @@ export default function GaleriaProcesso2({ images }) {
   //   const handleMoveNext = () => setIndex(nextIndex);
 
   //constructing image data:
-  const imagesData = images.map((image) => ({
-    src_sm: image.url_sm.slice(6),
-    src: image.url_lg.slice(6),
-    width: image.size.width,
-    height: image.size.height,
-    alt: 'Nheenga Cabana | Imagem de percurso',
-    loading: 'lazy',
-  }));
+  const imagesData = images
+    .map((image) => ({
+      src_sm: image.url_sm.slice(6),
+      src: image.url_lg.slice(6),
+      width: image.size.width,
+      height: image.size.height,
+      alt: 'Nheenga Cabana | Imagem de percurso',
+      loading: 'lazy',
+    }))
+    .sort(() => Math.random() - 0.5);
 
   //Lightbox:
   const gotoPrevious = () =>
@@ -189,12 +191,12 @@ export default function GaleriaProcesso2({ images }) {
           {imagesData.map((image, index) => (
             <div
               key={image.src_sm}
-              className='hover:z-10 flex items-center justify-center overflow-visible max-h-16 max-w-[4rem]'
+              className='hover:z-10 flex items-center justify-center overflow-visible max-h-[4.1rem] max-w-[4.1rem]'
             >
               <img
                 src={image.src_sm}
                 alt='Nheenga Cabana | Imagem de processo'
-                className='object-cover w-16 h-16 hover:w-24 hover:h-24 hover:z-10 object-center duration-200 hover:overflow-visible ease-in-out cursor-pointer'
+                className='object-cover w-[4.1rem] h-[4.1rem] hover:w-24 hover:h-24 hover:z-10 object-center duration-200 hover:overflow-visible ease-in-out cursor-pointer'
                 onClick={() => {
                   setCurrentImageIndex(index);
                   setIsOpen(true);

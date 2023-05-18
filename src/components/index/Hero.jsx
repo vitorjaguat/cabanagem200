@@ -27,16 +27,17 @@ export default function Hero({ images }) {
   const [image7, setImage7] = useState('');
   const [image8, setImage8] = useState('');
   useEffect(() => {
-    const randomImage = () =>
-      images[Math.floor(Math.random() * images.length)].url_lg.slice(6);
-    setImage1(randomImage());
-    setImage2(randomImage());
-    setImage3(randomImage());
-    setImage4(randomImage());
-    setImage5(randomImage());
-    setImage6(randomImage());
-    setImage7(randomImage());
-    setImage8(randomImage());
+    // const randomImage = () =>
+    //   images[Math.floor(Math.random() * images.length)].url_lg.slice(6);
+    const shuffleImages = images.sort(() => Math.random() - 0.5);
+    setImage1(shuffleImages[1].url_lg.slice(6));
+    setImage2(shuffleImages[2].url_lg.slice(6));
+    setImage3(shuffleImages[3].url_lg.slice(6));
+    setImage4(shuffleImages[4].url_lg.slice(6));
+    setImage5(shuffleImages[5].url_lg.slice(6));
+    setImage6(shuffleImages[6].url_lg.slice(6));
+    setImage7(shuffleImages[7].url_lg.slice(6));
+    setImage8(shuffleImages[8].url_lg.slice(6));
   }, [images]);
   console.log(image1);
 
@@ -54,8 +55,8 @@ export default function Hero({ images }) {
             <div className='w-full h-full md:h-[calc(100vh-4.5rem)] row-span-1 md:col-span-1 bg-black/30'></div>
             <div className='w-full h-full md:h-[calc(100vh-4.5rem)] row-span-1 md:col-span-1 bg-black/10'></div> */}
           <div className='row-span-1 grid grid-cols-2'>
-            <div className='col-span-1 flex shrink-0 bg-slate-100 overflow-hidden'>
-              <div className=''>
+            <div className='col-span-1 grid grid-cols-2 shrink-0 bg-slate-100 overflow-hidden'>
+              <div className=' col-span-1'>
                 {image1 && (
                   <img
                     src={image1}
@@ -64,7 +65,7 @@ export default function Hero({ images }) {
                   />
                 )}
               </div>
-              <div className=''>
+              <div className='col-span-1'>
                 {image2 && (
                   <img
                     src={image2}
@@ -74,8 +75,8 @@ export default function Hero({ images }) {
                 )}
               </div>
             </div>
-            <div className='col-span-1 flex shrink-0 bg-slate-200'>
-              <div className=''>
+            <div className='col-span-1 grid grid-cols-2 shrink-0 bg-slate-200'>
+              <div className='col-span-1'>
                 {image3 && (
                   <img
                     src={image3}
@@ -84,7 +85,7 @@ export default function Hero({ images }) {
                   />
                 )}
               </div>
-              <div className=''>
+              <div className='col-span-1'>
                 {image4 && (
                   <img
                     src={image4}
@@ -96,8 +97,8 @@ export default function Hero({ images }) {
             </div>
           </div>
           <div className='row-span-1 grid grid-cols-2'>
-            <div className='col-span-1 flex shrink-0 bg-slate-200'>
-              <div className=''>
+            <div className='col-span-1 grid grid-cols-2 shrink-0 bg-slate-200'>
+              <div className='col-span-1'>
                 {image5 && (
                   <img
                     src={image5}
@@ -106,7 +107,7 @@ export default function Hero({ images }) {
                   />
                 )}
               </div>
-              <div className=''>
+              <div className='col-span-1'>
                 {image6 && (
                   <img
                     src={image6}
@@ -117,8 +118,8 @@ export default function Hero({ images }) {
               </div>
             </div>
             <div className='col-span-1 bg-slate-400'>
-              <div className='col-span-1 h-full flex shrink-0 bg-slate-200'>
-                <div className=''>
+              <div className='col-span-1 h-full grid grid-cols-2 shrink-0 bg-slate-200'>
+                <div className='col-span-1'>
                   {image7 && (
                     <img
                       src={image7}
@@ -127,7 +128,7 @@ export default function Hero({ images }) {
                     />
                   )}
                 </div>
-                <div className=''>
+                <div className='col-span-1'>
                   {image8 && (
                     <img
                       src={image8}
