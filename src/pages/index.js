@@ -20,9 +20,9 @@ export default function Home({ images }) {
         <Section2 />
         <Section3 />
         <Section5PDF />
-        <Section4Ed />
         <GaleriaProcesso2 images={images} />
         <GaleriaPrompts />
+        <Section4Ed />
       </main>
     </>
   );

@@ -139,14 +139,24 @@ export default function GaleriaProcesso2({ images }) {
   const onClose = () => setIsOpen(false);
 
   return (
-    <div className=''>
-      {/* <Gallery
+    <div className='flex py-20'>
+      {/* STICKY TITLE */}
+      <div
+        className='w-14 md:w-20 h-fit flex items-center sticky top-14 md:pt-4 shrink-0'
+        style={{ writingMode: 'vertical-rl' }}
+      >
+        <div className='h-fit text-[11px] md:text-sm px-3 md:px-4'>
+          <span className='font-bold'>ARQUIVO: IMAGENS DE PERCURSO</span>
+        </div>
+      </div>
+      <div className='md:pt-4'>
+        {/* <Gallery
         images={images}
         onClick={handleClick}
         enableImageSelection={false}
         rowHeight={300}
       /> */}
-      {/* <PhotoAlbum
+        {/* <PhotoAlbum
         layout='rows'
         photos={imagesData}
         // renderPhoto={NextJSImage}
@@ -161,7 +171,7 @@ export default function GaleriaProcesso2({ images }) {
         // }}
         rowConstraints={{ minPhotos: 20 }}
       /> */}
-      {/* <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 15 }}>
+        {/* <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 15 }}>
         <Masonry>
           {imagesData.map((image) => (
             <div className='p-1 hover:w-20 hover:z-10 object-center'>
@@ -174,43 +184,44 @@ export default function GaleriaProcesso2({ images }) {
           ))}
         </Masonry>
       </ResponsiveMasonry> */}
-      {/* <div className='w-full grid grid-cols-12 object-cover gap-0'> */}
-      <div className='flex flex-wrap gap-1'>
-        {imagesData.map((image, index) => (
-          <div
-            key={image.src_sm}
-            className='hover:z-10 flex items-center justify-center overflow-visible max-h-16 max-w-[4rem]'
-          >
-            <img
-              src={image.src_sm}
-              alt='Nheenga Cabana | Imagem de processo'
-              className='object-cover w-16 h-16 hover:w-24 hover:h-24 hover:z-10 object-center duration-200 hover:overflow-visible ease-in-out cursor-pointer'
-              onClick={() => {
-                setCurrentImageIndex(index);
-                setIsOpen(true);
-              }}
-            />
-          </div>
-        ))}
+        {/* <div className='w-full grid grid-cols-12 object-cover gap-0'> */}
+        <div className='flex flex-wrap gap-1'>
+          {imagesData.map((image, index) => (
+            <div
+              key={image.src_sm}
+              className='hover:z-10 flex items-center justify-center overflow-visible max-h-16 max-w-[4rem]'
+            >
+              <img
+                src={image.src_sm}
+                alt='Nheenga Cabana | Imagem de processo'
+                className='object-cover w-16 h-16 hover:w-24 hover:h-24 hover:z-10 object-center duration-200 hover:overflow-visible ease-in-out cursor-pointer'
+                onClick={() => {
+                  setCurrentImageIndex(index);
+                  setIsOpen(true);
+                }}
+              />
+            </div>
+          ))}
+        </div>
+        <Lightbox
+          isOpen={isOpen}
+          onPrev={gotoPrevious}
+          onNext={gotoNext}
+          onClose={onClose}
+          images={imagesData}
+          currentIndex={currentImageIndex}
+          singleClickToZoom
+          renderPrevButton={({ canPrev }) =>
+            canPrev && <PrevButton gotoPrevious={gotoPrevious} />
+          }
+          renderNextButton={({ canNext }) =>
+            canNext && <NextButton setIsOpen={setIsOpen} gotoNext={gotoNext} />
+          }
+          renderImageOverlay={() => (
+            <Overlay isOpen={isOpen} setIsOpen={setIsOpen} />
+          )}
+        />
       </div>
-      <Lightbox
-        isOpen={isOpen}
-        onPrev={gotoPrevious}
-        onNext={gotoNext}
-        onClose={onClose}
-        images={imagesData}
-        currentIndex={currentImageIndex}
-        singleClickToZoom
-        renderPrevButton={({ canPrev }) =>
-          canPrev && <PrevButton gotoPrevious={gotoPrevious} />
-        }
-        renderNextButton={({ canNext }) =>
-          canNext && <NextButton setIsOpen={setIsOpen} gotoNext={gotoNext} />
-        }
-        renderImageOverlay={() => (
-          <Overlay isOpen={isOpen} setIsOpen={setIsOpen} />
-        )}
-      />
     </div>
   );
 }
