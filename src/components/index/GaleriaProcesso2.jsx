@@ -184,7 +184,7 @@ export default function GaleriaProcesso2({ images }) {
               src={image.src}
               alt='Nheenga Cabana | Imagem de processo'
               className='object-cover w-16 h-16 hover:w-24 hover:h-24 hover:z-10 object-center duration-200 hover:overflow-visible ease-in-out cursor-pointer'
-              onClick={(index) => {
+              onClick={() => {
                 setCurrentImageIndex(index);
                 setIsOpen(true);
               }}
