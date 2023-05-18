@@ -5,6 +5,7 @@ import PhotoAlbum from 'react-photo-album';
 import Lightbox from 'react-spring-lightbox';
 import { IoIosArrowBack, IoIosArrowForward, IoClose } from 'react-icons/io';
 import Image from 'next/image';
+import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 
 // const images = [
 //   {
@@ -102,7 +103,7 @@ import Image from 'next/image';
 //   '/assets/percurso/035_percurso.png',
 // ];
 
-export default function GaleriaProcesso({ images }) {
+export default function GaleriaProcesso2({ images }) {
   const [isOpen, setIsOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -144,18 +145,45 @@ export default function GaleriaProcesso({ images }) {
         enableImageSelection={false}
         rowHeight={300}
       /> */}
-      <PhotoAlbum
-        layout='columns'
+      {/* <PhotoAlbum
+        layout='rows'
         photos={imagesData}
         // renderPhoto={NextJSImage}
         onClick={({ index }) => {
           setCurrentImageIndex(index);
           setIsOpen(true);
-        }}
+        }} 
         defaultContainerWidth={1200}
-        // setCurrentImageIndex={setCurrentImageIndex}
-        // setIsOpen={setIsOpen}
-      />
+        spacing={2}
+        // componentsProps={{
+        //   imageProps: { width: imagesData[index].width / 10 },
+        // }}
+        rowConstraints={{ minPhotos: 20 }}
+      /> */}
+      {/* <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 15 }}>
+        <Masonry>
+          {imagesData.map((image) => (
+            <div className='p-1 hover:w-20 hover:z-10 object-center'>
+              <img
+                src={image.src}
+                alt='Nheenga Cabana | Imagem de processo'
+                className='object-center'
+              />
+            </div>
+          ))}
+        </Masonry>
+      </ResponsiveMasonry> */}
+      <div className='w-full grid grid-cols-12 object-cover gap-0'>
+        {imagesData.map((image) => (
+          <div className='w-24 h-24 hover:z-10 flex items-center justify-center'>
+            <img
+              src={image.src}
+              alt='Nheenga Cabana | Imagem de processo'
+              className='object-cover w-16 h-16 hover:w-24 hover:h-24 hover:z-10 hover:object-fill object-center duration-200'
+            />
+          </div>
+        ))}
+      </div>
       <Lightbox
         isOpen={isOpen}
         onPrev={gotoPrevious}

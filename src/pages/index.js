@@ -6,7 +6,7 @@ import Section2 from '@/components/index/Section2';
 import Section3 from '@/components/index/Section3';
 import Section4Ed from '@/components/index/Section4Ed';
 import Section5PDF from '@/components/index/Section5PDF';
-import GaleriaProcesso from '@/components/index/GaleriaProcesso';
+import GaleriaProcesso2 from '@/components/index/GaleriaProcesso2';
 import probe from 'probe-image-size';
 import fs from 'fs';
 import path from 'path';
@@ -21,7 +21,7 @@ export default function Home({ images }) {
         <Section3 />
         <Section5PDF />
         <Section4Ed />
-        <GaleriaProcesso images={images} />
+        <GaleriaProcesso2 images={images} />
         <GaleriaPrompts />
       </main>
     </>
@@ -54,11 +54,11 @@ export async function getStaticProps({ locale }) {
 
   imagesStr = Array.from(Array(200), (el, i) => {
     if (i < 9) {
-      return 'public/assets/percurso/00' + (i + 1) + '_percurso.png';
+      return 'public/assets/percurso/00' + (i + 1) + '_percurso.jpg';
     } else if (i < 99) {
-      return 'public/assets/percurso/0' + (i + 1) + '_percurso.png';
+      return 'public/assets/percurso/0' + (i + 1) + '_percurso.jpg';
     } else {
-      return 'public/assets/percurso/' + (i + 1) + '_percurso.png';
+      return 'public/assets/percurso/' + (i + 1) + '_percurso.jpg';
     }
   });
 

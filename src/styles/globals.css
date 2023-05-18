@@ -7,13 +7,16 @@ html {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
-  width: 100%;
+  /* width: 100%; */
   overflow-x: hidden;
+  width: calc(100vw - (100vw - 100%));
 }
 
 body {
-  width: 100%;
+  width: calc(100vw - (100vw - 100%));
   /* overflow-x: hidden; */
+  margin: 0;
+  padding: 0;
 }
 
 * {
