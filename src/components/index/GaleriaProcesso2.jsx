@@ -175,7 +175,7 @@ export default function GaleriaProcesso2({ images }) {
       </ResponsiveMasonry> */}
       {/* <div className='w-full grid grid-cols-12 object-cover gap-0'> */}
       <div className='flex flex-wrap gap-1'>
-        {imagesData.map((image) => (
+        {imagesData.map((image, index) => (
           <div
             key={image.src}
             className='hover:z-10 flex items-center justify-center overflow-visible max-h-16 max-w-[4rem]'
@@ -183,7 +183,11 @@ export default function GaleriaProcesso2({ images }) {
             <img
               src={image.src}
               alt='Nheenga Cabana | Imagem de processo'
-              className='object-cover w-16 h-16 hover:w-24 hover:h-24 hover:z-10 object-center duration-200 hover:overflow-visible ease-in-out'
+              className='object-cover w-16 h-16 hover:w-24 hover:h-24 hover:z-10 object-center duration-200 hover:overflow-visible ease-in-out cursor-pointer'
+              onClick={(index) => {
+                setCurrentImageIndex(index);
+                setIsOpen(true);
+              }}
             />
           </div>
         ))}
