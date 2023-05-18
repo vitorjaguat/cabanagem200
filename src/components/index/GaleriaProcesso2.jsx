@@ -1,5 +1,5 @@
 // import probe from 'probe-image-size';
-import { useState } from 'react';
+import { useEffect, useState, useMemo, useCallback } from 'react';
 import { Gallery } from 'react-grid-gallery';
 import PhotoAlbum from 'react-photo-album';
 import Lightbox from 'react-spring-lightbox';
@@ -119,16 +119,33 @@ export default function GaleriaProcesso2({ images }) {
   //   const handleMoveNext = () => setIndex(nextIndex);
 
   //constructing image data:
-  const imagesData = images
-    .map((image) => ({
-      src_sm: image.url_sm.slice(6),
-      src: image.url_lg.slice(6),
-      width: image.size.width,
-      height: image.size.height,
-      alt: 'Nheenga Cabana | Imagem de percurso',
-      loading: 'lazy',
-    }))
-    .sort(() => Math.random() - 0.5);
+  const [imagesData, setImagesData] = useState([]);
+  const imagesDataMemo = useMemo(
+    () =>
+      images
+        .map((image) => {
+          // console.log('memo!');
+          return {
+            src_sm: image.url_sm.slice(6),
+            src: image.url_lg.slice(6),
+            width: image.size.width,
+            height: image.size.height,
+            alt: 'Nheenga Cabana | Imagem de percurso',
+            loading: 'lazy',
+          };
+        })
+        .sort(() => Math.random() - 0.5),
+    [images, Math.random, Array.prototype.sort, Array.prototype.map]
+  );
+  // console.log(imagesData);
+
+  useEffect(() => {
+    setImagesData(imagesDataMemo);
+  }, [imagesDataMemo]);
+
+  // const memoTest = useMemo(() => console.log('memo!'), [...imagesData]);
+
+  // console.log(imagesData);
 
   //Lightbox:
   const gotoPrevious = () =>

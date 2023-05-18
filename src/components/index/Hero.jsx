@@ -8,6 +8,12 @@ const headlines = [
   'cabanos fazem barricadas de fogo em praça pública de Belém',
   'Império fracassa mais uma vez na contenção da revolta armada',
   'indígenas unem força com a insurreição popular amazônica',
+  'Felipe Patroni retorna a Belém e reabre tipografia confiscada',
+  'Guerra de morte é declarada ao marechal Jorge Rodrigues',
+  'Eduardo Angelim, 21 anos, é eleito governador Cabano',
+  'Assalto ao Clio: carga saqueada e tripulação aniquilada',
+  'Massacre: 20% da população é dizimada após anos de conflito',
+  'Cabanos se rendem na vila de Luséia, entregando as armas',
 ];
 
 export default function Hero({ images }) {
