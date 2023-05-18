@@ -120,7 +120,8 @@ export default function GaleriaProcesso2({ images }) {
 
   //constructing image data:
   const imagesData = images.map((image) => ({
-    src: image.url.slice(6),
+    src_sm: image.url_sm.slice(6),
+    src: image.url_lg.slice(6),
     width: image.size.width,
     height: image.size.height,
     alt: 'Nheenga Cabana | Imagem de percurso',

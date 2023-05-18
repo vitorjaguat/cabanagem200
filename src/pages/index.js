@@ -29,50 +29,47 @@ export default function Home({ images }) {
 }
 
 export async function getStaticProps({ locale }) {
-  let imagesStr = [
-    'public/assets/percurso/001_percurso.png',
-    'public/assets/percurso/002_percurso.png',
-    'public/assets/percurso/003_percurso.png',
-    'public/assets/percurso/004_percurso.png',
-    'public/assets/percurso/005_percurso.png',
-    'public/assets/percurso/006_percurso.png',
-    'public/assets/percurso/007_percurso.png',
-    'public/assets/percurso/008_percurso.png',
-    'public/assets/percurso/009_percurso.png',
-    'public/assets/percurso/010_percurso.png',
-    'public/assets/percurso/026_percurso.png',
-    'public/assets/percurso/027_percurso.png',
-    'public/assets/percurso/028_percurso.png',
-    'public/assets/percurso/029_percurso.png',
-    'public/assets/percurso/030_percurso.png',
-    'public/assets/percurso/031_percurso.png',
-    'public/assets/percurso/032_percurso.png',
-    'public/assets/percurso/033_percurso.png',
-    'public/assets/percurso/034_percurso.png',
-    'public/assets/percurso/035_percurso.png',
-  ];
-
-  imagesStr = Array.from(Array(200), (el, i) => {
+  let imagesThumbStr = Array.from(Array(200), (el, i) => {
     if (i < 9) {
-      return 'public/assets/percurso/00' + (i + 1) + '_percurso.jpg';
+      return 'public/assets/percurso-sm/00' + (i + 1) + '_percurso.jpg';
     } else if (i < 99) {
-      return 'public/assets/percurso/0' + (i + 1) + '_percurso.jpg';
+      return 'public/assets/percurso-sm/0' + (i + 1) + '_percurso.jpg';
     } else {
-      return 'public/assets/percurso/' + (i + 1) + '_percurso.jpg';
+      return 'public/assets/percurso-sm/' + (i + 1) + '_percurso.jpg';
     }
   });
 
-  // console.log(imagesStr);
+  let imagesLargeStr = Array.from(Array(200), (el, i) => {
+    if (i < 9) {
+      return 'public/assets/percurso-lg/00' + (i + 1) + '_percurso.jpg';
+    } else if (i < 99) {
+      return 'public/assets/percurso-lg/0' + (i + 1) + '_percurso.jpg';
+    } else {
+      return 'public/assets/percurso-lg/' + (i + 1) + '_percurso.jpg';
+    }
+  });
 
-  const images = imagesStr.map((string) => ({
-    url: string,
+  const images = imagesThumbStr.map((string, i) => ({
+    url_sm: string,
+    url_lg: imagesLargeStr[i],
   }));
 
-  const imagesWithSizes = await Promise.all(
+  const imagesWithThumbsSizes = await Promise.all(
     images.map(async (image, i) => {
       const imageWithSize = image;
       imageWithSize.size = await probe(
-        fs.createReadStream(path.join(process.cwd(), image.url))
+        fs.createReadStream(path.join(process.cwd(), image.url_sm))
+      );
+
+      return imageWithSize;
+    })
+  );
+
+  const imagesWithAllSizes = await Promise.all(
+    imagesWithThumbsSizes.map(async (image, i) => {
+      const imageWithSize = image;
+      imageWithSize.size = await probe(
+        fs.createReadStream(path.join(process.cwd(), image.url_lg))
       );
 
       return imageWithSize;
@@ -82,7 +79,7 @@ export async function getStaticProps({ locale }) {
   return {
     props: {
       ...(await serverSideTranslations(locale, ['common'])),
-      images: imagesWithSizes,
+      images: imagesWithAllSizes,
     },
   };
 }

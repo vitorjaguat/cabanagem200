@@ -22,13 +22,21 @@ export default function Hero({ images }) {
   const [image2, setImage2] = useState('');
   const [image3, setImage3] = useState('');
   const [image4, setImage4] = useState('');
+  const [image5, setImage5] = useState('');
+  const [image6, setImage6] = useState('');
+  const [image7, setImage7] = useState('');
+  const [image8, setImage8] = useState('');
   useEffect(() => {
     const randomImage = () =>
-      images[Math.floor(Math.random() * images.length)].url.slice(6);
+      images[Math.floor(Math.random() * images.length)].url_lg.slice(6);
     setImage1(randomImage());
     setImage2(randomImage());
     setImage3(randomImage());
     setImage4(randomImage());
+    setImage5(randomImage());
+    setImage6(randomImage());
+    setImage7(randomImage());
+    setImage8(randomImage());
   }, [images]);
   console.log(image1);
 
@@ -46,43 +54,89 @@ export default function Hero({ images }) {
             <div className='w-full h-full md:h-[calc(100vh-4.5rem)] row-span-1 md:col-span-1 bg-black/30'></div>
             <div className='w-full h-full md:h-[calc(100vh-4.5rem)] row-span-1 md:col-span-1 bg-black/10'></div> */}
           <div className='row-span-1 grid grid-cols-2'>
-            <div className='col-span-1 bg-slate-100 object-cover overflow-hidden'>
-              {image1 && (
-                <img
-                  src={image1}
-                  alt=''
-                  className='h-full w-full object-cover'
-                />
-              )}
+            <div className='col-span-1 flex shrink-0 bg-slate-100 overflow-hidden'>
+              <div className=''>
+                {image1 && (
+                  <img
+                    src={image1}
+                    alt=''
+                    className='h-full object-cover shrink-0'
+                  />
+                )}
+              </div>
+              <div className=''>
+                {image2 && (
+                  <img
+                    src={image2}
+                    alt=''
+                    className='h-full object-cover shrink-0'
+                  />
+                )}
+              </div>
             </div>
-            <div className='col-span-1 bg-slate-200'>
-              {image2 && (
-                <img
-                  src={image2}
-                  alt=''
-                  className='h-full w-full object-cover'
-                />
-              )}
+            <div className='col-span-1 flex shrink-0 bg-slate-200'>
+              <div className=''>
+                {image3 && (
+                  <img
+                    src={image3}
+                    alt=''
+                    className='h-full object-cover shrink-0'
+                  />
+                )}
+              </div>
+              <div className=''>
+                {image4 && (
+                  <img
+                    src={image4}
+                    alt=''
+                    className='h-full object-cover shrink-0'
+                  />
+                )}
+              </div>
             </div>
           </div>
           <div className='row-span-1 grid grid-cols-2'>
-            <div className='col-span-1 bg-slate-300'>
-              {image3 && (
-                <img
-                  src={image3}
-                  alt=''
-                  className='h-full w-full object-cover'
-                />
-              )}
+            <div className='col-span-1 flex shrink-0 bg-slate-200'>
+              <div className=''>
+                {image5 && (
+                  <img
+                    src={image5}
+                    alt=''
+                    className='h-full object-cover shrink-0'
+                  />
+                )}
+              </div>
+              <div className=''>
+                {image6 && (
+                  <img
+                    src={image6}
+                    alt=''
+                    className='h-full object-cover shrink-0'
+                  />
+                )}
+              </div>
             </div>
             <div className='col-span-1 bg-slate-400'>
-              {image4 && (
-                <img
-                  src={image4}
-                  alt=''
-                  className='h-full w-full object-cover'
-                />
-              )}
+              <div className='col-span-1 h-full flex shrink-0 bg-slate-200'>
+                <div className=''>
+                  {image7 && (
+                    <img
+                      src={image7}
+                      alt=''
+                      className='h-full object-cover shrink-0'
+                    />
+                  )}
+                </div>
+                <div className=''>
+                  {image8 && (
+                    <img
+                      src={image8}
+                      alt=''
+                      className='h-full object-cover shrink-0'
+                    />
+                  )}
+                </div>
+              </div>
             </div>
           </div>
         </div>
