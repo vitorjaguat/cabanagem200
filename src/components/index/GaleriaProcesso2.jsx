@@ -178,11 +178,11 @@ export default function GaleriaProcesso2({ images }) {
       <div className='flex flex-wrap gap-1'>
         {imagesData.map((image, index) => (
           <div
-            key={image.src}
+            key={image.src_sm}
             className='hover:z-10 flex items-center justify-center overflow-visible max-h-16 max-w-[4rem]'
           >
             <img
-              src={image.src}
+              src={image.src_sm}
               alt='Nheenga Cabana | Imagem de processo'
               className='object-cover w-16 h-16 hover:w-24 hover:h-24 hover:z-10 object-center duration-200 hover:overflow-visible ease-in-out cursor-pointer'
               onClick={() => {
