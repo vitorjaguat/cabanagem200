@@ -6,6 +6,8 @@ import { useState, useEffect } from 'react';
 const headlines = [
   'estoura insurreição popular na Amazônia durante a madrugada',
   'cabanos fazem barricadas de fogo em praça pública de Belém',
+  'Dias seguidos de intensos combates nas ruas de Belém do Pará',
+  'O povo toma o poder na província do Grão-Pará',
   'Império fracassa mais uma vez na contenção da revolta armada',
   'indígenas unem força com a insurreição popular amazônica',
   'Felipe Patroni retorna a Belém e reabre tipografia confiscada',
@@ -13,7 +15,7 @@ const headlines = [
   'Eduardo Angelim, 21 anos, é eleito governador Cabano',
   'Assalto ao Clio: carga saqueada e tripulação aniquilada',
   'Massacre: 20% da população é dizimada após anos de conflito',
-  'Cabanos se rendem na vila de Luséia, entregando as armas',
+  // 'Cabanos se rendem na vila de Luséia, entregando as armas',
 ];
 
 export default function Hero({ images }) {
