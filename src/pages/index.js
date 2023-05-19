@@ -22,7 +22,7 @@ export default function Home({ images }) {
         <Section5PDF />
         <GaleriaProcesso2 images={images} />
         <GaleriaPrompts />
-        <Section4Ed />
+        {/* <Section4Ed /> */}
       </main>
     </>
   );

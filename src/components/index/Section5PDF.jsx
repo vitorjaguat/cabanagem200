@@ -132,7 +132,9 @@ export default function Section5PDF() {
         style={{ writingMode: 'vertical-rl', height: 'calc(100%-20px)' }}
       >
         <div className='h-fit text-[11px] md:text-sm px-3 md:px-4'>
-          <span className='font-bold'>JORNAL PESSOAL</span>
+          <span className='font-bold'>
+            JORNAL PESSOAL | Edição Extraordinária
+          </span>
         </div>
       </div>
 
@@ -152,7 +154,7 @@ export default function Section5PDF() {
 
         {/* PAGES */}
         <div
-          className='h-[466px] md:h-[733px] md:flex overflow-hidden md:overflow-auto'
+          className='h-[467px] md:h-[733px] md:flex overflow-hidden md:overflow-auto'
           style={{
             width:
               mdMediaQuery && pageNumber !== 0 && pageNumber !== 31
@@ -182,7 +184,7 @@ export default function Section5PDF() {
             src={imageData[pageNumber].src}
             width={1350}
             height={1800}
-            className='cursor-pointer'
+            className='cursor-pointer h-[466px] md:h-auto w-[330px] md:w-auto'
             // fill
             alt={imageData[0].alt}
             onClick={() => {
@@ -190,7 +192,7 @@ export default function Section5PDF() {
               setIsOpen(true);
             }}
           />
-          {pageNumber !== 0 && pageNumber !== 31 && (
+          {mdMediaQuery && pageNumber !== 0 && pageNumber !== 31 && (
             <Image
               src={imageData[pageNumber + 1].src}
               width={1350}
@@ -284,13 +286,13 @@ export default function Section5PDF() {
           </button>
         </div>
 
-        <div className='md:hidden w-full flex gap-10 items-center justify-center py-4'>
+        <div className='md:hidden w-full mt-6 flex gap-10 items-center justify-center py-4'>
           <button
             className=''
-            disabled={pageNumber <= 1}
+            disabled={pageNumber <= 0}
             onClick={() => setPageNumber((curr) => curr - 1)}
           >
-            <GrLinkPrevious size={18} />
+            <IoIosArrowBack size={18} />
           </button>
           <div className='text-xs'>página {pageNumber + 1} de 32</div>
           <button
@@ -298,7 +300,7 @@ export default function Section5PDF() {
             disabled={pageNumber >= numPages}
             onClick={() => setPageNumber((curr) => curr + 1)}
           >
-            <GrLinkNext size={18} />
+            <IoIosArrowForward size={18} />
           </button>
         </div>
       </div>
