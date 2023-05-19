@@ -16,7 +16,7 @@ const imgSrcArr = [
     src: '/img/obr1.jpg',
     title: '7 de Janeiro de 1835',
     media:
-      'Impressão em jato de tinta sobre papel de algodão a partir de imagens geradas por aprendizagem de máquina',
+      'Frente: impressão em jato de tinta sobre papel de algodão a partir de imagens geradas por aprendizagem de máquina. Verso: anotações em acetato afixadas sobre painel expográfico',
     measure: '110x110cm',
     year: '2022',
   },
@@ -24,7 +24,7 @@ const imgSrcArr = [
     src: '/img/inst1.jpg',
     title: '7 de Janeiro de 1835',
     media:
-      'Impressão em jato de tinta sobre papel de algodão a partir de imagens geradas por aprendizagem de máquina',
+      'Frente: impressão em jato de tinta sobre papel de algodão a partir de imagens geradas por aprendizagem de máquina. Verso: anotações em acetato afixadas sobre painel expográfico',
     measure: '110x110cm',
     year: '2022',
   },
@@ -32,7 +32,7 @@ const imgSrcArr = [
     src: '/img/obr2.jpg',
     title: '256 cabanxs',
     media:
-      'Impressão em jato de tinta sobre papel de algodão a partir de imagens geradas por aprendizagem de máquina',
+      'Frente: impressão em jato de tinta sobre papel de algodão a partir de imagens geradas por aprendizagem de máquina. Verso: anotações em acetato afixadas sobre painel expográfico',
     measure: '110x110cm',
     year: '2022',
   },
@@ -40,7 +40,7 @@ const imgSrcArr = [
     src: '/img/inst2.jpg',
     title: '256 cabanxs',
     media:
-      'Impressão em jato de tinta sobre papel de algodão a partir de imagens geradas por aprendizagem de máquina',
+      'Frente: impressão em jato de tinta sobre papel de algodão a partir de imagens geradas por aprendizagem de máquina. Verso: anotações em acetato afixadas sobre painel expográfico',
     measure: '110x110cm',
     year: '2022',
   },
@@ -48,7 +48,7 @@ const imgSrcArr = [
     src: '/img/obr3.jpg',
     title: 'Sonho Cabano',
     media:
-      'Impressão em jato de tinta sobre papel de algodão a partir de imagens geradas por aprendizagem de máquina',
+      'Frente: impressão em jato de tinta sobre papel de algodão a partir de imagens geradas por aprendizagem de máquina. Verso: anotações em acetato afixadas sobre painel expográfico',
     measure: '110x110cm',
     year: '2022',
   },
@@ -56,7 +56,7 @@ const imgSrcArr = [
     src: '/img/inst3.jpg',
     title: 'Sonho Cabano',
     media:
-      'Impressão em jato de tinta sobre papel de algodão a partir de imagens geradas por aprendizagem de máquina',
+      'Frente: impressão em jato de tinta sobre papel de algodão a partir de imagens geradas por aprendizagem de máquina. Verso: anotações em acetato afixadas sobre painel expográfico',
     measure: '110x110cm',
     year: '2022',
   },
@@ -133,7 +133,8 @@ export default function Section3() {
             <p className='font-stanleybold text-[11px] md:text-[13px]'>
               {imgSrcArr[0].title}
             </p>
-            <p className=''>{imgSrcArr[0].media}</p>
+            <p className=''>{imgSrcArr[0].media.slice(0, 113)}</p>
+            <p className=''>{imgSrcArr[0].media.slice(114)}</p>
             <p className='text-[9px] md:text-[11px]'>{imgSrcArr[0].measure}</p>
             <p className='text-[9px] md:text-[11px]'>{imgSrcArr[0].year}</p>
           </div>
@@ -173,7 +174,8 @@ export default function Section3() {
             <p className='font-stanleybold text-[11px] md:text-[13px]'>
               {imgSrcArr[2].title}
             </p>
-            <p className=''>{imgSrcArr[2].media}</p>
+            <p className=''>{imgSrcArr[0].media.slice(0, 113)}</p>
+            <p className=''>{imgSrcArr[0].media.slice(114)}</p>
             <p className='text-[9px] md:text-[11px]'>{imgSrcArr[2].measure}</p>
             <p className='text-[9px] md:text-[11px]'>{imgSrcArr[2].year}</p>
           </div>
@@ -213,7 +215,8 @@ export default function Section3() {
             <p className='font-stanleybold text-[11px] md:text-[13px]'>
               {imgSrcArr[4].title}
             </p>
-            <p className=''>{imgSrcArr[4].media}</p>
+            <p className=''>{imgSrcArr[0].media.slice(0, 113)}</p>
+            <p className=''>{imgSrcArr[0].media.slice(114)}</p>
             <p className='text-[9px] md:text-[11px]'>{imgSrcArr[4].measure}</p>
             <p className='text-[9px] md:text-[11px]'>{imgSrcArr[4].year}</p>
           </div>
