@@ -11,6 +11,8 @@ module.exports = {
       fontFamily: {
         stanley: ['var(--stanley-font)'],
         stanleybold: ['var(--stanleybold-font)'],
+        stanleybolditalic: ['var(--stanleybolditalic-font)'],
+        stanleyitalic: ['var(--stanleyitalic-font)'],
       },
     },
   },

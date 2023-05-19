@@ -6,14 +6,26 @@ export default function Section2() {
           <span className='tracking-[1.5px] font-stanleybold text-[15px]'>
             cabanagem200
           </span>{' '}
-          apresenta <span className='font-bold'>Nheenga Cabana</span>, um
+          apresenta{' '}
+          <span className=' font-stanleybolditalic'>Nheenga Cabana</span>, um
           conjunto de trabalhos de Giseli Vasconcelos e Pedro Victor Brandão que
           trata da Revolução da Cabanagem ocorrida no período regencial, quando
-          insurgências eclodiram no Brasil durante o século XIX. O projeto se
-          deu a partir da leitura dos escritos e arquivos sobre a Cabanagem do
-          jornalista e sociólogo paraense Lúcio Flávio Pinto, postados no blog{' '}
+          insurgências eclodiram no Brasil durante o século XIX. O projeto foi
+          comissionado pelo Museu de Arte Moderna do Rio de Janeiro para a
+          exposição{' '}
           <a
-            className='text-slate-700 tracking-tight font-stanley'
+            className='text-slate-700 tracking-tight font-stanleybold'
+            href='https://mam.rio/programacao/atos-de-revolta/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            Atos de revolta: outros imaginários sobre independência
+          </a>{' '}
+          e se deu a partir da leitura dos escritos e arquivos sobre a Cabanagem
+          do jornalista e sociólogo paraense Lúcio Flávio Pinto, postados no
+          blog{' '}
+          <a
+            className='text-slate-700 tracking-tight font-stanleybold'
             href='https://cabanagem180.wordpress.com'
             target='_blank'
             rel='noreferrer'
@@ -24,17 +36,20 @@ export default function Section2() {
         </p>{' '}
         <p className='pb-4 md:pb-2'>
           Ao longo do processo, editamos uma edição extraordinária do{' '}
-          <span className='font-bold'>Jornal Pessoal</span> de Lúcio sobre esse
-          período e co-criamos imagens com versões iniciais de tecnologias
-          recentes de aprendizagem de máquina (MidJourney, DALL-E 2, Stable
-          Difusion) para criar uma iconografia contemporânea sobre uma revolução
-          que colocou, pela primeira vez, o povo no poder.
+          <span className='font-stanleybolditalic'>Jornal Pessoal</span> de
+          Lúcio sobre esse período e co-criamos imagens com versões iniciais de
+          tecnologias recentes de aprendizagem de máquina (MidJourney, DALL-E 2,
+          Stable Difusion) para inventar uma iconografia contemporânea sobre uma
+          revolução que colocou, pela primeira vez, o povo no poder.
         </p>
         <p>
           Reunimos aqui os materiais apresentados na instalação com painéis
           expográficos para livre acesso, incluindo os arquivos digitais das 3
-          impressões de grande formato e também o arquivo em PDF da edição
-          extraordinária do Jornal Pessoal.
+          impressões de grande formato, o arquivo em PDF da edição
+          extraordinária do{' '}
+          <span className='font-stanleybolditalic'>Jornal Pessoal</span>; e
+          também imagens e entradas de texto (prompts) feitas durante o
+          processo.
         </p>
       </div>
     </div>

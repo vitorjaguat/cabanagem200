@@ -16,6 +16,18 @@ const stanleybold = localFont({
   display: 'block',
 });
 
+const stanleyitalic = localFont({
+  src: '../../public/assets/fonts/stanley-italic.woff2',
+  variable: '--stanleyitalic-font',
+  display: 'block',
+});
+
+const stanleybolditalic = localFont({
+  src: '../../public/assets/fonts/stanley-bolditalic.woff2',
+  variable: '--stanleybolditalic-font',
+  display: 'block',
+});
+
 const App = ({ Component, pageProps }) => {
   return (
     <>
@@ -65,7 +77,7 @@ const App = ({ Component, pageProps }) => {
         <meta property='og:locale' content='en_US' />
       </Head>
       <div
-        className={`${stanley.variable} ${stanleybold.variable} font-stanley`}
+        className={`${stanley.variable} ${stanleybold.variable} ${stanleyitalic.variable} ${stanleybolditalic.variable} font-stanley`}
       >
         <Navbar />
         <Component {...pageProps} />
