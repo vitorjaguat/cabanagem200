@@ -98,10 +98,10 @@ export default function Section3() {
         </div>
       </div>
 
-      <div className='flex flex-col items-center md:pt-4'>
+      <div className='flex flex-col md:pt-4'>
         <div
           id='obra1'
-          className='grid grid-rows-2 md:grid-cols-5 w-full h-fit gap-2 md:gap-4 pr-2 md:pr-0'
+          className='grid grid-rows-2 grid-cols-1 md:grid-rows-1 md:grid-cols-5 w-full h-fit gap-2 md:gap-4 pr-2 md:pr-0 pb-8 md:pb-4'
         >
           <div className='row-span-1 md:col-span-2'>
             <Image
@@ -109,7 +109,7 @@ export default function Section3() {
               alt={imgSrcArr[0].title}
               width={1500}
               height={1500}
-              className=''
+              className='cursor-pointer'
               onClick={() => {
                 setCurrentImageIndex(0);
                 setIsOpen(true);
@@ -122,20 +122,100 @@ export default function Section3() {
               alt={imgSrcArr[1].title}
               width={1500}
               height={1500}
-              className=''
+              className='cursor-pointer'
               onClick={() => {
-                setCurrentImageIndex(0);
+                setCurrentImageIndex(1);
                 setIsOpen(true);
               }}
             />
           </div>
           <div className='col-span-1 flex flex-col justify-end leading-3 text-[10px] md:text-xs md:pr-4 text-right md:text-left pl-[40%] md:pl-0'>
-            <p className='font-stanleybold text-[11px] md:text-[13px] leading-4'>
+            <p className='font-stanleybold text-[11px] md:text-[13px]'>
               {imgSrcArr[0].title}
             </p>
             <p className=''>{imgSrcArr[0].media}</p>
-            <p className=''>{imgSrcArr[0].measure}</p>
-            <p className=''>{imgSrcArr[0].date}</p>
+            <p className='text-[9px] md:text-[11px]'>{imgSrcArr[0].measure}</p>
+            <p className='text-[9px] md:text-[11px]'>{imgSrcArr[0].year}</p>
+          </div>
+        </div>
+
+        <div
+          id='obra2'
+          className='grid grid-rows-2 grid-cols-1 md:grid-rows-1 md:grid-cols-5 w-full h-fit gap-2 md:gap-4 pr-2 md:pr-0 pb-8 md:pb-4'
+        >
+          <div className='row-span-1 md:col-span-2'>
+            <Image
+              src={imgSrcArr[2].src}
+              alt={imgSrcArr[2].title}
+              width={1500}
+              height={1500}
+              className='cursor-pointer'
+              onClick={() => {
+                setCurrentImageIndex(2);
+                setIsOpen(true);
+              }}
+            />
+          </div>
+          <div className='row-span-1 md:col-span-2'>
+            <Image
+              src={imgSrcArr[3].src}
+              alt={imgSrcArr[3].title}
+              width={1500}
+              height={1500}
+              className='cursor-pointer'
+              onClick={() => {
+                setCurrentImageIndex(3);
+                setIsOpen(true);
+              }}
+            />
+          </div>
+          <div className='col-span-1 flex flex-col justify-end leading-3 text-[10px] md:text-xs md:pr-4 text-right md:text-left pl-[40%] md:pl-0'>
+            <p className='font-stanleybold text-[11px] md:text-[13px]'>
+              {imgSrcArr[2].title}
+            </p>
+            <p className=''>{imgSrcArr[2].media}</p>
+            <p className='text-[9px] md:text-[11px]'>{imgSrcArr[2].measure}</p>
+            <p className='text-[9px] md:text-[11px]'>{imgSrcArr[2].year}</p>
+          </div>
+        </div>
+
+        <div
+          id='obra3'
+          className='grid grid-rows-2 grid-cols-1 md:grid-rows-1 md:grid-cols-5 w-full h-fit gap-2 md:gap-4 pr-2 md:pr-0 pb-8 md:pb-4'
+        >
+          <div className='row-span-1 md:col-span-2'>
+            <Image
+              src={imgSrcArr[4].src}
+              alt={imgSrcArr[4].title}
+              width={1500}
+              height={1500}
+              className='cursor-pointer'
+              onClick={() => {
+                setCurrentImageIndex(4);
+                setIsOpen(true);
+              }}
+            />
+          </div>
+          <div className='row-span-1 md:col-span-2'>
+            <Image
+              src={imgSrcArr[5].src}
+              alt={imgSrcArr[5].title}
+              width={1500}
+              height={1500}
+              className='cursor-pointer'
+              onClick={() => {
+                setCurrentImageIndex(5);
+                setIsOpen(true);
+              }}
+            />
+          </div>
+          <div className='col-span-1 flex flex-col justify-end leading-3 text-[10px] md:text-xs md:pr-4 text-right md:text-left pl-[40%] md:pl-0'>
+            <p className='font-stanleybold text-[11px] md:text-[13px]'>
+              {imgSrcArr[4].title}
+            </p>
+            <p className=''>{imgSrcArr[4].media}</p>
+            <p className='text-[9px] md:text-[11px]'>{imgSrcArr[4].measure}</p>
+            <p className='text-[9px] md:text-[11px]'>{imgSrcArr[4].year}</p>
           </div>
         </div>
 
