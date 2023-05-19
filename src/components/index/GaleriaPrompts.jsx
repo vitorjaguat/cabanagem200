@@ -348,7 +348,7 @@ export default function GaleriaPrompts() {
               if (prompt) {
                 return (
                   <div
-                    className=' hover:scale-[3.5] cursor-default m-1 p-2 bg-white text-[4px] duration-700'
+                    className={`hover:scale-[3.5] cursor-default m-1 p-2 bg-[#efefef] text-[4px] duration-500 rounded-sm ease-in-out`}
                     key={prompt}
                   >
                     {prompt}

@@ -42,8 +42,8 @@ export default function Navbar() {
             <div
               className={
                 !shadow
-                  ? 'w-[100px] md:w-[200px] px-1 text-[15px] md:text-3xl uppercase tracking-widest md:tracking-[2.5px] duration-700 ease-in-out'
-                  : 'w-[100px] md:w-[200px] px-1 text-[12px] md:text-[15px] uppercase font-stanleybold tracking-widest md:tracking-[2.5px] duration-700 ease-in-out'
+                  ? 'w-[100px] md:w-[200px] px-1 text-2xl md:text-3xl uppercase tracking-widest md:tracking-[2.5px] duration-700 ease-in-out'
+                  : 'w-[100px] md:w-[200px] px-1 text-[14px] md:text-[15px] uppercase font-stanleybold tracking-widest md:tracking-[2.5px] duration-700 ease-in-out'
               }
             >
               cabanagem200

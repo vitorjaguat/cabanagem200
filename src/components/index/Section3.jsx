@@ -8,6 +8,8 @@ import obr3Img from '../../../public/img/obr3.jpg';
 import { useEffect, useRef, useState } from 'react';
 import Section3Item from './Section3Item';
 import Section3ItemJ from './Section3ItemJ';
+import Lightbox from 'react-spring-lightbox';
+import { IoIosArrowForward, IoClose, IoIosArrowBack } from 'react-icons/io';
 
 const imgSrcArr = [
   {
@@ -61,15 +63,26 @@ const imgSrcArr = [
 ];
 
 export default function Section3() {
-  const img1Ref = useRef();
-  const [showTitle1, setShowTitle1] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const [mousePosition, setMousePosition] = useState({
-    x: 0,
-    y: 0,
-  });
+  //constructins ImagesData for Lightbox:
+  const imagesData = imgSrcArr.map((item) => ({
+    src: item.src,
+    width: 1500,
+    height: 1500,
+    alt: item.title,
+    loading: 'lazy',
+  }));
+  // console.log(imagesData);
 
-  // console.log(mousePosition);
+  //Lightbox functions:
+  const gotoPrevious = () =>
+    currentImageIndex > 0 && setCurrentImageIndex(currentImageIndex - 1);
+  const gotoNext = () =>
+    currentImageIndex + 1 < imagesData.length &&
+    setCurrentImageIndex(currentImageIndex + 1);
+  const onClose = () => setIsOpen(false);
 
   return (
     <div className='flex w-full'>
@@ -86,8 +99,67 @@ export default function Section3() {
       </div>
 
       <div className='flex flex-col items-center md:pt-4'>
+        <div
+          id='obra1'
+          className='grid grid-rows-2 md:grid-cols-5 w-full h-fit gap-2 md:gap-4 pr-2 md:pr-0'
+        >
+          <div className='row-span-1 md:col-span-2'>
+            <Image
+              src={imgSrcArr[0].src}
+              alt={imgSrcArr[0].title}
+              width={1500}
+              height={1500}
+              className=''
+              onClick={() => {
+                setCurrentImageIndex(0);
+                setIsOpen(true);
+              }}
+            />
+          </div>
+          <div className='row-span-1 md:col-span-2'>
+            <Image
+              src={imgSrcArr[1].src}
+              alt={imgSrcArr[1].title}
+              width={1500}
+              height={1500}
+              className=''
+              onClick={() => {
+                setCurrentImageIndex(0);
+                setIsOpen(true);
+              }}
+            />
+          </div>
+          <div className='col-span-1 flex flex-col justify-end leading-3 text-[10px] md:text-xs md:pr-4 text-right md:text-left pl-[40%] md:pl-0'>
+            <p className='font-stanleybold text-[11px] md:text-[13px] leading-4'>
+              {imgSrcArr[0].title}
+            </p>
+            <p className=''>{imgSrcArr[0].media}</p>
+            <p className=''>{imgSrcArr[0].measure}</p>
+            <p className=''>{imgSrcArr[0].date}</p>
+          </div>
+        </div>
+
+        <Lightbox
+          isOpen={isOpen}
+          onPrev={gotoPrevious}
+          onNext={gotoNext}
+          onClose={onClose}
+          images={imagesData}
+          currentIndex={currentImageIndex}
+          singleClickToZoom
+          renderPrevButton={({ canPrev }) =>
+            canPrev && <PrevButton gotoPrevious={gotoPrevious} />
+          }
+          renderNextButton={({ canNext }) =>
+            canNext && <NextButton setIsOpen={setIsOpen} gotoNext={gotoNext} />
+          }
+          renderImageOverlay={() => (
+            <Overlay isOpen={isOpen} setIsOpen={setIsOpen} />
+          )}
+        />
+
         {/* IMAGES */}
-        <Section3Item
+        {/* <Section3Item
           obrImg={obr1Img}
           instImg={inst1Img}
           title='7 de Janeiro de 1835'
@@ -116,111 +188,47 @@ export default function Section3() {
           date='2022'
           modalNumber1={4}
           modalNumber2={5}
-        />
-        {/* <Section3ItemJ /> */}
-        {/* <div className='w-full flex flex-col items-center'>
-          <div
-            className='flex flex-col md:flex-row gap-2 md:gap-4 relative cursor-none'
-            ref={img1Ref}
-            onMouseMove={handleMouseEnter1}
-            onMouseLeave={() => setMousePosition({ x: 0, y: 0 })}
-          >
-            <div className='cursor-none'>
-              <Image src={obr1Img} alt='7 de Janeiro de 1835' />
-            </div>
-            <div className='flex md:block pr-2 md:pr-4 cursor-none'>
-              <Image
-                src={inst1Img}
-                className='w-[200px] md:w-auto'
-                alt='7 de Janeiro de 1835'
-              />
-              <div className='md:hidden pl-2 flex flex-col justify-end'>
-                <p className='font-stanleybold text-[10px] leading-tight'>
-                  7 de Janeiro de 1835
-                </p>
-                <p className='leading-0 text-[9px] leading-tight'>
-                  Impressão em jato de tinta sobre papel de algodão a partir de
-                  imagens geradas por aprendizagem de máquina
-                </p>
-                <p className='text-[9px] leading-tight'>110x110cm</p>
-                <p className='text-[9px] leading-tight'>2022</p>
-              </div>
-            </div>
-
-            <div
-              className='bg-[#00000090] py-2 pr-3 pl-4 max-w-[200px] text-slate-200 tracking-wide rounded-sm absolute cursor-none'
-              style={{
-                display: mousePosition.x !== 0 ? 'block' : 'none',
-                top: mousePosition.y,
-                left: mousePosition.x,
-              }}
-            >
-              <p className='font-stanleybold text-[13px] leading-5'>
-                7 de Janeiro de 1835
-              </p>
-              <p className='leading-4 text-[13px]'>
-                Impressão em jato de tinta sobre papel de algodão a partir de
-                imagens geradas por aprendizagem de máquina
-              </p>
-              <p className='text-[13px] leading-4'>110x110cm</p>
-              <p className='text-[13px] leading-4'>2022</p>
-            </div>
-          </div>
-          <div className='h-4 md:h-16 w-[80%] border-b-[1px] border-dotted border-black'></div>
-        </div> */}
-
+        /> */}
         {/* IMAGE 2 */}
-        {/* <div className='pt-4 md:pt-16 w-full flex flex-col items-center'>
-          <div
-            className='flex flex-col md:flex-row gap-2 md:gap-4 relative cursor-none'
-            ref={img1Ref}
-            onMouseMove={handleMouseEnter1}
-            onMouseLeave={() => setMousePosition({ x: 0, y: 0 })}
-          >
-            <div className='cursor-none'>
-              <Image src={obr1Img} alt='7 de Janeiro de 1835' />
-            </div>
-            <div className='flex md:block pr-2 md:pr-4 cursor-none'>
-              <Image
-                src={inst1Img}
-                className='w-[200px] md:w-auto'
-                alt='7 de Janeiro de 1835'
-              />
-              <div className='md:hidden pl-2 flex flex-col justify-end'>
-                <p className='font-stanleybold text-[10px] leading-tight'>
-                  7 de Janeiro de 1835
-                </p>
-                <p className='leading-0 text-[9px] leading-tight'>
-                  Impressão em jato de tinta sobre papel de algodão a partir de
-                  imagens geradas por aprendizagem de máquina
-                </p>
-                <p className='text-[9px] leading-tight'>110x110cm</p>
-                <p className='text-[9px] leading-tight'>2022</p>
-              </div>
-            </div>
-
-            <div
-              className='bg-[#00000090] py-2 pr-3 pl-4 max-w-[200px] text-slate-200 tracking-wide rounded-sm absolute cursor-none'
-              style={{
-                display: mousePosition.x !== 0 ? 'block' : 'none',
-                top: mousePosition.y,
-                left: mousePosition.x,
-              }}
-            >
-              <p className='font-stanleybold text-[13px] leading-5'>
-                7 de Janeiro de 1835
-              </p>
-              <p className='leading-4 text-[13px]'>
-                Impressão em jato de tinta sobre papel de algodão a partir de
-                imagens geradas por aprendizagem de máquina
-              </p>
-              <p className='text-[13px] leading-4'>110x110cm</p>
-              <p className='text-[13px] leading-4'>2022</p>
-            </div>
-          </div>
-          <div className='h-4 md:h-16 w-[80%] border-b-[1px] border-dotted border-black'></div>
-        </div> */}
       </div>
     </div>
   );
 }
+
+const PrevButton = ({ gotoPrevious }) => {
+  return (
+    <div
+      className='absolute top-[50%] -translate-y-[50%] left-0 p-4 z-[10] cursor-pointer hidden sm:block'
+      onClick={gotoPrevious}
+    >
+      <IoIosArrowBack size={40} color={'#d1d1d1'} />
+    </div>
+  );
+};
+const NextButton = ({ gotoNext, setIsOpen }) => {
+  return (
+    <>
+      <div
+        className='absolute top-[50%] -translate-y-[50%] right-0 p-4 z-[10] cursor-pointer hidden sm:block select-none'
+        onClick={gotoNext}
+      >
+        <IoIosArrowForward size={40} color={'#d1d1d1'} />
+      </div>
+      <div
+        className='top-4 right-4 absolute text-[#d1d1d1] sm:hidden'
+        onClick={() => setIsOpen(false)}
+      >
+        x
+      </div>
+    </>
+  );
+};
+const Overlay = ({ setIsOpen, isOpen }) => {
+  return (
+    <div
+      className='fixed right-0 top-0 bg-black/80 w-full h-screen z-[-100]'
+      //   style={{ display: isOpen ? 'block' : 'hidden' }}
+      onClick={() => setIsOpen(false)}
+    ></div>
+  );
+};
