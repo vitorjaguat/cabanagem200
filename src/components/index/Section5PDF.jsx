@@ -133,37 +133,37 @@ export default function Section5PDF() {
       >
         <div className='h-fit text-[11px] md:text-sm px-3 md:px-4'>
           <span className='font-bold'>
-            JORNAL PESSOAL | Edição Extraordinária
+            JORNAL PESSOAL&ensp;&ensp;Edição Extraordinária
           </span>
         </div>
       </div>
-
-      <div className='relative flex flex-col md:flex-row justify-center md:pt-4 w-full overflow-hidden'>
-        {/* <div className='hidden md:block absolute top-4 right-4 text-sm'>
+      <div className='flex flex-col justify-center md:pt-4 w-full overflow-hidden'>
+        <div className='relative flex flex-col md:flex-row justify-center w-full overflow-hidden'>
+          {/* <div className='hidden md:block absolute top-4 right-4 text-sm'>
           página {pageNumber} de {numPages}
         </div> */}
-        <div className='hidden w-fit md:flex mr-3 h-full flex-col justify-center'>
-          <button
-            className='cursor-pointer'
-            disabled={pageNumber <= 0}
-            onClick={() => prevPage()}
-          >
-            <IoIosArrowBack size={25} />
-          </button>
-        </div>
+          <div className='hidden w-fit md:flex mr-3 h-full flex-col justify-center'>
+            <button
+              className='cursor-pointer'
+              disabled={pageNumber <= 0}
+              onClick={() => prevPage()}
+            >
+              <IoIosArrowBack size={25} />
+            </button>
+          </div>
 
-        {/* PAGES */}
-        <div
-          className='h-[467px] md:h-[733px] md:flex overflow-hidden md:overflow-auto'
-          style={{
-            width:
-              mdMediaQuery && pageNumber !== 0 && pageNumber !== 31
-                ? '1100px'
-                : '550px',
-          }}
-          // ref={containerRef}
-        >
-          {/* <Document
+          {/* PAGES */}
+          <div
+            className='h-[467px] md:h-[733px] md:flex overflow-hidden md:overflow-auto'
+            style={{
+              width:
+                mdMediaQuery && pageNumber !== 0 && pageNumber !== 31
+                  ? '1100px'
+                  : '550px',
+            }}
+            // ref={containerRef}
+          >
+            {/* <Document
             file='/assets/jornal_pessoal_web.pdf'
             onLoadSuccess={() => {
               onDocumentLoadSuccess({ numPages: 32 });
@@ -180,24 +180,11 @@ export default function Section5PDF() {
             // style={{ display: 'flex', alignItems: 'center' }}
             // renderMode='svg'
           > */}
-          <Image
-            src={imageData[pageNumber].src}
-            width={1350}
-            height={1800}
-            className='cursor-pointer h-[466px] md:h-auto w-[330px] md:w-auto'
-            // fill
-            alt={imageData[0].alt}
-            onClick={() => {
-              setCurrentImageIndex(pageNumber);
-              setIsOpen(true);
-            }}
-          />
-          {mdMediaQuery && pageNumber !== 0 && pageNumber !== 31 && (
             <Image
-              src={imageData[pageNumber + 1].src}
+              src={imageData[pageNumber].src}
               width={1350}
               height={1800}
-              className='cursor-pointer'
+              className='cursor-pointer h-[466px] md:h-auto w-[330px] md:w-auto'
               // fill
               alt={imageData[0].alt}
               onClick={() => {
@@ -205,30 +192,43 @@ export default function Section5PDF() {
                 setIsOpen(true);
               }}
             />
-          )}
-
-          <Lightbox
-            isOpen={isOpen}
-            onPrev={gotoPrevious}
-            onNext={gotoNext}
-            onClose={onClose}
-            images={imageData}
-            currentIndex={currentImageIndex}
-            singleClickToZoom
-            renderPrevButton={({ canPrev }) =>
-              canPrev && <PrevButton gotoPrevious={gotoPrevious} />
-            }
-            renderNextButton={({ canNext }) =>
-              canNext && (
-                <NextButton setIsOpen={setIsOpen} gotoNext={gotoNext} />
-              )
-            }
-            renderImageOverlay={() => (
-              <Overlay isOpen={isOpen} setIsOpen={setIsOpen} />
+            {mdMediaQuery && pageNumber !== 0 && pageNumber !== 31 && (
+              <Image
+                src={imageData[pageNumber + 1].src}
+                width={1350}
+                height={1800}
+                className='cursor-pointer'
+                // fill
+                alt={imageData[0].alt}
+                onClick={() => {
+                  setCurrentImageIndex(pageNumber);
+                  setIsOpen(true);
+                }}
+              />
             )}
-          />
 
-          {/* <Page
+            <Lightbox
+              isOpen={isOpen}
+              onPrev={gotoPrevious}
+              onNext={gotoNext}
+              onClose={onClose}
+              images={imageData}
+              currentIndex={currentImageIndex}
+              singleClickToZoom
+              renderPrevButton={({ canPrev }) =>
+                canPrev && <PrevButton gotoPrevious={gotoPrevious} />
+              }
+              renderNextButton={({ canNext }) =>
+                canNext && (
+                  <NextButton setIsOpen={setIsOpen} gotoNext={gotoNext} />
+                )
+              }
+              renderImageOverlay={() => (
+                <Overlay isOpen={isOpen} setIsOpen={setIsOpen} />
+              )}
+            />
+
+            {/* <Page
             // width={smScreen ? '200' : '400'}
             width={mdMediaQuery ? 550 : 350}
             renderTextLayer={false}
@@ -248,7 +248,7 @@ export default function Section5PDF() {
 
             // }
           /> */}
-          {/* {mdMediaQuery && pageNumber !== 1 && pageNumber < numPages && (
+            {/* {mdMediaQuery && pageNumber !== 1 && pageNumber < numPages && (
             <Page
               // width={smScreen ? '200' : '400'}
               width={mdMediaQuery ? 550 : 350}
@@ -268,40 +268,62 @@ export default function Section5PDF() {
               // }
             />
           )} */}
-          {/* </Document> */}
-          {/* <iframe
+            {/* </Document> */}
+            {/* <iframe
             src='/assets/jornal-pessoal-edext.pdf'
             // frameborder='0'
             className='w-[600px] h-[900px]'
           ></iframe> */}
+          </div>
+
+          <div className='hidden md:flex ml-3 h-full flex-col justify-center'>
+            <button
+              className='cursor-pointer'
+              disabled={pageNumber >= numPages}
+              onClick={() => nextPage()}
+            >
+              <IoIosArrowForward size={25} />
+            </button>
+          </div>
+
+          <div className='md:hidden w-full mt-3 flex flex-col items-center'>
+            <div className=' flex gap-10 items-center justify-center py-4'>
+              <button
+                className=''
+                disabled={pageNumber <= 0}
+                onClick={() => setPageNumber((curr) => curr - 1)}
+              >
+                <IoIosArrowBack size={18} />
+              </button>
+              <div className='text-xs'>página {pageNumber + 1} de 32</div>
+              <button
+                className=''
+                disabled={pageNumber >= numPages}
+                onClick={() => setPageNumber((curr) => curr + 1)}
+              >
+                <IoIosArrowForward size={18} />
+              </button>
+            </div>
+            <div className='mt-8 flex justify-center w-full pr-1'>
+              <a
+                href='/assets/jornal-pessoal-edext.pdf'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <div className='px-4 py-2 bg-black/20 text-xs'>BAIXAR PDF</div>
+              </a>
+            </div>
+          </div>
         </div>
 
-        <div className='hidden md:flex ml-3 h-full flex-col justify-center'>
-          <button
-            className='cursor-pointer'
-            disabled={pageNumber >= numPages}
-            onClick={() => nextPage()}
+        <div className='hidden md:flex mt-8 justify-center w-full pr-1'>
+          <a
+            href='/assets/jornal-pessoal-edext.pdf'
+            target='_blank'
+            rel='noopener noreferrer'
           >
-            <IoIosArrowForward size={25} />
-          </button>
-        </div>
-
-        <div className='md:hidden w-full mt-6 flex gap-10 items-center justify-center py-4'>
-          <button
-            className=''
-            disabled={pageNumber <= 0}
-            onClick={() => setPageNumber((curr) => curr - 1)}
-          >
-            <IoIosArrowBack size={18} />
-          </button>
-          <div className='text-xs'>página {pageNumber + 1} de 32</div>
-          <button
-            className=''
-            disabled={pageNumber >= numPages}
-            onClick={() => setPageNumber((curr) => curr + 1)}
-          >
-            <IoIosArrowForward size={18} />
-          </button>
+            <div className='px-4 py-2 bg-black/20 text-xs'>BAIXAR PDF</div>
+          </a>
         </div>
       </div>
     </div>

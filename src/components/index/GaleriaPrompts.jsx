@@ -340,8 +340,17 @@ export default function GaleriaPrompts() {
   );
 
   return (
-    <div className='w-full'>
-      <div className='w-full'>
+    <div className='flex py-20'>
+      {/* STICKY TITLE */}
+      <div
+        className='w-14 md:w-20 h-fit flex items-center sticky top-14 md:pt-4 shrink-0'
+        style={{ writingMode: 'vertical-rl' }}
+      >
+        <div className='h-fit text-[11px] md:text-sm px-3 md:px-4'>
+          <span className='font-bold'>ARQUIVO: ENTRADAS DE TEXTO</span>
+        </div>
+      </div>
+      <div className='w-full pt-4'>
         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 8 }}>
           <Masonry>
             {prompts.map((prompt) => {

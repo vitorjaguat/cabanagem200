@@ -154,7 +154,7 @@ export default function Hero({ images }) {
           >
             {headlines[Math.floor(Math.random() * headlines.length)] ||
               'estoura insurreição popular na Amazônia durante a madrugada'}
-            &nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;
           </Marquee>
         </div>
       </div>
