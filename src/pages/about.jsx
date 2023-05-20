@@ -14,10 +14,10 @@ export default function About() {
         <div className='mb-4'>
           <span className='font-stanleybold'>cabanagem200</span> é um site que
           mostra de forma permanente arquivos do conjunto de trabalhos{' '}
-          <span className='font-stanleyitalic'>Nheenga Cabana</span>,
+          <span className='font-stanleybolditalic'>Nheenga Cabana</span>,
           apresentando com destaque a edição extraordinária do{' '}
-          <span className='font-stanleyitalic'>Jornal Pessoal</span> de Lúcio
-          Flávio Pinto, a ficha técnica de todo o projeto, materiais de
+          <span className='font-stanleybolditalic'>Jornal Pessoal</span> de
+          Lúcio Flávio Pinto, a ficha técnica de todo o projeto, materiais de
           imprensa, os arquivos de imagem co-criados com inteligências
           artificiais exibidos no MAM-Rio e também uma seleção de arquivos de
           imagens inéditos. O site exibe conteúdos de mídia hospedados com IPFS

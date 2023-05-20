@@ -158,8 +158,8 @@ export default function Section5PDF() {
             style={{
               width:
                 mdMediaQuery && pageNumber !== 0 && pageNumber !== 31
-                  ? '1100px'
-                  : '550px',
+                  ? '1050px'
+                  : '525px',
             }}
             // ref={containerRef}
           >

@@ -5,8 +5,10 @@ import Image from 'next/image';
 export default function Press() {
   return (
     <div className='pt-10 md:pt-12 h-full bg-[#e1e1e1]'>
-      <div className='w-full h-[60vh] flex justify-end items-end text-4xl pr-4 pb-4 bg-black/20'>
-        IMPRENSA
+      <div className='w-full h-[60vh]  bg-black/20'>
+        <div className='flex justify-end items-end text-4xl pb-4 max-w-[1000px] w-full h-full mx-auto'>
+          IMPRENSA
+        </div>
       </div>
       <div className='max-w-[1000px] py-20 mx-auto flex flex-col gap-12'>
         {/* CARD */}
