@@ -1,5 +1,6 @@
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import { TagCloud } from 'react-tagcloud';
+import { Carousel } from 'react-configurable-carousel';
 
 const prompts = [
   'Focal length 16mm. f/11. 1/60s. ISO 100. Film Still POV of an Igapó in the amazonian forest. It is possible to see the river and the sky. Aerial roots can be seen in the margins. Giant exemplars of one samaúma tree, bromélias tocha de fogo, vitórias-régias and aningas de várzea are also present and it is possible to see their flowers. An ocelot-pirarucu makes an appearance. A bunch of cabana coins are blended with brown shaky waters. A fragata is burning in the sky, with fire and flames. Nheenga cabana flag in the center. ',
@@ -320,38 +321,55 @@ export default function GaleriaPrompts() {
   // console.log(data);
 
   //TagCloud custom renderer:
-  const customRenderer = (tag, size, color) => (
-    <span
-      key={tag.key}
-      style={{
-        maxWidth: '200px',
-        maxHeight: '200px',
-        width: 'content-fit',
-        height: 'content-fit',
-        padding: '2px',
-        fontSize: `${size}px`,
-        display: 'block',
-      }}
-      className='hover:scale-125 hover:text-blue-300 duration-300 hover:bg-black hover:text-[#d1d1d1]'
-      // onMouseEnter={}
-    >
-      {tag.value}
-    </span>
-  );
+  // const customRenderer = (tag, size, color) => (
+  //   <span
+  //     key={tag.key}
+  //     style={{
+  //       maxWidth: '200px',
+  //       maxHeight: '200px',
+  //       width: 'content-fit',
+  //       height: 'content-fit',
+  //       padding: '2px',
+  //       fontSize: `${size}px`,
+  //       display: 'block',
+  //     }}
+  //     className='hover:scale-125 hover:text-blue-300 duration-300 hover:bg-black hover:text-[#d1d1d1]'
+  //     // onMouseEnter={}
+  //   >
+  //     {tag.value}
+  //   </span>
+  // );
 
   return (
-    <div className='flex pt-8' id='prompts'>
+    <div className='flex pt-8 pb-20' id='prompts'>
       {/* STICKY TITLE */}
       <div
         className='w-14 md:w-20 h-fit flex items-center sticky top-14 md:pt-4 shrink-0'
         style={{ writingMode: 'vertical-rl' }}
       >
         <div className='h-fit text-[11px] md:text-sm px-3 md:px-4'>
-          <span className='font-bold'>ARQUIVO: ENTRADAS DE TEXTO</span>
+          <span className='font-bold'>ARQUIVO&ensp;&ensp;</span>
+          <span>ENTRADAS DE TEXTO</span>
         </div>
       </div>
-      <div className='w-full pt-4'>
-        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 8 }}>
+      <div className='w-full pb-20 pt-4 flex justify-center'>
+        <Carousel
+          arrows={true}
+          // dotsNavigation={true}
+          // dotsNavigationInside={true}
+          width={'95%'}
+          height={'400px'}
+          carouselStyle={'3d'}
+          outOfFocusDarken={true}
+        >
+          {data.map((item, i) => (
+            <div className='text-[11px] md:text-sm p-4 md:px-6 h-full flex items-center bg-slate-100'>
+              {item.value}
+            </div>
+          ))}
+        </Carousel>
+
+        {/* <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 8 }}>
           <Masonry>
             {prompts.map((prompt) => {
               if (prompt) {
@@ -366,7 +384,7 @@ export default function GaleriaPrompts() {
               }
             })}
           </Masonry>
-        </ResponsiveMasonry>
+        </ResponsiveMasonry> */}
         {/* <TagCloud
           minSize={4}
           maxSize={12}

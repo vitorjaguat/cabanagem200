@@ -132,9 +132,8 @@ export default function Section5PDF() {
         style={{ writingMode: 'vertical-rl', height: 'calc(100%-20px)' }}
       >
         <div className='h-fit text-[11px] md:text-sm px-3 md:px-4'>
-          <span className='font-bold'>
-            JORNAL PESSOAL&ensp;&ensp;Edição Extraordinária
-          </span>
+          <span className='font-bold'>JORNAL PESSOAL&ensp;&ensp;</span>
+          <span>Edição Extraordinária</span>
         </div>
       </div>
       <div className='flex flex-col justify-center md:pt-4 w-full overflow-hidden'>

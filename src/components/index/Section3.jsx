@@ -92,9 +92,9 @@ export default function Section3() {
         style={{ writingMode: 'vertical-rl', height: 'calc(100vh-20px)' }}
       >
         <div className='min-h-[350px] max-h-[350px] md:max-h-[500px] md:min-h-[500px] text-[11px] md:text-sm px-3 md:px-4'>
-          <span className='font-bold'>Nheenga Cabana</span>, 2022 Instalação com
-          painéis expográficos, impressões em jato de tinta e tiragem offset de
-          jornal
+          <span className='font-bold'>Nheenga Cabana</span>, 2022.&ensp;
+          Instalação com painéis expográficos, impressões em jato de tinta e
+          tiragem offset de jornal
         </div>
       </div>
 

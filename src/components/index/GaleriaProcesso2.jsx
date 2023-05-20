@@ -51,14 +51,15 @@ export default function GaleriaProcesso2({ images }) {
   const onClose = () => setIsOpen(false);
 
   return (
-    <div className='flex pt-8' id='arquivo'>
+    <div className='flex pt-8 pb-20' id='arquivo'>
       {/* STICKY TITLE */}
       <div
         className='w-14 md:w-20 h-fit flex items-center sticky top-14 md:pt-4 shrink-0'
         style={{ writingMode: 'vertical-rl' }}
       >
         <div className='h-fit text-[11px] md:text-sm px-3 md:px-4'>
-          <span className='font-bold'>ARQUIVO: IMAGENS DE PERCURSO</span>
+          <span className='font-bold'>ARQUIVO&ensp;&ensp;</span>
+          <span>IMAGENS DE PERCURSO</span>
         </div>
       </div>
       <div className='md:pt-4'>
