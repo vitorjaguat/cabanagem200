@@ -385,6 +385,7 @@ export default function GaleriaPrompts() {
           swiping={true}
           responsive={true}
           useArrowKeys={true}
+          dynamic={true}
           rightArrow={
             <div className='flex items-center h-full bg-black/5 rounded-r-sm'>
               <IoIosArrowForward
