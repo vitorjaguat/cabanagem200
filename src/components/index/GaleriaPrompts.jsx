@@ -1,6 +1,9 @@
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import { TagCloud } from 'react-tagcloud';
 import { Carousel } from 'react-configurable-carousel';
+import { Carousel as Carousel2 } from '@trendyol-js/react-carousel';
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
+import { useMediaQuery } from '@/utils/useMediaQuery';
 
 const prompts = [
   'Focal length 16mm. f/11. 1/60s. ISO 100. Film Still POV of an Igapó in the amazonian forest. It is possible to see the river and the sky. Aerial roots can be seen in the margins. Giant exemplars of one samaúma tree, bromélias tocha de fogo, vitórias-régias and aningas de várzea are also present and it is possible to see their flowers. An ocelot-pirarucu makes an appearance. A bunch of cabana coins are blended with brown shaky waters. A fragata is burning in the sky, with fire and flames. Nheenga cabana flag in the center. ',
@@ -312,6 +315,8 @@ const prompts = [
 ];
 
 export default function GaleriaPrompts() {
+  const mdMediaQuery = useMediaQuery('md');
+
   const data = prompts.map((prompt, i) => ({
     value: prompt,
     key: i,
@@ -352,8 +357,9 @@ export default function GaleriaPrompts() {
           <span>ENTRADAS DE TEXTO</span>
         </div>
       </div>
-      <div className='w-full pb-20 pt-4 flex justify-center'>
-        <Carousel
+      {/* <div className='mr-4 w-full flex justify-center'> */}
+      <div className='w-[80%] md:w-[90%] pb-20 md:pt-4 flex justify-center'>
+        {/* <Carousel
           arrows={true}
           // dotsNavigation={true}
           // dotsNavigationInside={true}
@@ -370,7 +376,43 @@ export default function GaleriaPrompts() {
               {item.value}
             </div>
           ))}
-        </Carousel>
+        </Carousel> */}
+
+        <Carousel2
+          // style={{ paddingRight: '1rem' }}
+          show={mdMediaQuery ? 5 : 1}
+          // slide={150}
+          swiping={true}
+          responsive={true}
+          useArrowKeys={true}
+          rightArrow={
+            <div className='flex items-center h-full bg-black/5 rounded-r-sm'>
+              <IoIosArrowForward
+                className='cursor-pointer'
+                size={mdMediaQuery ? 30 : 15}
+                color={'grey'}
+              />
+            </div>
+          }
+          leftArrow={
+            <div className='flex items-center h-full bg-black/5 rounded-l-sm'>
+              <IoIosArrowBack
+                size={mdMediaQuery ? 30 : 15}
+                color={'grey'}
+                className='cursor-pointer'
+              />
+            </div>
+          }
+        >
+          {data.map((item, i) => (
+            <div
+              className='text-[11px] border-[1px] md:border-r-0 border-black md:text-sm p-4 md:px-6 h-full flex items-center bg-slate-100'
+              key={i}
+            >
+              {item.value}
+            </div>
+          ))}
+        </Carousel2>
 
         {/* <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 8 }}>
           <Masonry>
@@ -401,6 +443,7 @@ export default function GaleriaPrompts() {
           renderer={customRenderer}
         /> */}
       </div>
+      {/* </div> */}
     </div>
   );
 }
