@@ -363,7 +363,10 @@ export default function GaleriaPrompts() {
           outOfFocusDarken={true}
         >
           {data.map((item, i) => (
-            <div className='text-[11px] md:text-sm p-4 md:px-6 h-full flex items-center bg-slate-100'>
+            <div
+              className='text-[11px] md:text-sm p-4 md:px-6 h-full flex items-center bg-slate-100'
+              key={i}
+            >
               {item.value}
             </div>
           ))}
