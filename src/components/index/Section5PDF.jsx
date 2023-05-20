@@ -304,6 +304,18 @@ export default function Section5PDF() {
                 <IoIosArrowForward size={18} />
               </button>
             </div>
+            <div className='mt-6 flex flex-col items-center md:text-xs leading-3 text-[10px]'>
+              <div className='font-stanleybold text-[11px] md:text-[13px]'>
+                Edição Extraordinária do Jornal Pessoal
+              </div>
+              <div className='font-stanleybold text-[11px] md:text-[13px]'>
+                A Agenda Amazônica de Lúcio Flávio Pinto
+              </div>
+              <div className=''>Impressão offset</div>
+              <div className=''>27x20cm, 32 páginas</div>
+              <div className=''>Edição de 5000 cópias</div>
+              <div className=''>2022</div>
+            </div>
             <div className='mt-8 flex justify-center w-full pr-1'>
               <a
                 href='/assets/jornal-pessoal-edext.pdf'
@@ -316,14 +328,28 @@ export default function Section5PDF() {
           </div>
         </div>
 
-        <div className='hidden md:flex mt-8 justify-center w-full pr-1'>
-          <a
-            href='/assets/jornal-pessoal-edext.pdf'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <div className='px-4 py-2 bg-black/20 text-xs'>BAIXAR PDF</div>
-          </a>
+        <div className='hidden md:flex flex-col mt-6 justify-center w-full pr-1'>
+          <div className='mt-6 flex flex-col items-center md:text-xs leading-3 text-[10px]'>
+            <div className='font-stanleybold text-[11px] md:text-[13px]'>
+              Edição Extraordinária do Jornal Pessoal
+            </div>
+            <div className='font-stanleybold text-[11px] md:text-[13px]'>
+              A Agenda Amazônica de Lúcio Flávio Pinto
+            </div>
+            <div className=''>Impressão offset</div>
+            <div className=''>27x20cm, 32 páginas</div>
+            <div className=''>Edição de 5000 cópias</div>
+            <div className=''>2022</div>
+          </div>
+          <div className='flex justify-center mt-8'>
+            <a
+              href='/assets/jornal-pessoal-edext.pdf'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <div className='px-4 py-2 bg-black/20 text-xs'>BAIXAR PDF</div>
+            </a>
+          </div>
         </div>
       </div>
     </div>

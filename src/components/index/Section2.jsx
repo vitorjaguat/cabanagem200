@@ -14,7 +14,7 @@ export default function Section2() {
           comissionado pelo Museu de Arte Moderna do Rio de Janeiro para a
           exposição{' '}
           <a
-            className='text-slate-700 tracking-tight font-stanleybold'
+            className='text-slate-700 tracking-tight font-stanleybold hover:underline'
             href='https://mam.rio/programacao/atos-de-revolta/'
             target='_blank'
             rel='noreferrer'
@@ -25,7 +25,7 @@ export default function Section2() {
           do jornalista e sociólogo paraense Lúcio Flávio Pinto, postados no
           blog{' '}
           <a
-            className='text-slate-700 tracking-tight font-stanleybold'
+            className='text-slate-700 tracking-tight font-stanleybold hover:underline'
             href='https://cabanagem180.wordpress.com'
             target='_blank'
             rel='noreferrer'
