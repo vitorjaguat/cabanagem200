@@ -3,6 +3,7 @@ import '@/styles/globals.css';
 import { appWithTranslation } from 'next-i18next';
 import localFont from '@next/font/local';
 import Head from 'next/head';
+import Footer from '@/components/Footer';
 
 const stanley = localFont({
   src: '../../public/assets/fonts/stanley-regular.woff2',
@@ -81,6 +82,7 @@ const App = ({ Component, pageProps }) => {
       >
         <Navbar />
         <Component {...pageProps} />
+        <Footer />
       </div>
     </>
   );
