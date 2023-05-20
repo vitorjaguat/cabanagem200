@@ -340,7 +340,7 @@ export default function GaleriaPrompts() {
   );
 
   return (
-    <div className='flex py-20'>
+    <div className='flex pt-8' id='prompts'>
       {/* STICKY TITLE */}
       <div
         className='w-14 md:w-20 h-fit flex items-center sticky top-14 md:pt-4 shrink-0'

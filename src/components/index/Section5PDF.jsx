@@ -125,7 +125,7 @@ export default function Section5PDF() {
   const onClose = () => setIsOpen(false);
 
   return (
-    <div className='flex my-40'>
+    <div className='flex my-40 pt-8' id='jornal'>
       {/* STICKY TITLE */}
       <div
         className='w-14 md:w-20 h-fit flex items-center sticky top-14 md:pt-4 shrink-0'
@@ -154,7 +154,7 @@ export default function Section5PDF() {
 
           {/* PAGES */}
           <div
-            className='h-[467px] md:h-[733px] md:flex overflow-hidden md:overflow-auto'
+            className='h-[467px] md:h-[700px] md:flex overflow-hidden md:overflow-auto'
             style={{
               width:
                 mdMediaQuery && pageNumber !== 0 && pageNumber !== 31

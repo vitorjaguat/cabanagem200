@@ -50,7 +50,7 @@ export default function Hero({ images }) {
   console.log(image1);
 
   return (
-    <div className='overflow-hidden h-screen w-full'>
+    <div className='overflow-hidden h-screen w-full' id='home'>
       <div
         className='w-full h-screen md:pt-[4.5rem] pt-[3.5rem] flex flex-col'
         // style={{ objectPosition: '50% 100%' }}

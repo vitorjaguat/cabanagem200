@@ -42,8 +42,8 @@ export default function Navbar() {
             <div
               className={
                 !shadow
-                  ? 'w-[100px] md:w-[200px] px-1 text-2xl md:text-3xl uppercase tracking-widest md:tracking-[2.5px] duration-700 ease-in-out'
-                  : 'w-[100px] md:w-[200px] px-1 text-[14px] md:text-[15px] uppercase font-stanleybold tracking-widest md:tracking-[2.5px] duration-700 ease-in-out'
+                  ? 'w-[100px] md:w-[200px] px-1 text-2xl md:text-[19px] lg:text-3xl uppercase tracking-widest md:tracking-[2.5px] duration-700 ease-in-out'
+                  : 'w-[100px] md:w-[200px] px-1 text-[14px] lg:text-[15px] uppercase font-stanleybold tracking-widest md:tracking-[2.5px] duration-700 ease-in-out'
               }
             >
               cabanagem200
@@ -51,12 +51,53 @@ export default function Navbar() {
           </Link>
 
           <div className='flex gap-16'>
-            <ul className='hidden md:flex md:justify-between text-xs md:text-[13px] gap-14 mx-auto tracking-widest'>
-              <Link href='/' scroll={false}>
+            <ul className='hidden md:flex md:justify-between text-xs md:text-[13px] md:gap-3 lg:gap-8 mx-auto tracking-widest'>
+              <Link href='/#home' scroll={false}>
                 <li className='uppercase hover:text-slate-500'>
                   {t('navbar.home')}
                 </li>
               </Link>
+
+              <li className='uppercase group w-fit'>
+                <Link href='/#paineis' scroll={false}>
+                  <div className='hover:text-slate-500'>exposição</div>
+                </Link>
+                <div className='absolute lowercase overflow-hidden opacity-0 group-hover:opacity-100 ease-in-out transition-all duration-300 bg-[#e1e1e1] p-1 pr-7 text-md rounded-sm'>
+                  <Link href='/#paineis' scroll={false}>
+                    <div className='pt-4 hover:text-slate-500 pb-4'>
+                      paineis
+                    </div>
+                  </Link>
+                  <Link href='/#vistas' scroll={false}>
+                    <div className='hover:text-slate-500'>vistas</div>
+                  </Link>
+                </div>
+              </li>
+
+              <Link href='/#jornal' scroll={false}>
+                <li className='uppercase hover:text-slate-500 whitespace-nowrap'>
+                  jornal pessoal
+                </li>
+              </Link>
+
+              <li className='uppercase group w-fit'>
+                <Link href='/#arquivo' scroll={false}>
+                  <div className='hover:text-slate-500'>arquivo</div>
+                </Link>
+                <div className='absolute lowercase overflow-hidden opacity-0 group-hover:opacity-100 ease-in-out transition-all duration-300 bg-[#e1e1e1] p-1 pr-7 text-md rounded-sm'>
+                  <Link href='/#arquivo' scroll={false}>
+                    <div className='pt-4 hover:text-slate-500 pb-4'>
+                      imagens de processo
+                    </div>
+                  </Link>
+                  <Link href='/#prompts' scroll={false}>
+                    <div className='hover:text-slate-500'>
+                      entradas de texto
+                    </div>
+                  </Link>
+                </div>
+              </li>
+
               {/* <Link href='/references' scroll={false}>
               <li className='ml-8 uppercase hover:border-b'>
                 {t('navbar.references')}

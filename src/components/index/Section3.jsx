@@ -85,7 +85,7 @@ export default function Section3() {
   const onClose = () => setIsOpen(false);
 
   return (
-    <div className='flex w-full'>
+    <div className='flex w-full pt-8' id='paineis'>
       {/* STICKY TITLE */}
       <div
         className='w-14 md:w-20 min-h-[350px] max-h-[350px] md:max-h-[500px] md:min-h-[500px] flex items-center sticky top-14 md:pt-4 shrink-0'
