@@ -1,7 +1,10 @@
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import { TagCloud } from 'react-tagcloud';
 import { Carousel } from 'react-configurable-carousel';
-import { Carousel as Carousel2 } from '@trendyol-js/react-carousel';
+import {
+  Carousel as Carousel2,
+  ScrollingCarousel,
+} from '@trendyol-js/react-carousel';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import { useMediaQuery } from '@/utils/useMediaQuery';
 import { useEffect, useState } from 'react';
@@ -397,42 +400,85 @@ export default function GaleriaPrompts() {
         </Carousel> */}
 
         {showCarousel && (
-          <Carousel2
-            // style={{ paddingRight: '1rem' }}
-            show={itemsToShow || 3}
-            // slide={150}
-            swiping={true}
-            responsive={true}
-            useArrowKeys={true}
-            dynamic={true}
-            rightArrow={
-              <div className='flex items-center h-full bg-black/5 rounded-r-sm'>
-                <IoIosArrowForward
-                  className='cursor-pointer'
-                  size={lgMediaQuery ? 30 : 15}
-                  color={'grey'}
-                />
-              </div>
-            }
-            leftArrow={
-              <div className='flex items-center h-full bg-black/5 rounded-l-sm'>
-                <IoIosArrowBack
-                  size={lgMediaQuery ? 30 : 15}
-                  color={'grey'}
-                  className='cursor-pointer'
-                />
-              </div>
-            }
-          >
-            {data.map((item, i) => (
-              <div
-                className='text-[11px] border-[1px] md:border-r-0 border-black md:text-sm p-4 md:px-6 h-full flex items-center bg-slate-100'
-                key={i}
+          <div className='flex flex-col w-full'>
+            <div className='block'>
+              <ScrollingCarousel
+                // style={{ paddingRight: '1rem' }}
+                show={itemsToShow || 3}
+                // slide={150}
+                swiping={true}
+                responsive={true}
+                useArrowKeys={true}
+                dynamic={true}
+                rightArrow={
+                  <div className='flex items-center h-full bg-black/5 rounded-r-sm'>
+                    <IoIosArrowForward
+                      className='cursor-pointer'
+                      size={lgMediaQuery ? 30 : 15}
+                      color={'grey'}
+                    />
+                  </div>
+                }
+                leftArrow={
+                  <div className='flex items-center h-full bg-black/5 rounded-l-sm'>
+                    <IoIosArrowBack
+                      size={lgMediaQuery ? 30 : 15}
+                      color={'grey'}
+                      className='cursor-pointer'
+                    />
+                  </div>
+                }
               >
-                {item.value}
-              </div>
-            ))}
-          </Carousel2>
+                {data.slice(51, 100).map((item, i) => (
+                  <div
+                    className='text-[11px] border-[1px] border-b-0 md:border-r-0 border-black md:text-sm p-4 min-h-[300px] max-w-[400px] md:px-6 h-full flex items-center bg-slate-100'
+                    key={i}
+                  >
+                    {item.value}
+                  </div>
+                ))}
+              </ScrollingCarousel>
+            </div>
+            <div className='block'>
+              <ScrollingCarousel
+                // style={{ paddingRight: '1rem' }}
+                show={itemsToShow || 3}
+                // slide={150}
+                swiping={true}
+                responsive={true}
+                useArrowKeys={true}
+                dynamic={true}
+                rightArrow={
+                  <div className='flex items-center h-full bg-black/5 rounded-r-sm'>
+                    <IoIosArrowForward
+                      className='cursor-pointer'
+                      size={lgMediaQuery ? 30 : 15}
+                      color={'grey'}
+                    />
+                  </div>
+                }
+                leftArrow={
+                  <div className='flex items-center h-full bg-black/5 rounded-l-sm'>
+                    <IoIosArrowBack
+                      size={lgMediaQuery ? 30 : 15}
+                      color={'grey'}
+                      className='cursor-pointer'
+                    />
+                  </div>
+                }
+              >
+                {data.slice(0, 50).map((item, i) => (
+                  <div
+                    className='text-[11px] border-[1px] md:border-r-0 border-black md:text-sm p-4 min-h-[300px] max-w-[400px] md:px-6 h-full flex items-center bg-slate-100'
+                    key={i}
+                    // style={{ maxWidth: lgMediaQuery ? '25%' : '100%' }}
+                  >
+                    {item.value}
+                  </div>
+                ))}
+              </ScrollingCarousel>
+            </div>
+          </div>
         )}
 
         {/* <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 8 }}>
