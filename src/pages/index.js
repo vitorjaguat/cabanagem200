@@ -11,6 +11,7 @@ import probe from 'probe-image-size';
 import fs from 'fs';
 import path from 'path';
 import GaleriaPrompts from '@/components/index/GaleriaPrompts';
+import Deco from '@/components/index/Deco';
 
 export default function Home({ images }) {
   return (
@@ -19,6 +20,7 @@ export default function Home({ images }) {
         <Hero images={images} />
         <Section2 />
         <Section3 />
+        <Deco />
         <Section5PDF />
         <GaleriaProcesso2 images={images} />
         <GaleriaPrompts />

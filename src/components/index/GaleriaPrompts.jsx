@@ -429,7 +429,7 @@ export default function GaleriaPrompts() {
                   </div>
                 }
               >
-                {data.slice(51, 100).map((item, i) => (
+                {data.slice(78, data.length - 1).map((item, i) => (
                   <div
                     className='text-[11px] border-[1px] border-b-0 md:border-r-0 border-black md:text-sm p-4 min-h-[300px] max-w-[400px] md:px-6 h-full flex items-center bg-slate-100'
                     key={i}
@@ -467,7 +467,7 @@ export default function GaleriaPrompts() {
                   </div>
                 }
               >
-                {data.slice(0, 50).map((item, i) => (
+                {data.slice(0, 77).map((item, i) => (
                   <div
                     className='text-[11px] border-[1px] md:border-r-0 border-black md:text-sm p-4 min-h-[300px] max-w-[400px] md:px-6 h-full flex items-center bg-slate-100'
                     key={i}

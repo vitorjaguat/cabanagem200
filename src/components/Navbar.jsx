@@ -33,8 +33,8 @@ export default function Navbar() {
       <div
         className={
           !shadow
-            ? 'fixed w-full h-[3.5rem] md:h-[4.5rem] z-[100] ease-in-out duration-700 bg-[#e1e1e1]'
-            : 'fixed w-full h-10 md:h-12 z-[100] ease-in-out duration-700 bg-[#e1e1e1]'
+            ? 'fixed w-full h-[3.5rem] md:h-[4.5rem] z-[100] ease-in-out duration-700 bg-[#cdcdcd]'
+            : 'fixed w-full h-10 md:h-12 z-[100] ease-in-out duration-700 bg-[#cdcdcd]'
         }
       >
         <div className='flex justify-between items-center w-full h-full px-1 md:px-4 2xl:px-16 mx-auto'>
@@ -46,7 +46,9 @@ export default function Navbar() {
                   : 'w-[100px] md:w-[200px] px-1 text-[14px] lg:text-[15px] uppercase font-stanleybold tracking-widest md:tracking-[2.5px] duration-700 ease-in-out'
               }
             >
-              cabanagem200
+              <div className='translate-y-[2px] md:translate-y-0'>
+                cabanagem200
+              </div>
             </div>
           </Link>
 

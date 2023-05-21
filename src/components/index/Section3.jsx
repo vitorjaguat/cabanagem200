@@ -85,20 +85,20 @@ export default function Section3() {
   const onClose = () => setIsOpen(false);
 
   return (
-    <div className='flex w-full pt-8' id='paineis'>
+    <div className='flex w-full' id='paineis'>
       {/* STICKY TITLE */}
       <div
-        className='w-14 md:w-20 min-h-[350px] max-h-[350px] md:max-h-[500px] md:min-h-[500px] flex items-center sticky top-14 md:pt-4 shrink-0'
-        style={{ writingMode: 'vertical-rl', height: 'calc(100vh-20px)' }}
+        className='bg-[#cdcdcd] w-14 md:w-20 min-h-[350px] max-h-full md:max-h-full md:min-h-[500px] flex items-center sticky top-10 md:top-12 pt-2 md:pt-4 shrink-0'
+        style={{ writingMode: 'vertical-rl', height: 'calc(100%-20px)' }}
       >
-        <div className='min-h-[350px] max-h-[350px] md:max-h-[500px] md:min-h-[500px] text-[11px] md:text-sm px-3 md:px-4'>
-          <span className='font-bold'>Nheenga Cabana</span>, 2022.&ensp;
+        <div className='min-h-[350px] max-h-full md:max-h-full md:min-h-[500px] text-[11px] md:text-sm px-3 md:px-4'>
+          <span className='font-stanleybold'>NHEENGA CANANA</span>&ensp;&ensp;
           Instalação com painéis expográficos, impressões em jato de tinta e
-          tiragem offset de jornal
+          tiragem offset de jornal. 2022
         </div>
       </div>
 
-      <div className='flex flex-col md:pt-4'>
+      <div className='flex flex-col pl-2 md:pl-4'>
         <div
           id='obra1'
           className='grid grid-rows-2 grid-cols-1 md:grid-rows-1 md:grid-cols-5 w-full h-fit gap-2 md:gap-4 pr-2 md:pr-0 pb-8 md:pb-4'

@@ -9,7 +9,7 @@ import Image from 'next/image';
 import Lightbox from 'react-spring-lightbox';
 import { IoIosArrowBack, IoIosArrowForward, IoIosClose } from 'react-icons/io';
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
+// pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 
 export default function Section5PDF() {
   const [numPages, setNumPages] = useState(31);
@@ -125,18 +125,19 @@ export default function Section5PDF() {
   const onClose = () => setIsOpen(false);
 
   return (
-    <div className='flex my-40 pt-8' id='jornal'>
+    <div className='flex w-full' id='jornal'>
       {/* STICKY TITLE */}
       <div
-        className='w-14 md:w-20 h-fit flex items-center sticky top-14 md:pt-4 shrink-0'
+        className='bg-[#cdcdcd] w-14 md:w-20 min-h-[350px] md:max-h-full max-h-[350px] md:min-h-[500px] flex items-center sticky top-10 md:top-12 pt-2 md:pt-4 shrink-0 h-full overflow-hidden'
         style={{ writingMode: 'vertical-rl', height: 'calc(100%-20px)' }}
       >
-        <div className='h-fit text-[11px] md:text-sm px-3 md:px-4'>
-          <span className='font-bold'>JORNAL PESSOAL&ensp;&ensp;</span>
+        <div className='h-screen w-full flex items-center bg-[#cdcdcd] text-[11px] md:text-sm px-3 md:px-4 sticky'>
+          <span className='font-stanleybold'>JORNAL PESSOAL&ensp;&ensp;</span>
           <span>Edição Extraordinária</span>
         </div>
       </div>
-      <div className='flex flex-col justify-center md:pt-4 w-full overflow-hidden'>
+
+      <div className='flex flex-col justify-center w-full overflow-hidden h-full'>
         <div className='relative flex flex-col md:flex-row justify-center w-full overflow-hidden'>
           {/* <div className='hidden md:block absolute top-4 right-4 text-sm'>
           página {pageNumber} de {numPages}
