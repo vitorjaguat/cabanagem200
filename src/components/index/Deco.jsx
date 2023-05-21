@@ -1,9 +1,14 @@
+import Image from 'next/image';
+import svg6 from '../../../public/assets/orn/006.svg';
+
 export default function Deco() {
   return (
-    <div className='w-full h-40 flex'>
-      <div className='bg-[#cdcdcd] w-14 md:w-20'></div>
+    <div className='m-0 p-0 w-screen h-[400px] flex'>
+      {/* <div className='w-14 md:w-20'></div> */}
       <div className='flex items-center'>
-        <div className='w-full h-2 bg-slate-400'> </div>
+        <div className='w-full h-2'>
+          <Image src={svg6} />
+        </div>
       </div>
     </div>
   );
