@@ -9,10 +9,10 @@ export default function Section2() {
           apresenta{' '}
           <span className=' font-stanleybolditalic'>Nheenga Cabana</span>, um
           conjunto de trabalhos de Giseli Vasconcelos e Pedro Victor Brandão que
-          trata da Revolução da Cabanagem ocorrida no período regencial, quando
-          insurgências eclodiram no Brasil durante o século XIX. O projeto foi
-          comissionado pelo Museu de Arte Moderna do Rio de Janeiro para a
-          exposição{' '}
+          trata da Revolução da Cabanagem, ocorrida durante o período regencial,
+          no século XIX, quando diversas insurgências eclodiram no Brasil. O
+          projeto foi comissionado pelo Museu de Arte Moderna do Rio de Janeiro
+          para a exposição{' '}
           <a
             className='text-slate-700 tracking-tight font-stanleybold hover:underline'
             href='https://mam.rio/programacao/atos-de-revolta/'
