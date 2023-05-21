@@ -128,7 +128,7 @@ export default function Section5PDF() {
     <div className='flex w-full' id='jornal'>
       {/* STICKY TITLE */}
       <div
-        className='bg-[#cdcdcd] w-14 md:w-20 min-h-[350px] md:max-h-full max-h-[350px] md:min-h-[500px] flex items-center sticky top-10 md:top-12 pt-2 md:pt-4 shrink-0 h-full overflow-hidden'
+        className=' w-14 md:w-20 min-h-[350px] md:max-h-full max-h-[350px] md:min-h-[500px] flex items-center sticky top-10 md:top-12 pt-2 md:pt-4 shrink-0 h-full overflow-hidden'
         style={{ writingMode: 'vertical-rl', height: 'calc(100%-20px)' }}
       >
         <div className='h-screen w-full flex items-center bg-[#cdcdcd] text-[11px] md:text-sm px-3 md:px-4 sticky'>
