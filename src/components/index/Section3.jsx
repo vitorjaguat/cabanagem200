@@ -183,7 +183,7 @@ export default function Section3() {
 
         <div
           id='obra3'
-          className='grid grid-rows-2 grid-cols-1 md:grid-rows-1 md:grid-cols-5 w-full h-fit gap-2 md:gap-4 pr-2 md:pr-0 pb-8 md:pb-4'
+          className='grid grid-rows-2 grid-cols-1 md:grid-rows-1 md:grid-cols-5 w-full h-fit gap-2 md:gap-4 pr-2 md:pr-0'
         >
           <div className='row-span-1 md:col-span-2'>
             <Image
