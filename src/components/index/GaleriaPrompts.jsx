@@ -401,7 +401,7 @@ export default function GaleriaPrompts() {
 
         {showCarousel && (
           <div className='flex flex-col w-full'>
-            <div className='w-full mr-4 mb-4 p-4 bg-black/20 rounded-sm'>
+            <div className='w-full mr-4 mb-4 p-4 bg-black/20 rounded-sm text-sm md:text-md'>
               O diálogo que tivemos com as máquinas geradoras de imagem com IA a
               partir de textos (text-to-image AI image generators) produziu um
               arquivo extenso que não foi utilizado nas três composições
