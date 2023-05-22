@@ -40,7 +40,7 @@ export default function Vistas() {
           <span>VISTAS</span>
         </div>
       </div>
-      <div className='md:pt-2 mr-2 md:mr-4'>
+      <div className='md:pt-2 mr-4'>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2'>
           {imgData.map((img, i) => (
             <div className='' key={i}>

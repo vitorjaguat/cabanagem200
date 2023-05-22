@@ -120,7 +120,7 @@ export default function Navbar() {
 
           <div
             onClick={handleNav}
-            className='w-[100px] flex justify-end md:hidden pl-10'
+            className='w-[100px] flex justify-end md:hidden pl-10 pr-1'
           >
             <AiOutlineMenu size={21} />
           </div>

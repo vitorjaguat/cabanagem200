@@ -379,7 +379,7 @@ export default function GaleriaPrompts() {
         </div>
       </div>
       {/* <div className='mr-4 w-full flex justify-center'> */}
-      <div className='pb-20 md:pt-4 w-[calc(100%-4rem)] md:w-[calc(100%-6rem)] mr-2 md:mr-4 flex'>
+      <div className='pb-20 md:pt-4 w-[calc(100%-4.5rem)] md:w-[calc(100%-6rem)] flex'>
         {/* <Carousel
           arrows={true}
           // dotsNavigation={true}
@@ -401,7 +401,7 @@ export default function GaleriaPrompts() {
 
         {showCarousel && (
           <div className='flex flex-col w-full'>
-            <div className='w-full mr-4 mb-4 p-4 bg-black/20 rounded-sm text-sm md:text-md'>
+            <div className='w-full mb-4 p-4 bg-black/20 rounded-sm text-sm md:text-md'>
               O diálogo que tivemos com as máquinas geradoras de imagem com IA a
               partir de textos (text-to-image AI image generators) produziu um
               arquivo extenso que não foi utilizado nas três composições

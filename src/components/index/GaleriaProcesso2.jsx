@@ -62,7 +62,7 @@ export default function GaleriaProcesso2({ images }) {
           <span>IMAGENS DE PERCURSO</span>
         </div>
       </div>
-      <div className='md:pt-4 mr-2 md:mr-4'>
+      <div className='md:pt-4 mr-4'>
         {/* <Gallery
         images={images}
         onClick={handleClick}

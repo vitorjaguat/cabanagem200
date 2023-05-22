@@ -97,7 +97,7 @@ export default function Section3() {
       </div>
 
       <div className='flex flex-col pt-2 md:pt-4'>
-        <div className='flex flex-col mb-2 md:mb-4 p-4 mr-2 md:mr-4 bg-black/20 rounded-sm'>
+        <div className='flex flex-col mb-2 md:mb-4 p-4 mr-4 bg-black/20 rounded-sm'>
           <div className='pb-2 text-sm md:text-md'>
             Trazemos aqui as três composições que foram criadas a partir da
             leitura dos textos de Lúcio Flávio Pinto. À esquerda temos as
@@ -119,7 +119,7 @@ export default function Section3() {
         </div>
         <div
           id='obra1'
-          className='grid grid-rows-2 grid-cols-1 md:grid-rows-1 md:grid-cols-5 w-full h-fit gap-2 md:gap-4 pr-2 md:pr-0 pb-8 md:pb-4'
+          className='grid grid-rows-2 grid-cols-1 md:grid-rows-1 md:grid-cols-5 w-full h-fit gap-2 md:gap-4 pr-4 md:pr-0 pb-8 md:pb-4'
         >
           <div className='row-span-1 md:col-span-2'>
             <Image
@@ -160,7 +160,7 @@ export default function Section3() {
 
         <div
           id='obra2'
-          className='grid grid-rows-2 grid-cols-1 md:grid-rows-1 md:grid-cols-5 w-full h-fit gap-2 md:gap-4 pr-2 md:pr-0 pb-8 md:pb-4'
+          className='grid grid-rows-2 grid-cols-1 md:grid-rows-1 md:grid-cols-5 w-full h-fit gap-2 md:gap-4 pr-4 md:pr-0 pb-8 md:pb-4'
         >
           <div className='row-span-1 md:col-span-2'>
             <Image
@@ -201,7 +201,7 @@ export default function Section3() {
 
         <div
           id='obra3'
-          className='grid grid-rows-2 grid-cols-1 md:grid-rows-1 md:grid-cols-5 w-full h-fit gap-2 md:gap-4 pr-2 md:pr-0'
+          className='grid grid-rows-2 grid-cols-1 md:grid-rows-1 md:grid-cols-5 w-full h-fit gap-2 md:gap-4 pr-4 md:pr-0'
         >
           <div className='row-span-1 md:col-span-2'>
             <Image

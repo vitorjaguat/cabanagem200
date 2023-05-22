@@ -138,6 +138,17 @@ export default function Section5PDF() {
       </div>
 
       <div className='flex flex-col justify-center w-full overflow-hidden'>
+        <div className='mr-4 mb-4 p-4 bg-black/20 rounded-sm text-sm md:text-md w-[calc(100%-1rem)]'>
+          O{' '}
+          <span className='font-stanleyitalic'>
+            Jornal Pessoal - Edição Extraordinária
+          </span>{' '}
+          é uma edição feita a partir de textos do pesquisador e historiador
+          Lúcio Flávio Pinto, contendo também algumas das imagens geradas via
+          inteligência artificial a partir de trechos desses escritos. O jornal
+          teve tiragem de 5000 exemplares e a versão em PDF está disponível
+          abaixo.
+        </div>
         <div className='relative flex flex-col md:flex-row justify-center w-full overflow-hidden'>
           {/* <div className='hidden md:block absolute top-4 right-4 text-sm'>
           página {pageNumber} de {numPages}
@@ -327,7 +338,6 @@ export default function Section5PDF() {
             </div>
           </div>
         </div>
-
         <div className='hidden md:flex flex-col mt-6 justify-center w-full pr-1'>
           <div className='mt-6 flex flex-col items-center md:text-xs leading-3 text-[10px]'>
             <div className='font-stanleybold text-[11px] md:text-[13px]'>
