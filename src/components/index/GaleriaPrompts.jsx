@@ -367,7 +367,7 @@ export default function GaleriaPrompts() {
   // );
 
   return (
-    <div className='flex pt-8 pb-20 w-full' id='prompts'>
+    <div className='flex pt-8  pb-32 md:pb-60 w-full' id='prompts'>
       {/* STICKY TITLE */}
       <div
         className='w-14 md:w-20 h-fit flex items-center sticky top-14 md:pt-4 shrink-0'
@@ -442,7 +442,7 @@ export default function GaleriaPrompts() {
               >
                 {data.slice(78, data.length - 1).map((item, i) => (
                   <div
-                    className='text-[11px] border-[1px] border-b-0 md:border-r-0 border-black md:text-sm p-4 min-h-[300px] max-w-[400px] md:px-6 h-full flex items-center bg-slate-100'
+                    className='text-[11px] border-[1px] border-b-0 border-r-0 border-black md:text-sm p-4 min-h-[300px] max-w-[280px] md:max-w-[400px] md:px-6 h-full flex items-center bg-slate-100'
                     key={i}
                   >
                     {item.value}
@@ -480,7 +480,7 @@ export default function GaleriaPrompts() {
               >
                 {data.slice(0, 77).map((item, i) => (
                   <div
-                    className='text-[11px] border-[1px] md:border-r-0 border-black md:text-sm p-4 min-h-[300px] max-w-[400px] md:px-6 h-full flex items-center bg-slate-100'
+                    className='text-[11px] border-[1px] border-r-0 border-black md:text-sm p-4 min-h-[300px] max-w-[280px] md:max-w-[400px] md:px-6 h-full flex items-center bg-slate-100'
                     key={i}
                     // style={{ maxWidth: lgMediaQuery ? '25%' : '100%' }}
                   >

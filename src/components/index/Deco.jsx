@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import svg6 from '../../../public/assets/orn/006.svg';
-import svg2 from '../../../public/assets/orn/002.svg';
+import svg2 from '../../../public/assets/orn/002b1.svg';
 import svg1 from '../../../public/assets/orn/001.svg';
 import svg3 from '../../../public/assets/orn/003.svg';
 import svg4 from '../../../public/assets/orn/004.svg';
@@ -14,11 +14,11 @@ export default function Deco() {
       <div className='flex items-center w-full'>
         <div className='w-full flex items-center justify-center h-fit'>
           <Image
-            className='h-5 md:h-10 w-[100%] scale-50 object-cover'
+            className='scale-100'
             width={2362}
             height={94}
             // fill
-            src={svg2}
+            src={svg1}
           />
         </div>
       </div>

@@ -19,10 +19,13 @@ export default function Home({ images }) {
       <main className='bg-[#e1e1e1]'>
         <Hero images={images} />
         <Section2 />
+        {/* <Deco /> */}
         <Section3 />
-        <Deco />
+        {/* <Deco /> */}
         <Section5PDF />
+        {/* <Deco /> */}
         <GaleriaProcesso2 images={images} />
+        {/* <Deco /> */}
         <GaleriaPrompts />
         {/* <Section4Ed /> */}
       </main>
