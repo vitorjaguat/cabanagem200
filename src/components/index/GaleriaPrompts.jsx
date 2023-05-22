@@ -367,7 +367,7 @@ export default function GaleriaPrompts() {
   // );
 
   return (
-    <div className='flex pt-8 pb-20' id='prompts'>
+    <div className='flex pt-8 pb-20 w-full' id='prompts'>
       {/* STICKY TITLE */}
       <div
         className='w-14 md:w-20 h-fit flex items-center sticky top-14 md:pt-4 shrink-0'
@@ -379,7 +379,7 @@ export default function GaleriaPrompts() {
         </div>
       </div>
       {/* <div className='mr-4 w-full flex justify-center'> */}
-      <div className='w-[80%] md:w-[90%] pb-20 md:pt-4 flex justify-center'>
+      <div className='pb-20 md:pt-4 w-[calc(100%-4rem)] md:w-[calc(100%-6rem)] mr-2 md:mr-4 flex'>
         {/* <Carousel
           arrows={true}
           // dotsNavigation={true}
@@ -401,6 +401,16 @@ export default function GaleriaPrompts() {
 
         {showCarousel && (
           <div className='flex flex-col w-full'>
+            <div className='w-full mr-4 mb-4 p-4 bg-black/20 rounded-sm'>
+              O diálogo que tivemos com as máquinas geradoras de imagem com IA a
+              partir de textos (text-to-image AI image generators) produziu um
+              arquivo extenso que não foi utilizado nas três composições
+              exibidas na exposição Atos de revolta, e nem impresso na edição
+              extraordinária do Jornal Pessoal. A seleção abaixo é composta por
+              200 imagens deste percurso, erros e acertos, criadas com prompts
+              mostrados na seção seguinte. Faça clique em qualquer uma das
+              imagens para vê-las em tela cheia.
+            </div>
             <div className='block'>
               <ScrollingCarousel
                 // style={{ paddingRight: '1rem' }}

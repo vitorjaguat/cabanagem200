@@ -92,13 +92,14 @@ export default function Section3() {
         style={{ writingMode: 'vertical-rl', height: 'calc(100%-20px)' }}
       >
         <div className='min-h-[350px] max-h-full md:max-h-full md:min-h-[500px] text-[11px] md:text-sm px-3 md:px-4'>
-          <span className='font-stanleybold'>NHEENGA CANANA</span>&ensp;&ensp;
+          <span className='font-stanleybold'>NHEENGA CABANA</span>&ensp;&ensp;
           Instalação com painéis expográficos, impressões em jato de tinta e
           tiragem offset de jornal. 2022
         </div>
       </div>
 
-      <div className='flex flex-col pl-2 md:pl-4'>
+      <div className='flex flex-col pl-2 md:pl-4 pt-2 md:pt-4'>
+        {/* <div className="w-full pr-2 pb-4"></div> */}
         <div
           id='obra1'
           className='grid grid-rows-2 grid-cols-1 md:grid-rows-1 md:grid-cols-5 w-full h-fit gap-2 md:gap-4 pr-2 md:pr-0 pb-8 md:pb-4'

@@ -62,7 +62,7 @@ export default function GaleriaProcesso2({ images }) {
           <span>IMAGENS DE PERCURSO</span>
         </div>
       </div>
-      <div className='md:pt-4'>
+      <div className='md:pt-4 mr-2 md:mr-4'>
         {/* <Gallery
         images={images}
         onClick={handleClick}
@@ -98,7 +98,19 @@ export default function GaleriaProcesso2({ images }) {
         </Masonry>
       </ResponsiveMasonry> */}
         {/* <div className='w-full grid grid-cols-12 object-cover gap-0'> */}
-        <div className='flex flex-wrap gap-1'>
+
+        <div className='w-full mr-4 mb-4 p-4 bg-black/20 rounded-sm'>
+          O diálogo que tivemos com as máquinas geradoras de imagem com IA a
+          partir de textos (text-to-image AI image generators) produziu um
+          arquivo extenso que não foi utilizado nas três composições exibidas na
+          exposição Atos de revolta, e nem impresso na edição extraordinária do
+          Jornal Pessoal. A seleção abaixo é composta por 200 imagens deste
+          percurso, erros e acertos, criadas com prompts mostrados na seção
+          seguinte. Faça clique em qualquer uma das imagens para vê-las em tela
+          cheia.
+        </div>
+
+        <div className='flex flex-wrap gap-1 justify-center'>
           {imagesData.map((image, index) => (
             <div
               key={image.src_sm}
