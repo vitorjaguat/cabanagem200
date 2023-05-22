@@ -125,7 +125,7 @@ export default function Section5PDF() {
   const onClose = () => setIsOpen(false);
 
   return (
-    <div className='flex w-full pb-32 md:pb-80' id='jornal'>
+    <div className='flex w-full pb-32 md:pb-80 pt-10 md:pt-12' id='jornal'>
       {/* STICKY TITLE */}
       <div
         className=' w-14 md:w-20 min-h-[350px] md:max-h-full max-h-[350px] md:min-h-[500px] flex items-center sticky top-10 md:top-12 pt-2 md:pt-4 shrink-0 h-full overflow-hidden'
