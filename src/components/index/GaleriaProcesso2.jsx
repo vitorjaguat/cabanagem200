@@ -58,7 +58,7 @@ export default function GaleriaProcesso2({ images }) {
         style={{ writingMode: 'vertical-rl' }}
       >
         <div className='h-fit text-[11px] md:text-sm px-3 md:px-4'>
-          <span className='font-bold'>ARQUIVO&ensp;&ensp;</span>
+          <span className='font-stanleybold'>ARQUIVO&ensp;&ensp;</span>
           <span>IMAGENS DE PERCURSO</span>
         </div>
       </div>
@@ -103,11 +103,12 @@ export default function GaleriaProcesso2({ images }) {
           O diálogo que tivemos com as máquinas geradoras de imagem com IA a
           partir de textos (text-to-image AI image generators) produziu um
           arquivo extenso que não foi utilizado nas três composições exibidas na
-          exposição Atos de revolta, e nem impresso na edição extraordinária do
-          Jornal Pessoal. A seleção abaixo é composta por 200 imagens deste
-          percurso, erros e acertos, criadas com prompts mostrados na seção
-          seguinte. Faça clique em qualquer uma das imagens para vê-las em tela
-          cheia.
+          exposição <span className='font-stanleyitalic'>Atos de revolta</span>,
+          e nem impresso na edição extraordinária do{' '}
+          <span className='font-stanleyitalic'>Jornal Pessoal</span>. A seleção
+          abaixo é composta por 200 imagens deste percurso, erros e acertos,
+          criadas com prompts mostrados na seção seguinte. Faça clique em
+          qualquer uma das imagens para vê-las em tela cheia.
         </div>
 
         <div className='flex flex-wrap gap-1 justify-center'>

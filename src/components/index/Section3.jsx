@@ -93,13 +93,30 @@ export default function Section3() {
       >
         <div className='min-h-[350px] max-h-full md:max-h-full md:min-h-[500px] text-[11px] md:text-sm px-3 md:px-4'>
           <span className='font-stanleybold'>NHEENGA CABANA</span>&ensp;&ensp;
-          Instalação com painéis expográficos, impressões em jato de tinta e
-          tiragem offset de jornal. 2022
         </div>
       </div>
 
-      <div className='flex flex-col pl-2 md:pl-4 pt-2 md:pt-4'>
-        {/* <div className="w-full pr-2 pb-4"></div> */}
+      <div className='flex flex-col pt-2 md:pt-4'>
+        <div className='w-full flex flex-col mr-4 mb-4 p-4 bg-black/20 rounded-sm'>
+          <div className='pb-2'>
+            Trazemos aqui as três composições que foram criadas a partir da
+            leitura dos textos de Lúcio Flávio Pinto. À esquerda temos as
+            próprias imagens, e à direita, os versos dos paineis mostrados na
+            exposição, com anotações feitas em transparências contendo as
+            entradas de texto utilizadas para geração das imagens.
+          </div>
+          <div className='flex flex-col justify-end leading-3 text-[10px] md:text-xs pl-[40%] md:pl-0 max-w-[400px]'>
+            <p className='font-stanleybold text-[11px] md:text-[13px]'>
+              Nheenga Cabana
+            </p>
+            <p className=''>
+              Instalação com painéis expográficos, impressões em jato de tinta,
+              transparências com anotações e tiragem offset de jornal
+            </p>
+            <p className='text-[9px] md:text-[11px]'>Dimensões variáveis</p>
+            <p className='text-[9px] md:text-[11px]'>2022</p>
+          </div>
+        </div>
         <div
           id='obra1'
           className='grid grid-rows-2 grid-cols-1 md:grid-rows-1 md:grid-cols-5 w-full h-fit gap-2 md:gap-4 pr-2 md:pr-0 pb-8 md:pb-4'

@@ -12,9 +12,9 @@ export default function Deco() {
     <div className='h-[300px] md:h-[400px] flex w-full'>
       {/* <div className='w-14 md:w-20'></div> */}
       <div className='flex items-center w-full'>
-        <div className='w-full flex items-center h-fit'>
+        <div className='w-full flex items-center justify-center h-fit'>
           <Image
-            className='h-5 md:h-10 w-[110%] object-cover'
+            className='h-5 md:h-10 w-[100%] scale-50 object-cover'
             width={2362}
             height={94}
             // fill
