@@ -402,15 +402,11 @@ export default function GaleriaPrompts() {
         {showCarousel && (
           <div className='flex flex-col w-full'>
             <div className='w-full mb-4 p-4 bg-black/20 rounded-sm text-sm md:text-md'>
-              O diálogo que tivemos com as máquinas geradoras de imagem com IA a
-              partir de textos (text-to-image AI image generators) produziu um
-              arquivo extenso que não foi utilizado nas três composições
-              exibidas na exposição Atos de revolta, e nem impresso na edição
-              extraordinária do{' '}
-              <span className='font-stanleyitalic'>Jornal Pessoal</span>. A
-              seleção abaixo é composta por 200 imagens deste percurso, erros e
-              acertos, criadas com prompts mostrados na seção seguinte. Faça
-              clique em qualquer uma das imagens para vê-las em tela cheia.
+              Nesta seção reunimos 150 entradas de texto criadas a partir do
+              processo de edição e leituras dos escritos de Lúcio Flávio Pinto
+              que foram utilizadas para a geração de imagens. Arraste para os
+              lados para navegar. Deslize com o mouse ou o touch para ver todos
+              os prompts. Para copiar os textos, faça três cliques na cartela.
             </div>
             <div className='block'>
               <ScrollingCarousel
