@@ -12,6 +12,7 @@ import fs from 'fs';
 import path from 'path';
 import GaleriaPrompts from '@/components/index/GaleriaPrompts';
 import Deco from '@/components/index/Deco';
+import Vistas from '@/components/index/Vistas';
 
 export default function Home({ images }) {
   return (
@@ -21,6 +22,7 @@ export default function Home({ images }) {
         <Section2 />
         {/* <Deco /> */}
         <Section3 />
+        <Vistas />
         {/* <Deco /> */}
         <Section5PDF />
         {/* <Deco /> */}

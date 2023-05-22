@@ -367,7 +367,7 @@ export default function GaleriaPrompts() {
   // );
 
   return (
-    <div className='flex pt-8  pb-32 md:pb-60 w-full' id='prompts'>
+    <div className='flex pt-8  pb-32 md:pb-80 w-full' id='prompts'>
       {/* STICKY TITLE */}
       <div
         className='w-14 md:w-20 h-fit flex items-center sticky top-14 md:pt-4 shrink-0'
