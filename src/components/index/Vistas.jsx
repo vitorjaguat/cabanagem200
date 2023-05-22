@@ -13,7 +13,7 @@ export default function Vistas() {
     src_sm: '/assets/vistas/sm/0' + (i + 1) + '.jpg',
     alt: 'Atos de Revolta | Vistas da exposição',
     loading: 'lazy',
-    width: i <= 3 ? 1500 : 2999,
+    width: i <= 2 ? 1500 : 2999,
     height: 2000,
   }));
   //   console.log(imgData);
