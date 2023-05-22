@@ -1,14 +1,24 @@
 import PressCard from '@/components/press/PressCard';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Image from 'next/image';
+import imgHeader from '../../public/assets/header_press.jpg';
 
 export default function Press() {
   return (
-    <div className='pt-10 md:pt-12 h-full bg-[#e1e1e1]'>
-      <div className='w-full h-[60vh]  bg-black/20'>
-        <div className='flex justify-end items-end text-4xl pb-4 max-w-[1000px] w-full h-full mx-auto'>
-          IMPRENSA
+    <div className='pt-10 w-full md:pt-12 bg-[#e1e1e1]'>
+      <div className='w-full h-[350px] flex justify-center relative'>
+        <div className='relative text-4xl pb-4 h-[350px] w-full max-w-[1000px]'>
+          <div className='absolute w-full bottom-0 right-0 z-[100] flex justify-end'>
+            IMPRENSA
+          </div>
         </div>
+
+        <Image
+          src='/assets/header_press.jpg'
+          fill
+          className='object-cover overflow-hidden'
+          alt='Imprensa'
+        />
       </div>
       <div className='max-w-[1000px] py-20 mx-auto flex flex-col gap-12'>
         {/* CARD */}
