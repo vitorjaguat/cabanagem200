@@ -373,7 +373,7 @@ export default function GaleriaPrompts() {
         className='w-14 md:w-20 h-fit flex items-center sticky top-14 md:pt-4 shrink-0'
         style={{ writingMode: 'vertical-rl' }}
       >
-        <div className='h-fit text-[11px] md:text-sm px-3 md:px-4'>
+        <div className='h-fit text-[11px] md:text-sm px-3 md:px-4 tracking-wider'>
           <span className='font-stanleybold'>ARQUIVO&ensp;&ensp;</span>
           <span>ENTRADAS DE TEXTO</span>
         </div>

@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <div className='w-full p-10 pb-7 text-xs bg-[#C2C1A5]'>
+    <div className='w-full p-10 pb-7 text-xs bg-[#d6d5c2]'>
       <div className='flex flex-col md:flex-row items-center md:items-end justify-center md:justify-between h-full w-full md:w-[95%] md:mx-auto'>
         <div className='text-center md:text-left'>
           <div className='font-stanleybold'>Nheenga Cabana</div>

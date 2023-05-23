@@ -91,7 +91,7 @@ export default function Section3() {
         className='w-14 md:w-20 min-h-[350px] max-h-full md:max-h-full md:min-h-[500px] flex items-center sticky top-10 md:top-12 pt-2 md:pt-4 shrink-0'
         style={{ writingMode: 'vertical-rl', height: 'calc(100%-20px)' }}
       >
-        <div className='min-h-[350px] max-h-full md:max-h-full md:min-h-[500px] text-[11px] md:text-sm px-3 md:px-4'>
+        <div className='min-h-[350px] max-h-full md:max-h-full md:min-h-[500px] text-[11px] md:text-sm px-3 md:px-4 tracking-wider'>
           <span className='font-stanleybold'>NHEENGA CABANA</span>&ensp;&ensp;
         </div>
       </div>

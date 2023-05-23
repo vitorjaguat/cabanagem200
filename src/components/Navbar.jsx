@@ -46,8 +46,11 @@ export default function Navbar() {
                   : 'w-[100px] md:w-[200px] px-1 text-[14px] lg:text-[15px] uppercase font-stanleybold tracking-widest md:tracking-[2.5px] duration-700 ease-in-out'
               }
             >
-              <div className='translate-y-[2px] md:translate-y-0'>
-                cabanagem200
+              <div className='translate-y-[0px] w-fit'>
+                <div className='w-[90%] mx-auto h-3 relative translate-y-[3px]'>
+                  <Image src='/assets/orn/001.svg' fill />
+                </div>
+                <div className='w-fit'>cabanagem200</div>
               </div>
             </div>
           </Link>
@@ -64,7 +67,7 @@ export default function Navbar() {
                 <Link href='/#paineis' scroll={false}>
                   <div className='hover:text-slate-500'>exposição</div>
                 </Link>
-                <div className='absolute lowercase overflow-hidden opacity-0 group-hover:opacity-100 ease-in-out transition-all duration-300 bg-[#e1e1e1] p-1 pr-7 text-md rounded-sm translate-x-1'>
+                <div className='absolute lowercase overflow-hidden opacity-0 group-hover:opacity-100 ease-in-out transition-all duration-300 bg-[#d6d5c2] p-1 pr-7 text-md rounded-sm translate-x-1'>
                   <Link href='/#paineis' scroll={false}>
                     <div className='pt-4 hover:text-slate-500 pb-4'>
                       paineis
@@ -86,7 +89,7 @@ export default function Navbar() {
                 <Link href='/#arquivo' scroll={false}>
                   <div className='hover:text-slate-500'>arquivo</div>
                 </Link>
-                <div className='absolute lowercase overflow-hidden opacity-0 group-hover:opacity-100 ease-in-out transition-all duration-300 bg-[#e1e1e1] p-1 pr-7 text-md rounded-sm translate-x-1'>
+                <div className='absolute lowercase overflow-hidden opacity-0 group-hover:opacity-100 ease-in-out transition-all duration-300 bg-[#d6d5c2] p-1 pr-7 text-md rounded-sm translate-x-1'>
                   <Link href='/#arquivo' scroll={false}>
                     <div className='pt-4 hover:text-slate-500 pb-4'>
                       imagens de processo
@@ -137,7 +140,7 @@ export default function Navbar() {
           <div
             className={
               nav
-                ? 'fixed left-0 top-0 w-[75%] sm:w-[50%] md:w-[40%] h-full bg-[#ecf0f3] p-10 ease-in duration-500'
+                ? 'fixed left-0 top-0 w-[75%] sm:w-[50%] md:w-[40%] h-full bg-[#d6d5c2] p-10 ease-in duration-500'
                 : 'fixed left-[-100%] p-10 top-0 h-full ease-in duration-500'
             }
           >
@@ -227,7 +230,7 @@ export default function Navbar() {
             <div className='right-4 bottom-4 absolute'>
               <div
                 onClick={() => setNav(false)}
-                className='rounded-full bg-[#e2e2e2] p-2 cursor-pointer'
+                className='rounded-full bg-black/10 p-2 cursor-pointer'
               >
                 <AiOutlineClose />
               </div>
