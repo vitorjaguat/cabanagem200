@@ -43,14 +43,14 @@ export default function Navbar({ toggleDarkMode }) {
             <div
               className={
                 !shadow
-                  ? 'w-[100px] md:w-[200px] px-1 text-2xl md:text-[19px] lg:text-3xl uppercase tracking-widest md:tracking-[2.5px] '
-                  : 'w-[100px] md:w-[200px] px-1 text-[14px] lg:text-[15px] uppercase font-stanleybold tracking-widest md:tracking-[2.5px] '
+                  ? 'w-[100px] md:w-[200px] px-1 text-2xl md:text-[19px] lg:text-3xl uppercase tracking-widest md:tracking-[2.5px] duration-700'
+                  : 'w-[100px] md:w-[200px] px-1 text-[14px] lg:text-[15px] uppercase font-stanleybold tracking-widest md:tracking-[2.5px] duration-700'
               }
             >
               <div className='translate-y-[0px] w-fit'>
                 <div className='w-[90%] mx-auto h-3 relative translate-y-[3px] '>
                   <Image
-                    className='dark:invert'
+                    className='dark:invert duration-700'
                     src='/assets/orn/001.svg'
                     fill
                   />
