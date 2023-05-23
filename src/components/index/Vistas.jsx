@@ -42,7 +42,7 @@ export default function Vistas() {
         </div>
       </div>
       <div className='md:pt-2 mr-4'>
-        <div className='mb-4 p-4 bg-[#C2C1A5] rounded-sm text-sm md:text-md w-full'>
+        <div className='mb-4 p-4 bg-[#d6d5c2] rounded-sm text-sm md:text-md w-full'>
           A instalação{' '}
           <span className='font-stanleyitalic'>Nheenga Cabana</span> foi
           apresentada em três painéis expográficos no interior do espaço

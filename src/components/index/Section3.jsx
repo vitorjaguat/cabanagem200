@@ -97,7 +97,7 @@ export default function Section3() {
       </div>
 
       <div className='flex flex-col pt-2 md:pt-4'>
-        <div className='flex flex-col mb-2 md:mb-4 p-4 mr-4 bg-[#C2C1A5] rounded-sm'>
+        <div className='flex flex-col mb-2 md:mb-4 p-4 mr-4 bg-[#d6d5c2] rounded-sm'>
           <div className='pb-2 text-sm md:text-md'>
             Trazemos aqui as três composições que foram criadas a partir da
             leitura dos textos de Lúcio Flávio Pinto. À esquerda temos as
