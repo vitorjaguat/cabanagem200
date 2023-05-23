@@ -401,7 +401,7 @@ export default function GaleriaPrompts() {
 
         {showCarousel && (
           <div className='flex flex-col w-full'>
-            <div className='w-full mb-4 p-4 bg-[#d6d5c2] rounded-sm text-sm md:text-md'>
+            <div className='w-full mb-4 p-4 bg-[#d6d5c2] rounded-sm text-sm md:text-md dark:bg-[#633636]'>
               Nesta seção reunimos 150 entradas de texto criadas a partir do
               processo de edição e leituras dos escritos de Lúcio Flávio Pinto
               que foram utilizadas para a geração de imagens. Arraste para os
@@ -438,7 +438,7 @@ export default function GaleriaPrompts() {
               >
                 {data.slice(78, data.length - 1).map((item, i) => (
                   <div
-                    className='text-[11px] border-[1px] border-b-0 border-r-0 border-black md:text-sm p-4 min-h-[300px] max-w-[280px] md:max-w-[400px] md:px-6 h-full flex items-center bg-slate-100'
+                    className='text-[11px] border-[1px] border-b-0 border-r-0 border-black md:text-sm p-4 min-h-[300px] max-w-[280px] md:max-w-[400px] md:px-6 h-full flex items-center bg-slate-100 dark:bg-white/10'
                     key={i}
                   >
                     {item.value}
@@ -476,7 +476,7 @@ export default function GaleriaPrompts() {
               >
                 {data.slice(0, 77).map((item, i) => (
                   <div
-                    className='text-[11px] border-[1px] border-r-0 border-black md:text-sm p-4 min-h-[300px] max-w-[280px] md:max-w-[400px] md:px-6 h-full flex items-center bg-slate-100'
+                    className='text-[11px] border-[1px] border-r-0 border-black md:text-sm p-4 min-h-[300px] max-w-[280px] md:max-w-[400px] md:px-6 h-full flex items-center bg-slate-100 dark:bg-white/10'
                     key={i}
                     // style={{ maxWidth: lgMediaQuery ? '25%' : '100%' }}
                   >

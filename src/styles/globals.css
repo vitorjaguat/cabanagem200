@@ -26,8 +26,13 @@ body {
 
 /* custom global styles: */
 @layer base {
-  body {
-    @apply bg-[#bec4c9] text-[#252525] dark:bg-gray-800;
+  body,
+  main {
+    @apply bg-[#bec4c9] text-[#252525] dark:bg-[#2f2f2f] dark:text-white;
+  }
+
+  * {
+    @apply dark:text-white;
   }
 
   h1,

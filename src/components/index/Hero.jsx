@@ -1,9 +1,10 @@
 import Image from 'next/image';
 import heroImg from '../../../public/img/hero.jpg';
 import Marquee from 'react-fast-marquee';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { useTheme } from 'next-themes';
 import { MdDarkMode } from 'react-icons/md';
+import { ThemeContext } from '@/context/ThemeContext';
 
 const headlines = [
   'estoura insurreição popular na Amazônia durante a madrugada',
@@ -20,13 +21,14 @@ const headlines = [
   // 'Cabanos se rendem na vila de Luséia, entregando as armas',
 ];
 
-export default function Hero({ images, toggleDarkMode }) {
+export default function Hero({ images }) {
   // const [headline, setHeadline] = useState('');
   // useEffect(() => {
   //   const headlineContent =
   //     headlines[Math.floor(Math.random() * headlines.length)];
   //   console.log(headlineContent);
   // }, []);
+  // console.log(test);
 
   const [image1, setImage1] = useState('');
   const [image2, setImage2] = useState('');
@@ -54,20 +56,28 @@ export default function Hero({ images, toggleDarkMode }) {
   //Dark mode toggle:
   // const { systemTheme, theme, setTheme } = useTheme();
   // const currentTheme = theme === 'system' ? systemTheme : theme;
+  const { toggleDarkMode, darkMode } = useContext(ThemeContext);
+  console.log(toggleDarkMode);
 
   return (
-    <div className='overflow-hidden h-screen w-full' id='home'>
+    <div
+      className='overflow-hidden h-screen w-full dark:bg-[rgb(38,44,44)] duration-700 transition-all'
+      id='home'
+    >
       <div
-        className='w-full h-screen md:pt-[4.5rem] pt-[3.5rem] flex flex-col'
+        className='w-full h-screen md:pt-[4.5rem] pt-[3.5rem] flex flex-col dark:bg-[#262C2C]'
         // style={{ objectPosition: '50% 100%' }}
         // style={{ objectFit: 'cover' }}
       >
-        <div className='grid grid-rows-2 h-full max-h-[calc(100%-3.5rem)] md:max-h-[calc(100%-4.5rem)] relative'>
+        <div className='grid grid-rows-2 h-full max-h-[calc(100%-3.5rem)] md:max-h-[calc(100%-4.5rem)] relative dark:bg-[#262C2C]'>
           <div
-            className='absolute right-4 top-4 p-1 bg-[#d6d5c2] dark:bg-slate-900 rounded-full cursor-pointer'
-            onClick={() => toggleDarkMode}
+            className='absolute right-4 top-4 p-1 bg-[#d6d5c2] dark:bg-[#262C2C] rounded-full cursor-pointer dark:text-[#F5F9E9]'
+            onClick={() => {
+              toggleDarkMode();
+              console.log('done');
+            }}
           >
-            <MdDarkMode color='' />
+            <MdDarkMode color={darkMode ? '#d1d1d1' : 'black'} />
           </div>
           {/* <div className='w-full h-full md:h-[calc(100vh-4.5rem)] row-span-1 md:col-span-1 bg-black/20'>
               {image1 && <img src='/assets/percurso/171_percurso.png' alt='' />}
@@ -161,10 +171,10 @@ export default function Hero({ images, toggleDarkMode }) {
             </div>
           </div>
         </div>
-        <div className='min-h-[3.5rem] md:min-h-[4.5rem] bg-[#d6d5c2] flex items-center relative'>
+        <div className='min-h-[3.5rem] md:min-h-[4.5rem] bg-[#d6d5c2] dark:bg-[#2f2f2f] flex items-center relative duration-700'>
           <Marquee
             speed={100}
-            className='text-3xl md:text-4xl tracking-wider uppercase h-[2.5rem] md:h-[3rem]'
+            className='text-3xl md:text-4xl tracking-wider uppercase h-[2.5rem] md:h-[3rem] dark:text-[#fff] '
           >
             {headlines[Math.floor(Math.random() * headlines.length)] ||
               'estoura insurreição popular na Amazônia durante a madrugada'}

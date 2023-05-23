@@ -13,8 +13,10 @@ import path from 'path';
 import GaleriaPrompts from '@/components/index/GaleriaPrompts';
 import Deco from '@/components/index/Deco';
 import Vistas from '@/components/index/Vistas';
+import { useContext } from 'react';
 
 export default function Home({ images }) {
+  // console.log(props);
   return (
     <>
       <main className='bg-[#e1e1e1]'>
@@ -83,10 +85,13 @@ export async function getStaticProps({ locale }) {
     })
   );
 
+  // const toggleDarkMode =
+
   return {
     props: {
       ...(await serverSideTranslations(locale, ['common'])),
       images: imagesWithAllSizes,
+      // toggleDarkMode: toggleDarkMode,
     },
   };
 }
