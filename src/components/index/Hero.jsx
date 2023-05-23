@@ -149,7 +149,7 @@ export default function Hero({ images }) {
             </div>
           </div>
         </div>
-        <div className='min-h-[3.5rem] md:min-h-[4.5rem] bg-[#e1e1e1] flex items-center'>
+        <div className='min-h-[3.5rem] md:min-h-[4.5rem] bg-[#C2C1A5] flex items-center'>
           <Marquee
             speed={100}
             className='text-3xl md:text-4xl tracking-wider uppercase h-[2.5rem] md:h-[3rem]'

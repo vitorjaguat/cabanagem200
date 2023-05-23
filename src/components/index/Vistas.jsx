@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Lightbox from 'react-spring-lightbox';
 import { IoIosArrowBack, IoIosArrowForward, IoClose } from 'react-icons/io';
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function Vistas() {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,6 +42,32 @@ export default function Vistas() {
         </div>
       </div>
       <div className='md:pt-2 mr-4'>
+        <div className='mb-4 p-4 bg-[#C2C1A5] rounded-sm text-sm md:text-md w-full'>
+          A instalação{' '}
+          <span className='font-stanleyitalic'>Nheenga Cabana</span> foi
+          apresentada em três painéis expográficos no interior do espaço
+          expositivo do MAM-Rio durante a exposição{' '}
+          <span className='font-stanleyitalic'>
+            Atos de Revolta: outros imaginários sobre a independência
+          </span>
+          . Os mobiliários foram desenhados por Juliana Godoy em aço e
+          compensados de madeira. Na frente, visitantes encontravam as imagens
+          de grande formato e exemplares do{' '}
+          <span className='font-stanleyitalic'>
+            Jornal Pessoal - Edição Extraordinária
+          </span>
+          ; e no verso, anotações em acetatos com entradas de textos (
+          <span className='font-stanleyitalic'>prompts</span>) utilizadas no
+          processo de criação destes trabalhos. Veja mais sobre a exposição na
+          seção{' '}
+          <Link
+            className='text-slate-700 tracking-tight font-stanleybold hover:underline'
+            href='/press'
+          >
+            Imprensa
+          </Link>
+          .
+        </div>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2'>
           {imgData.map((img, i) => (
             <div className='' key={i}>
