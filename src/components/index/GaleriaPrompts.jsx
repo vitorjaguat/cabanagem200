@@ -401,7 +401,7 @@ export default function GaleriaPrompts() {
 
         {showCarousel && (
           <div className='flex flex-col w-full'>
-            <div className='w-full mb-4 p-4 bg-black/20 rounded-sm text-sm md:text-md'>
+            <div className='w-full mb-4 p-4 bg-[#C2C1A5] rounded-sm text-sm md:text-md'>
               Nesta seção reunimos 150 entradas de texto criadas a partir do
               processo de edição e leituras dos escritos de Lúcio Flávio Pinto
               que foram utilizadas para a geração de imagens. Arraste para os

@@ -99,7 +99,7 @@ export default function GaleriaProcesso2({ images }) {
       </ResponsiveMasonry> */}
         {/* <div className='w-full grid grid-cols-12 object-cover gap-0'> */}
 
-        <div className='w-full text-sm md:text-md mb-4 p-4 bg-black/20 rounded-sm'>
+        <div className='w-full text-sm md:text-md mb-4 p-4 bg-[#C2C1A5] rounded-sm'>
           O diálogo que tivemos com as máquinas geradoras de imagem com IA a
           partir de textos (text-to-image AI image generators) produziu um
           arquivo extenso que não foi utilizado nas três composições exibidas na

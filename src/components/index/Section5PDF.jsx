@@ -138,7 +138,7 @@ export default function Section5PDF() {
       </div>
 
       <div className='flex flex-col justify-center w-full overflow-hidden'>
-        <div className='mr-4 mb-4 p-4 bg-black/20 rounded-sm text-sm md:text-md w-[calc(100%-1rem)]'>
+        <div className='mr-4 mb-4 p-4 bg-[#C2C1A5] rounded-sm text-sm md:text-md w-[calc(100%-1rem)]'>
           O{' '}
           <span className='font-stanleyitalic'>
             Jornal Pessoal - Edição Extraordinária
