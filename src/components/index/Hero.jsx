@@ -2,6 +2,8 @@ import Image from 'next/image';
 import heroImg from '../../../public/img/hero.jpg';
 import Marquee from 'react-fast-marquee';
 import { useState, useEffect } from 'react';
+import { useTheme } from 'next-themes';
+import { MdDarkMode } from 'react-icons/md';
 
 const headlines = [
   'estoura insurreição popular na Amazônia durante a madrugada',
@@ -18,7 +20,7 @@ const headlines = [
   // 'Cabanos se rendem na vila de Luséia, entregando as armas',
 ];
 
-export default function Hero({ images }) {
+export default function Hero({ images, toggleDarkMode }) {
   // const [headline, setHeadline] = useState('');
   // useEffect(() => {
   //   const headlineContent =
@@ -47,7 +49,11 @@ export default function Hero({ images }) {
     setImage7(shuffleImages[7].url_lg.slice(6));
     setImage8(shuffleImages[8].url_lg.slice(6));
   }, [images]);
-  console.log(image1);
+  // console.log(image1);
+
+  //Dark mode toggle:
+  // const { systemTheme, theme, setTheme } = useTheme();
+  // const currentTheme = theme === 'system' ? systemTheme : theme;
 
   return (
     <div className='overflow-hidden h-screen w-full' id='home'>
@@ -56,7 +62,13 @@ export default function Hero({ images }) {
         // style={{ objectPosition: '50% 100%' }}
         // style={{ objectFit: 'cover' }}
       >
-        <div className='grid grid-rows-2 h-full max-h-[calc(100%-3.5rem)] md:max-h-[calc(100%-4.5rem)]'>
+        <div className='grid grid-rows-2 h-full max-h-[calc(100%-3.5rem)] md:max-h-[calc(100%-4.5rem)] relative'>
+          <div
+            className='absolute right-4 top-4 p-1 bg-[#d6d5c2] dark:bg-slate-900 rounded-full cursor-pointer'
+            onClick={() => toggleDarkMode}
+          >
+            <MdDarkMode color='' />
+          </div>
           {/* <div className='w-full h-full md:h-[calc(100vh-4.5rem)] row-span-1 md:col-span-1 bg-black/20'>
               {image1 && <img src='/assets/percurso/171_percurso.png' alt='' />}
             </div>
@@ -149,7 +161,7 @@ export default function Hero({ images }) {
             </div>
           </div>
         </div>
-        <div className='min-h-[3.5rem] md:min-h-[4.5rem] bg-[#d6d5c2] flex items-center'>
+        <div className='min-h-[3.5rem] md:min-h-[4.5rem] bg-[#d6d5c2] flex items-center relative'>
           <Marquee
             speed={100}
             className='text-3xl md:text-4xl tracking-wider uppercase h-[2.5rem] md:h-[3rem]'

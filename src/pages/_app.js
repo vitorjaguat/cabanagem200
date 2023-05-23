@@ -4,6 +4,8 @@ import { appWithTranslation } from 'next-i18next';
 import localFont from '@next/font/local';
 import Head from 'next/head';
 import Footer from '@/components/Footer';
+import { ThemeProvider } from 'next-themes';
+import { useState } from 'react';
 
 const stanley = localFont({
   src: '../../public/assets/fonts/stanley-regular.woff2',
@@ -30,6 +32,12 @@ const stanleybolditalic = localFont({
 });
 
 const App = ({ Component, pageProps }) => {
+  const [darkMode, setDarkMode] = useState(false);
+  const toggleDarkMode = () => {
+    setDarkMode((curr) => !curr);
+  };
+  console.log(darkMode);
+
   return (
     <>
       <Head>
@@ -78,11 +86,15 @@ const App = ({ Component, pageProps }) => {
         <meta property='og:locale' content='en_US' />
       </Head>
       <div
-        className={`${stanley.variable} ${stanleybold.variable} ${stanleyitalic.variable} ${stanleybolditalic.variable} font-stanley`}
+        className={`${stanley.variable} ${stanleybold.variable} ${
+          stanleyitalic.variable
+        } ${stanleybolditalic.variable} font-stanley ${darkMode ? 'dark' : ''}`}
       >
+        {/* <ThemeProvider> */}
         <Navbar />
-        <Component {...pageProps} />
+        <Component {...pageProps} toggleDarkMode={toggleDarkMode} />
         <Footer />
+        {/* </ThemeProvider> */}
       </div>
     </>
   );
