@@ -7,11 +7,14 @@ import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { useTranslation } from 'next-i18next';
 import LanguageToggle from './LanguageToggle';
 import { MdDarkMode } from 'react-icons/md';
+import { useContext } from 'react';
+import { ThemeContext } from '@/context/ThemeContext';
 
-export default function Navbar({ toggleDarkMode }) {
+export default function Navbar() {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
   const { t } = useTranslation('common');
+  const { darkMode, toggleDarkMode } = useContext(ThemeContext);
 
   useEffect(() => {
     const handleShadow = () => {
@@ -128,6 +131,16 @@ export default function Navbar({ toggleDarkMode }) {
                   {t('navbar.about')}
                 </li>
               </Link>
+
+              <div
+                className='p-1 rounded-full cursor-pointer dark:text-[#F5F9E9]'
+                onClick={() => {
+                  toggleDarkMode();
+                  console.log('done');
+                }}
+              >
+                <MdDarkMode color={darkMode ? '#d1d1d1' : 'black'} />
+              </div>
             </ul>
 
             {/* <div className='flex justify-end'>

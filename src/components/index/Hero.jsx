@@ -70,7 +70,7 @@ export default function Hero({ images }) {
         // style={{ objectFit: 'cover' }}
       >
         <div className='grid grid-rows-2 h-full max-h-[calc(100%-3.5rem)] md:max-h-[calc(100%-4.5rem)] relative dark:bg-[#262C2C]'>
-          <div
+          {/* <div
             className='absolute right-4 top-4 p-1 bg-[#d6d5c2] dark:bg-[#262C2C] rounded-full cursor-pointer dark:text-[#F5F9E9]'
             onClick={() => {
               toggleDarkMode();
@@ -78,7 +78,7 @@ export default function Hero({ images }) {
             }}
           >
             <MdDarkMode color={darkMode ? '#d1d1d1' : 'black'} />
-          </div>
+          </div> */}
           {/* <div className='w-full h-full md:h-[calc(100vh-4.5rem)] row-span-1 md:col-span-1 bg-black/20'>
               {image1 && <img src='/assets/percurso/171_percurso.png' alt='' />}
             </div>
