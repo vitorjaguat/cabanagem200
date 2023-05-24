@@ -61,7 +61,7 @@ export default function Vistas() {
           processo de criação destes trabalhos. Veja mais sobre a exposição na
           seção{' '}
           <Link
-            className='text-slate-700 tracking-tight font-stanleybold hover:underline'
+            className='text-slate-700 tracking-tight font-stanleybold hover:underline dark:text-slate-400'
             href='/press'
           >
             Imprensa

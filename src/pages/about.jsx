@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function About() {
   return (
-    <div className='pt-10 w-full md:pt-12 bg-[#e1e1e1]'>
+    <div className='pt-10 w-full md:pt-12 bg-[#e1e1e1] dark:bg-[#2f2f2f] duration-700'>
       <div className='w-full h-[350px] flex justify-center relative'>
         <div className='relative text-3xl md:text-4xl pb-4 h-[350px] w-full max-w-[1000px]'>
           <div className='absolute w-full bottom-0 right-0 z-[100] flex justify-end px-4'>
@@ -14,7 +14,7 @@ export default function About() {
         <Image
           src='/assets/header_about.jpg'
           fill
-          className='object-cover overflow-hidden'
+          className='object-cover overflow-hidden dark:invert-[0.82] duration-700'
           alt='Imprensa'
         />
       </div>
@@ -37,7 +37,7 @@ export default function About() {
           de obras comissionadas pelo Museu de Arte Moderna do Rio de Janeiro
           para a exposição coletiva{' '}
           <a
-            className='text-slate-700 tracking-tight font-stanleybold hover:underline'
+            className='text-slate-700 tracking-tight font-stanleybold hover:underline dark:text-slate-400'
             href='https://mam.rio/programacao/atos-de-revolta/'
             target='_blank'
             rel='noreferrer'
@@ -79,7 +79,7 @@ export default function About() {
           <div className=''>
             DALL-E 2 (acessível em{' '}
             <a
-              className='text-slate-700 tracking-tight font-stanleybold hover:underline'
+              className='text-slate-700 tracking-tight font-stanleybold hover:underline dark:text-slate-400'
               href='https://labs.openai.com/'
               target='_blank'
               rel='noreferrer'
@@ -91,7 +91,7 @@ export default function About() {
           <div className=''>
             MidJourney v2 e v3 (atualmente v5, acessível em{' '}
             <a
-              className='text-slate-700 tracking-tight font-stanleybold hover:underline'
+              className='text-slate-700 tracking-tight font-stanleybold hover:underline dark:text-slate-400'
               href='https://www.midjourney.com/'
               target='_blank'
               rel='noreferrer'
@@ -103,7 +103,7 @@ export default function About() {
           <div className=''>
             Stable Diffusion v1.4 (Modelo local acessível em{' '}
             <a
-              className='text-slate-700 tracking-tight font-stanleybold hover:underline'
+              className='text-slate-700 tracking-tight font-stanleybold hover:underline dark:text-slate-400'
               href='https://github.com/CompVis/stable-diffusion'
               target='_blank'
               rel='noreferrer'
@@ -112,7 +112,7 @@ export default function About() {
             </a>
             ; atualmente v2.1, acessível em{' '}
             <a
-              className='text-slate-700 tracking-tight font-stanleybold hover:underline'
+              className='text-slate-700 tracking-tight font-stanleybold hover:underline dark:text-slate-400'
               href='https://github.com/Stability-AI/StableStudio/'
               target='_blank'
               rel='noreferrer'
@@ -124,7 +124,7 @@ export default function About() {
           <div className=''>
             Waifu2x v3.92.01 (atualmente v3.101.01, acessível em{' '}
             <a
-              className='text-slate-700 tracking-tight font-stanleybold hover:underline'
+              className='text-slate-700 tracking-tight font-stanleybold hover:underline dark:text-slate-400'
               href='https://github.com/AaronFeng753/Waifu2x-Extension-GUI/'
               target='_blank'
               rel='noreferrer'
