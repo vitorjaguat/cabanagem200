@@ -148,11 +148,23 @@ export default function Navbar() {
             </div> */}
           </div>
 
-          <div
-            onClick={handleNav}
-            className='w-[100px] flex justify-end md:hidden pl-10 pr-1'
-          >
-            <AiOutlineMenu size={26} />
+          <div className='flex items-center justify-between'>
+            <div
+              className='md:hidden p-1 rounded-full cursor-pointer dark:text-[#F5F9E9]'
+              onClick={() => {
+                toggleDarkMode();
+                console.log('done');
+              }}
+            >
+              <MdDarkMode size={20} color={darkMode ? '#d1d1d1' : 'black'} />
+            </div>
+
+            <div
+              onClick={handleNav}
+              className='flex justify-end md:hidden pl-4 pr-1'
+            >
+              <AiOutlineMenu size={26} />
+            </div>
           </div>
         </div>
 
