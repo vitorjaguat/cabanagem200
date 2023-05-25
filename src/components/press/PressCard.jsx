@@ -8,7 +8,7 @@ export default function PressCard({ link, img, title, text1, text2 }) {
           <Image src={img} className='object-cover object-' fill />
         </div>
         <div className='relative flex flex-col justify-between'>
-          <p className='text-3xl mb-4'>{title}</p>
+          <p className='text-2xl mb-4'>{title}</p>
           <div className='mt-auto'>
             <p className='text-sm text-justify'>{text1}</p>
             <p className='text-sm text-justify'>{text2}</p>

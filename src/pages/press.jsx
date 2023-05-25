@@ -20,7 +20,7 @@ export default function Press() {
           alt='Imprensa'
         />
       </div>
-      <div className='max-w-[1000px] py-20 mx-auto flex flex-col gap-12'>
+      <div className='max-w-[1000px] py-20 px-4 mx-auto flex flex-col gap-12'>
         {/* CARD */}
         <div className='p-5 flex flex-col md:flex-row justify-between gap-6 border-[0.5px] border-black'>
           <div className=' order-last md:order-1 w-[300px] h-[250px] relative md:overflow-hidden shrink-0 mt-auto mx-auto md:mx-0'>
@@ -40,7 +40,7 @@ export default function Press() {
               target='_blank'
               rel='noopener noreferrer'
             >
-              <p className='text-3xl mb-4'>
+              <p className='text-2xl mb-4'>
                 Atos de revolta | Giseli Vasconcelos e Pedro Victor Brandão -
                 Nheenga Cabana
               </p>
@@ -89,7 +89,7 @@ export default function Press() {
               target='_blank'
               rel='noopener noreferrer'
             >
-              <p className='text-3xl mb-4'>
+              <p className='text-2xl mb-4'>
                 Atos de revolta | panorama da exposição | Pablo Lafuente
               </p>
             </a>
@@ -136,7 +136,7 @@ export default function Press() {
               target='_blank'
               rel='noopener noreferrer'
             >
-              <p className='text-3xl mb-4'>Sem Censura Pará | Nheenga Cabana</p>
+              <p className='text-2xl mb-4'>Sem Censura Pará | Nheenga Cabana</p>
             </a>
             <div className='flex flex-col justify-end'>
               <p className='text-sm text-justify'>
