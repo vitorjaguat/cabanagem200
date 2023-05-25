@@ -5,7 +5,7 @@ import imgHeader from '../../public/assets/header_press.jpg';
 
 export default function Press() {
   return (
-    <div className='pt-10 w-full md:pt-12 bg-[#e1e1e1]'>
+    <div className='pt-10 w-full md:pt-12 bg-[#e1e1e1] dark:bg-[#2f2f2f]'>
       <div className='w-full h-[350px] flex justify-center relative'>
         <div className='relative text-3xl md:text-4xl pb-4 h-[350px] w-full max-w-[1000px]'>
           <div className='absolute w-full bottom-0 right-4 z-[100] flex justify-end text-[#e1e1e1]'>

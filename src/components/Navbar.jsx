@@ -167,7 +167,7 @@ export default function Navbar() {
           <div
             className={
               nav
-                ? 'fixed left-0 top-0 w-[75%] sm:w-[50%] md:w-[40%] h-full bg-[#d6d5c2] p-10 ease-in duration-500'
+                ? 'fixed left-0 top-0 w-[75%] sm:w-[50%] md:w-[40%] h-full bg-[#d6d5c2] dark:bg-[#633636] p-10 ease-in duration-500'
                 : 'fixed left-[-100%] p-10 top-0 h-full ease-in duration-500'
             }
           >
