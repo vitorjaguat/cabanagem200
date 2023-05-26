@@ -153,7 +153,7 @@ export default function Navbar() {
               className='md:hidden p-1 rounded-full cursor-pointer dark:text-[#F5F9E9]'
               onClick={() => {
                 toggleDarkMode();
-                console.log('done');
+                // console.log('done');
               }}
             >
               <MdDarkMode size={20} color={darkMode ? '#d1d1d1' : 'black'} />
