@@ -148,7 +148,7 @@ export default function Navbar() {
             </div> */}
           </div>
 
-          <div className='flex items-center justify-between'>
+          <div className='md:hidden flex items-center justify-between'>
             <div
               className='md:hidden p-1 rounded-full cursor-pointer dark:text-[#F5F9E9]'
               onClick={() => {
