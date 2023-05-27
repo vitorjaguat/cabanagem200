@@ -17,7 +17,9 @@ export default function Footer() {
       </div> */}
       <div className='flex flex-col items-center justify-center h-full w-full leading-[16px]'>
         <div className='p-3'>
-          <span className='font-stanley tracking-widest'>Nheenga Cabana</span>
+          <span className='font-stanleybold tracking-widest'>
+            Nheenga Cabana
+          </span>
           &nbsp;&nbsp;
           <a
             className='text-slate-700 tracking-tight hover:underline dark:text-slate-400'
@@ -29,7 +31,7 @@ export default function Footer() {
           </a>
           &nbsp;&nbsp; 2022
         </div>
-        <div className='tracking-widest'>cabanagem200.xyz</div>
+        <div className='tracking-widest font-stanleybold'>cabanagem200.net</div>
         <div className='tracking-wider'>desenvolvido por Vitor Butkus</div>
         <div className=''>2023</div>
       </div>

@@ -56,7 +56,7 @@ export default function About() {
           artista gaúcho Glauco Rodrigues, pertencentes ao acervo do MAM-Rio.
         </div>
         <div className='mt-20 mb-8 text-center'>
-          <div className='font-stanleybold'>cabanagem200.xyz</div>
+          <div className='font-stanleybold'>cabanagem200.net</div>
           <div className=''>Desenvolvimento web: Vitor Butkus</div>
         </div>
         <div className='text-center mb-8'>
