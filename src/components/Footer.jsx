@@ -32,7 +32,17 @@ export default function Footer() {
           &nbsp;&nbsp; 2022
         </div>
         <div className='tracking-widest font-stanleybold'>cabanagem200.net</div>
-        <div className='tracking-wider'>desenvolvido por Vitor Butkus</div>
+        <div className='tracking-wider'>
+          desenvolvido por{' '}
+          <a
+            className='text-slate-700 tracking-tight hover:underline dark:text-slate-400'
+            href='https://portfolio-vitor.vercel.app/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            Vitor Butkus
+          </a>
+        </div>
         <div className=''>2023</div>
       </div>
     </div>
