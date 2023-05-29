@@ -57,7 +57,17 @@ export default function About() {
         </div>
         <div className='mt-20 mb-8 text-center'>
           <div className='font-stanleybold'>cabanagem200.net</div>
-          <div className=''>Desenvolvimento web: Vitor Butkus</div>
+          <div className=''>
+            Desenvolvimento web:{' '}
+            <a
+              className='text-slate-700 tracking-tight font-stanleybold hover:underline dark:text-slate-400'
+              href='https://portfolio-vitor.vercel.app/'
+              target='_blank'
+              rel='noreferrer'
+            >
+              Vitor Butkus
+            </a>
+          </div>
         </div>
         <div className='text-center mb-8'>
           <div className='font-stanleybold'>
