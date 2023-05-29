@@ -9,6 +9,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { ThemeContext } from '@/context/ThemeContext';
+import Script from 'next/script';
 
 const stanley = localFont({
   src: '../../public/assets/fonts/stanley-regular.woff2',
@@ -92,6 +93,26 @@ const App = ({ Component, pageProps }) => {
           <meta property='og:type' content='article' />
           <meta property='og:locale' content='en_US' />
         </Head>
+        {/* GOOGLE-analytics https://www.makeuseof.com/nextjs-google-analytics/ */}
+        <Script
+          strategy='afterInteractive'
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GANALYTICS}`}
+        />
+        <Script
+          id='google-analytics'
+          strategy='afterInteractive'
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', '${process.env.NEXT_PUBLIC_GANALYTICS}', {
+              page_path: window.location.pathname,
+            });
+          `,
+          }}
+        />
         <div
           className={`${stanley.variable} ${stanleybold.variable} ${
             stanleyitalic.variable
