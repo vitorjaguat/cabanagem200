@@ -46,7 +46,7 @@ export default function Navbar() {
             <div
               className={
                 !shadow
-                  ? 'w-[100px] md:w-[200px] px-1 text-2xl md:text-[19px] lg:text-3xl uppercase tracking-widest md:tracking-[2.5px] duration-700'
+                  ? 'w-[100px] md:w-[200px] px-1 text-xl md:text-[19px] lg:text-3xl uppercase tracking-widest md:tracking-[2.5px] duration-700'
                   : 'w-[100px] md:w-[200px] px-1 text-[14px] lg:text-[15px] uppercase font-stanleybold tracking-widest md:tracking-[2.5px] duration-700'
               }
             >
@@ -59,7 +59,7 @@ export default function Navbar() {
                   />
                   {/* <Svg className='absolute top-0 left-0' /> */}
                 </div>
-                <div className='w-fit'>cabanagem200</div>
+                <div className='w-fit '>cabanagem200</div>
               </div>
             </div>
           </Link>

@@ -6,7 +6,7 @@ export default function About() {
     <div className='pt-10 w-full md:pt-12 bg-[#e1e1e1] dark:bg-[#2f2f2f] duration-700'>
       <div className='w-full h-[350px] flex justify-center relative'>
         <div className='relative text-3xl md:text-4xl pb-4 h-[350px] w-full max-w-[1000px]'>
-          <div className='absolute w-full bottom-0 right-0 z-[100] flex justify-end px-4'>
+          <div className='absolute w-full bottom-0 right-0 z-[99] flex justify-end px-4'>
             SOBRE
           </div>
         </div>
