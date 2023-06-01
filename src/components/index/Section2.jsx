@@ -50,7 +50,8 @@ export default function Section2() {
           impressões de grande formato, o arquivo em PDF da edição
           extraordinária do{' '}
           <span className='font-stanleybolditalic'>Jornal Pessoal</span>; e
-          também imagens e entradas de texto (prompts) feitas durante o
+          também imagens e entradas de texto (
+          <span className=' font-stanleyitalic'>prompts</span>) feitas durante o
           processo.
         </p>
       </div>

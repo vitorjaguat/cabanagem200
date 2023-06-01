@@ -7,6 +7,7 @@ import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { useTranslation } from 'next-i18next';
 import LanguageToggle from './LanguageToggle';
 import { MdDarkMode } from 'react-icons/md';
+import { FiSun } from 'react-icons/fi';
 import { useContext } from 'react';
 import { ThemeContext } from '@/context/ThemeContext';
 
@@ -139,7 +140,11 @@ export default function Navbar() {
                   console.log('done');
                 }}
               >
-                <MdDarkMode color={darkMode ? '#d1d1d1' : 'black'} />
+                {darkMode ? (
+                  <FiSun color='#d1d1d1' />
+                ) : (
+                  <MdDarkMode color='black' />
+                )}
               </div>
             </ul>
 
@@ -156,7 +161,11 @@ export default function Navbar() {
                 // console.log('done');
               }}
             >
-              <MdDarkMode size={20} color={darkMode ? '#d1d1d1' : 'black'} />
+              {darkMode ? (
+                <FiSun color='#d1d1d1' />
+              ) : (
+                <MdDarkMode size={20} color='black' />
+              )}
             </div>
 
             <div
