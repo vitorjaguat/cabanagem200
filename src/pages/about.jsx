@@ -29,8 +29,7 @@ export default function About() {
           Lúcio Flávio Pinto, a ficha técnica de todo o projeto, materiais de
           imprensa, os arquivos de imagem co-criados com inteligências
           artificiais exibidos no MAM-Rio e também uma seleção de arquivos de
-          imagens inéditos. O site exibe conteúdos de mídia hospedados com IPFS
-          de forma a preservar sua permanência.
+          imagens inéditos.
         </div>
         <div className=''>
           <span className='font-stanleyitalic'>Nheenga Cabana</span> é uma série
@@ -55,8 +54,8 @@ export default function About() {
           Inconfidência e do Museu Histórico Nacional; e oito pinturas do
           artista gaúcho Glauco Rodrigues, pertencentes ao acervo do MAM-Rio.
         </div>
-        <div className='mt-20 mb-8 text-center'>
-          <div className='font-stanleybold'>cabanagem200.net</div>
+        <div className='mt-20 mb-8'>
+          <div className='font-stanleybold uppercase'>cabanagem200.net</div>
           <div className=''>
             Desenvolvimento web:{' '}
             <a
@@ -69,8 +68,8 @@ export default function About() {
             </a>
           </div>
         </div>
-        <div className='text-center mb-8'>
-          <div className='font-stanleybold'>
+        <div className='mb-8'>
+          <div className='font-stanleybold uppercase'>
             Jornal Pessoal Edição Extraordinária
           </div>
           <div className=''>Redação: Lúcio Flávio Pinto</div>
@@ -82,8 +81,16 @@ export default function About() {
           <div className=''>Impressão: Gráfica Rotativa</div>
           <div className=''>Tiragem: 5.000 cópias</div>
         </div>
-        <div className='text-center'>
-          <div className='font-stanleybold'>
+        <div className='mb-8 text-left max-w-[600px]'>
+          <div className='font-stanleybold uppercase'>Agradecimentos</div>
+          <div className=''>
+            Luiz Pinto, Marilene Pantoja, Natalie Summers, Portas Vilaseca
+            Galeria, Vanessa Vasconcelos, família Vasconcelos e à toda equipe
+            MAM Rio.
+          </div>
+        </div>
+        <div className='mb-8 text-left'>
+          <div className='font-stanleybold uppercase'>
             Ferramentas de criação de imagem utilizadas
           </div>
           <div className=''>
@@ -142,6 +149,20 @@ export default function About() {
               https://github.com/AaronFeng753/Waifu2x-Extension-GUI/
             </a>
             ){' '}
+          </div>
+        </div>
+        <div className='mb-8 text-left'>
+          <div className=''>
+            Os arquivos mostrados neste site podem ser acessados em alta
+            resolução via IPFS:{' '}
+            <a
+              className='text-slate-700 tracking-tight font-stanleybold hover:underline dark:text-slate-400'
+              href='https://ipfs.io/ipfs/bafybeib4wnj5mkwvcozhbf3bdccz56rlts7q2oz5qwfemrhw6mezxttpgy/'
+              target='_blank'
+              rel='noreferrer'
+            >
+              https://ipfs.io/ipfs/bafybeib4wnj5mkwvcozhbf3bdccz56rlts7q2oz5qwfemrhw6mezxttpgy/
+            </a>
           </div>
         </div>
       </div>
