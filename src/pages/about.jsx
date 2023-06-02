@@ -85,7 +85,7 @@ export default function About() {
             <div className='font-stanleybold uppercase'>Agradecimentos</div>
             <div className=''>
               Luiz Pinto, Marilene Pantoja, Natalie Summers, Portas Vilaseca
-              Galeria, Vanessa Vasconcelos, família Vasconcelos e à toda equipe
+              Galeria, Vanessa Vasconcelos, família Vasconcelos e toda equipe
               MAM Rio.
             </div>
           </div>
