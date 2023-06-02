@@ -19,7 +19,6 @@ export default function About() {
         />
       </div>
       <div className='max-w-[1000px] px-4 py-20 mx-auto text-justify'>
-        {/* CARD */}
         <div className='mb-4'>
           <span className='font-stanleybold'>cabanagem200</span> é um site que
           mostra de forma permanente arquivos do conjunto de trabalhos{' '}
@@ -54,115 +53,117 @@ export default function About() {
           Inconfidência e do Museu Histórico Nacional; e oito pinturas do
           artista gaúcho Glauco Rodrigues, pertencentes ao acervo do MAM-Rio.
         </div>
-        <div className='mt-20 mb-8'>
-          <div className='font-stanleybold uppercase'>cabanagem200.net</div>
-          <div className=''>
-            Desenvolvimento web:{' '}
-            <a
-              className='text-slate-700 tracking-tight font-stanleybold hover:underline dark:text-slate-400'
-              href='https://portfolio-vitor.vercel.app/'
-              target='_blank'
-              rel='noreferrer'
-            >
-              Vitor Butkus
-            </a>
+        <div className='text-sm text-left'>
+          <div className='mt-20 mb-8'>
+            <div className='font-stanleybold'>cabanagem200.net</div>
+            <div className=''>
+              Desenvolvimento web:{' '}
+              <a
+                className='text-slate-700 tracking-tight font-stanleybold hover:underline dark:text-slate-400'
+                href='https://portfolio-vitor.vercel.app/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                Vitor Butkus
+              </a>
+            </div>
           </div>
-        </div>
-        <div className='mb-8'>
-          <div className='font-stanleybold uppercase'>
-            Jornal Pessoal Edição Extraordinária
+          <div className='mb-8'>
+            <div className='font-stanleybold uppercase'>
+              Jornal Pessoal Edição Extraordinária
+            </div>
+            <div className=''>Redação: Lúcio Flávio Pinto</div>
+            <div className=''>
+              Edição: Giseli Vasconcelos, Thais Medeiros e Pedro Victor Brandão
+            </div>
+            <div className=''>Leitura de Prova: Thais Medeiros</div>
+            <div className=''>Design e Diagramação: Tatiana Podlubny</div>
+            <div className=''>Impressão: Gráfica Rotativa</div>
+            <div className=''>Tiragem: 5.000 cópias</div>
           </div>
-          <div className=''>Redação: Lúcio Flávio Pinto</div>
-          <div className=''>
-            Edição: Giseli Vasconcelos, Thais Medeiros e Pedro Victor Brandão
+          <div className='mb-8 max-w-[600px]'>
+            <div className='font-stanleybold uppercase'>Agradecimentos</div>
+            <div className=''>
+              Luiz Pinto, Marilene Pantoja, Natalie Summers, Portas Vilaseca
+              Galeria, Vanessa Vasconcelos, família Vasconcelos e à toda equipe
+              MAM Rio.
+            </div>
           </div>
-          <div className=''>Leitura de Prova: Thais Medeiros</div>
-          <div className=''>Design e Diagramação: Tatiana Podlubny</div>
-          <div className=''>Impressão: Gráfica Rotativa</div>
-          <div className=''>Tiragem: 5.000 cópias</div>
-        </div>
-        <div className='mb-8 text-left max-w-[600px]'>
-          <div className='font-stanleybold uppercase'>Agradecimentos</div>
-          <div className=''>
-            Luiz Pinto, Marilene Pantoja, Natalie Summers, Portas Vilaseca
-            Galeria, Vanessa Vasconcelos, família Vasconcelos e à toda equipe
-            MAM Rio.
+          <div className='mb-8'>
+            <div className='font-stanleybold uppercase'>
+              Ferramentas de criação de imagem utilizadas
+            </div>
+            <div className=''>
+              DALL-E 2 (acessível em{' '}
+              <a
+                className='text-slate-700 tracking-tight font-stanleybold hover:underline dark:text-slate-400'
+                href='https://labs.openai.com/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                https://labs.openai.com/
+              </a>
+              )
+            </div>
+            <div className=''>
+              MidJourney v2 e v3 (atualmente v5, acessível em{' '}
+              <a
+                className='text-slate-700 tracking-tight font-stanleybold hover:underline dark:text-slate-400'
+                href='https://www.midjourney.com/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                https://www.midjourney.com/
+              </a>
+              )
+            </div>
+            <div className=''>
+              Stable Diffusion v1.4 (Modelo local acessível em{' '}
+              <a
+                className='text-slate-700 tracking-tight font-stanleybold hover:underline dark:text-slate-400'
+                href='https://github.com/CompVis/stable-diffusion'
+                target='_blank'
+                rel='noreferrer'
+              >
+                https://github.com/CompVis/stable-diffusion
+              </a>
+              ; atualmente v2.1, acessível em{' '}
+              <a
+                className='text-slate-700 tracking-tight font-stanleybold hover:underline dark:text-slate-400'
+                href='https://github.com/Stability-AI/StableStudio/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                https://github.com/Stability-AI/StableStudio/
+              </a>
+              )
+            </div>
+            <div className=''>
+              Waifu2x v3.92.01 (atualmente v3.101.01, acessível em{' '}
+              <a
+                className='text-slate-700 tracking-tight font-stanleybold hover:underline dark:text-slate-400'
+                href='https://github.com/AaronFeng753/Waifu2x-Extension-GUI/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                https://github.com/AaronFeng753/Waifu2x-Extension-GUI/
+              </a>
+              ){' '}
+            </div>
           </div>
-        </div>
-        <div className='mb-8 text-left'>
-          <div className='font-stanleybold uppercase'>
-            Ferramentas de criação de imagem utilizadas
-          </div>
-          <div className=''>
-            DALL-E 2 (acessível em{' '}
-            <a
-              className='text-slate-700 tracking-tight font-stanleybold hover:underline dark:text-slate-400'
-              href='https://labs.openai.com/'
-              target='_blank'
-              rel='noreferrer'
-            >
-              https://labs.openai.com/
-            </a>
-            )
-          </div>
-          <div className=''>
-            MidJourney v2 e v3 (atualmente v5, acessível em{' '}
-            <a
-              className='text-slate-700 tracking-tight font-stanleybold hover:underline dark:text-slate-400'
-              href='https://www.midjourney.com/'
-              target='_blank'
-              rel='noreferrer'
-            >
-              https://www.midjourney.com/
-            </a>
-            )
-          </div>
-          <div className=''>
-            Stable Diffusion v1.4 (Modelo local acessível em{' '}
-            <a
-              className='text-slate-700 tracking-tight font-stanleybold hover:underline dark:text-slate-400'
-              href='https://github.com/CompVis/stable-diffusion'
-              target='_blank'
-              rel='noreferrer'
-            >
-              https://github.com/CompVis/stable-diffusion
-            </a>
-            ; atualmente v2.1, acessível em{' '}
-            <a
-              className='text-slate-700 tracking-tight font-stanleybold hover:underline dark:text-slate-400'
-              href='https://github.com/Stability-AI/StableStudio/'
-              target='_blank'
-              rel='noreferrer'
-            >
-              https://github.com/Stability-AI/StableStudio/
-            </a>
-            )
-          </div>
-          <div className=''>
-            Waifu2x v3.92.01 (atualmente v3.101.01, acessível em{' '}
-            <a
-              className='text-slate-700 tracking-tight font-stanleybold hover:underline dark:text-slate-400'
-              href='https://github.com/AaronFeng753/Waifu2x-Extension-GUI/'
-              target='_blank'
-              rel='noreferrer'
-            >
-              https://github.com/AaronFeng753/Waifu2x-Extension-GUI/
-            </a>
-            ){' '}
-          </div>
-        </div>
-        <div className='mb-8 text-left'>
-          <div className=''>
-            Os arquivos mostrados neste site podem ser acessados em alta
-            resolução via IPFS:{' '}
-            <a
-              className='text-slate-700 tracking-tight font-stanleybold hover:underline dark:text-slate-400'
-              href='https://ipfs.io/ipfs/bafybeib4wnj5mkwvcozhbf3bdccz56rlts7q2oz5qwfemrhw6mezxttpgy/'
-              target='_blank'
-              rel='noreferrer'
-            >
-              https://ipfs.io/ipfs/bafybeib4wnj5mkwvcozhbf3bdccz56rlts7q2oz5qwfemrhw6mezxttpgy/
-            </a>
+          <div className='mb-8'>
+            <div className=''>
+              Os arquivos mostrados neste site podem ser acessados em alta
+              resolução via IPFS:{' '}
+              <a
+                className='text-slate-700 tracking-tight font-stanleybold hover:underline dark:text-slate-400'
+                href='https://ipfs.io/ipfs/bafybeib4wnj5mkwvcozhbf3bdccz56rlts7q2oz5qwfemrhw6mezxttpgy/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                https://ipfs.io/ipfs/bafybeib4wnj5mkwvcozhbf3bdccz56rlts7q2oz5qwfemrhw6mezxttpgy/
+              </a>
+            </div>
           </div>
         </div>
       </div>
