@@ -66,7 +66,7 @@ export default function Vistas() {
           >
             Imprensa
           </Link>
-          .
+          . Fotos: Fabio Souza | MAM Rio
         </div>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2'>
           {imgData.map((img, i) => (
