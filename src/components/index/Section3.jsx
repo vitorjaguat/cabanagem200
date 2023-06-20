@@ -85,10 +85,10 @@ export default function Section3() {
   const onClose = () => setIsOpen(false);
 
   return (
-    <div className='flex w-full pt-10 md:pt-12 pb-32 md:pb-80' id='paineis'>
+    <div className='flex w-full pt-10 md:pt-12 pb-32 md:pb-50' id='paineis'>
       {/* STICKY TITLE */}
       <div
-        className='w-14 md:w-20 min-h-[350px] max-h-full md:max-h-full md:min-h-[500px] flex items-center sticky top-10 md:top-12 pt-2 md:pt-4 shrink-0'
+        className='w-14 md:w-20 min-h-[350px] max-h-full md:max-h-full md:min-h-[500px] flex items-center sticky top-10 md:top-12 pt-4 md:pt-6 shrink-0'
         style={{ writingMode: 'vertical-rl', height: 'calc(100%-20px)' }}
       >
         <div className='min-h-[350px] max-h-full md:max-h-full md:min-h-[500px] text-[11px] md:text-sm px-3 md:px-4 tracking-wider'>
@@ -96,9 +96,9 @@ export default function Section3() {
         </div>
       </div>
 
-      <div className='flex flex-col pt-2 md:pt-4'>
+      <div className='flex flex-col pt-2 md:mt-4'>
         <div className='flex flex-col mb-2 md:mb-4 p-4 mr-4 bg-[#d6d5c2] rounded-sm dark:bg-[#633636]'>
-          <div className='pb-2 text-sm md:text-md'>
+          <div className='pb-4 text-sm md:text-md'>
             Trazemos aqui as três composições que foram criadas a partir da
             leitura dos textos de Lúcio Flávio Pinto. À esquerda temos as
             próprias imagens, e à direita, os versos dos paineis mostrados na

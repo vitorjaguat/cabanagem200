@@ -3,7 +3,7 @@ export default function Section4Ed() {
     <div className='flex py-20'>
       {/* STICKY TITLE */}
       <div
-        className='w-14 md:w-20 h-fit flex items-center sticky top-14 md:pt-4 shrink-0'
+        className='w-14 md:w-20 h-fit flex items-center sticky top-14 pt-4 shrink-0'
         style={{ writingMode: 'vertical-rl' }}
       >
         <div className='h-fit text-[11px] md:text-sm px-3 md:px-4'>

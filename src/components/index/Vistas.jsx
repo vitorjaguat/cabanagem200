@@ -41,7 +41,7 @@ export default function Vistas() {
           <span>VISTAS</span>
         </div>
       </div>
-      <div className='md:pt-2 mr-4'>
+      <div className='md:mt-4 mr-4'>
         <div className='mb-4 p-4 bg-[#d6d5c2] rounded-sm text-sm md:text-md w-full dark:bg-[#633636]'>
           A instalação{' '}
           <span className='font-stanleyitalic'>Nheenga Cabana</span> foi
