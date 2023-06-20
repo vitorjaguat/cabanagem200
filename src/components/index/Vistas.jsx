@@ -30,7 +30,7 @@ export default function Vistas() {
   const onClose = () => setIsOpen(false);
 
   return (
-    <div className='flex pt-8 pb-32 md:pb-80' id='vistas'>
+    <div className='flex pt-8 pb-32 md:pb-50' id='vistas'>
       {/* STICKY TITLE */}
       <div
         className='w-14 md:w-20 h-fit flex items-center sticky top-14 md:pt-4 shrink-0'
@@ -66,7 +66,7 @@ export default function Vistas() {
           >
             Imprensa
           </Link>
-          . Fotos: Fabio Souza | MAM Rio
+          .
         </div>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2'>
           {imgData.map((img, i) => (
