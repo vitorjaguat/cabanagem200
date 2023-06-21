@@ -15,7 +15,7 @@ export default function Vistas() {
     alt: 'Atos de Revolta | Vistas da exposição',
     loading: 'lazy',
     width: i <= 2 ? 1500 : 2999,
-    height: 2000,
+    height: i <= 2 ? 1200 : 2000,
   }));
   //   console.log(imgData);
 
