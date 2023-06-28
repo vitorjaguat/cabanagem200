@@ -8,7 +8,7 @@ export default function Vistas() {
   const [isOpen, setIsOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const imgArr = new Array(6).fill({});
+  const imgArr = new Array(9).fill({});
   const imgData = imgArr.map((item, i) => ({
     src: '/assets/vistas/lg/0' + (i + 1) + '.jpg',
     src_sm: '/assets/vistas/sm/0' + (i + 1) + '.jpg',
@@ -66,7 +66,8 @@ export default function Vistas() {
           >
             Imprensa
           </Link>
-          .
+          . Fotos de vistas da exposição por Fabio Souza (MAM Rio) e Rafael
+          Salim.
         </div>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-4'>
           {imgData.map((img, i) => (
