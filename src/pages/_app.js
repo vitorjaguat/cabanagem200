@@ -4,7 +4,6 @@ import { appWithTranslation } from 'next-i18next';
 import localFont from '@next/font/local';
 import Head from 'next/head';
 import Footer from '@/components/Footer';
-import { ThemeProvider } from 'next-themes';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import React from 'react';
