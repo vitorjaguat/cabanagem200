@@ -101,7 +101,7 @@ export default function Section3() {
           <div className='pb-4 text-sm md:text-md'>
             Trazemos aqui as três composições que foram criadas a partir da
             leitura dos textos de Lúcio Flávio Pinto. À esquerda temos as
-            próprias imagens, e à direita, os versos dos paineis mostrados na
+            próprias imagens, e à direita, os versos dos painéis mostrados na
             exposição, com anotações feitas em transparências contendo as
             entradas de texto utilizadas para geração das imagens.
           </div>

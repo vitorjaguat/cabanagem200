@@ -86,7 +86,7 @@ export default function Navbar() {
                 <div className='absolute lowercase overflow-hidden opacity-0 group-hover:opacity-100 ease-in-out transition-all duration-700 bg-[#d6d5c2] dark:bg-[#2f2f2f] p-1 pr-7 text-md rounded-sm translate-x-1'>
                   <Link href='/#paineis' scroll={false}>
                     <div className='pt-4 dark:hover:text-slate-400 hover:text-slate-500 pb-4'>
-                      paineis
+                      painéis
                     </div>
                   </Link>
                   <Link href='/#vistas' scroll={false}>
@@ -219,7 +219,7 @@ export default function Navbar() {
                       scroll={false}
                       onClick={() => setNav(false)}
                     >
-                      <div className='lowercase'>paineis</div>
+                      <div className='lowercase'>painéis</div>
                     </Link>
                     <Link
                       href='/#vistas'
