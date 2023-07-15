@@ -18,6 +18,7 @@ export default function Deco() {
             width={2362}
             height={94}
             // fill
+            alt='ornamento'
             src={svg1}
           />
         </div>

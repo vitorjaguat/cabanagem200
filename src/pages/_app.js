@@ -54,7 +54,7 @@ const App = ({ Component, pageProps }) => {
     setDarkMode((curr) => !curr);
   };
   const router = useRouter();
-  console.log(darkMode);
+  // console.log(darkMode);
 
   return (
     <ThemeContext.Provider

@@ -18,7 +18,7 @@ export default function Section3ItemJ() {
       y: e.clientY - img1Ref.current.getBoundingClientRect().top,
     });
   };
-  console.log(mousePosition);
+  // console.log(mousePosition);
 
   return (
     <div className='w-full flex flex-col items-center'>

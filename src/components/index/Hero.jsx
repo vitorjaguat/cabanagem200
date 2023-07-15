@@ -57,7 +57,7 @@ export default function Hero({ images }) {
   // const { systemTheme, theme, setTheme } = useTheme();
   // const currentTheme = theme === 'system' ? systemTheme : theme;
   const { toggleDarkMode, darkMode } = useContext(ThemeContext);
-  console.log(toggleDarkMode);
+  // console.log(toggleDarkMode);
 
   return (
     <div

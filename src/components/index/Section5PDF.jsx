@@ -65,7 +65,7 @@ export default function Section5PDF() {
     alt: 'Jornal Pessoal | Edição Extraordinária',
   }));
   // console.log(imageData);
-  console.log(pageNumber);
+  // console.log(pageNumber);
 
   //old jornal:
   // function onDocumentLoadSuccess({ numPages }) {

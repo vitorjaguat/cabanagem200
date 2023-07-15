@@ -61,6 +61,7 @@ export default function Navbar() {
                     className='dark:invert duration-700'
                     src='/assets/orn/001.svg'
                     fill
+                    alt='Ornamento Nheenga Cabana'
                   />
                   {/* <Svg className='absolute top-0 left-0' /> */}
                 </div>
@@ -139,7 +140,7 @@ export default function Navbar() {
                 className='p-1 rounded-full cursor-pointer dark:text-[#F5F9E9]'
                 onClick={() => {
                   toggleDarkMode();
-                  console.log('done');
+                  // console.log('done');
                 }}
               >
                 {darkMode ? (

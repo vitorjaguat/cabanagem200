@@ -77,6 +77,8 @@ export default function Vistas() {
             <div className='' key={i}>
               <Image
                 src={img.src}
+                alt='Fotos de vistas da exposição por Fabio Souza (MAM Rio) e Rafael
+                Salim'
                 width={img.width}
                 height={img.height}
                 onClick={() => {

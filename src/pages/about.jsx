@@ -15,7 +15,7 @@ export default function About() {
           src='/assets/header_about.jpg'
           fill
           className='object-cover overflow-hidden dark:invert-[0.82] duration-700'
-          alt='Imprensa'
+          alt='Sobre'
         />
       </div>
       <div className='max-w-[1000px] px-4 py-20 mx-auto text-justify'>
