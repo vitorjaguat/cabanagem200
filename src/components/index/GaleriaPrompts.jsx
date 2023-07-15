@@ -373,8 +373,8 @@ export default function GaleriaPrompts() {
         className='w-14 md:w-20 h-fit flex items-center sticky top-14 md:pt-4 shrink-0'
         style={{ writingMode: 'vertical-rl' }}
       >
-        <div className='h-fit text-[11px] md:text-sm px-3 md:px-4 tracking-wider'>
-          <span className='font-stanleybold'>ARQUIVO&ensp;&ensp;</span>
+        <div className='h-fit text-md md:text-md px-3 md:px-4 tracking-widest'>
+          <span className='font-bold'>ARQUIVO&ensp;&ensp;</span>
           <span>ENTRADAS DE TEXTO</span>
         </div>
       </div>
@@ -401,12 +401,17 @@ export default function GaleriaPrompts() {
 
         {showCarousel && (
           <div className='flex flex-col w-full'>
-            <div className='w-full mb-4 p-4 bg-[#d6d5c2] rounded-sm text-sm md:text-md dark:bg-[#633636]'>
-              Nesta seção reunimos 150 entradas de texto criadas a partir do
-              processo de edição e leituras dos escritos de Lúcio Flávio Pinto
-              que foram utilizadas para a geração de imagens. Arraste para os
-              lados para navegar. Deslize com o mouse ou o touch para ver todos
-              os prompts. Para copiar os textos, faça três cliques na cartela.
+            <div className='w-full mb-4 p-6 bg-[#d6d5c2] rounded-sm text-md md:text-md dark:bg-[#633636]'>
+              <p className='mb-2'>
+                Nesta seção reunimos 150 entradas de texto criadas a partir do
+                processo de edição e leituras dos escritos de Lúcio Flávio Pinto
+                que foram utilizadas para a geração de imagens.
+              </p>{' '}
+              <p>
+                Arraste para os lados para navegar. Deslize com o mouse ou o
+                touch para ver todos os prompts. Para copiar os textos, faça
+                três cliques na cartela.
+              </p>
             </div>
             <div className='block'>
               <ScrollingCarousel

@@ -57,8 +57,8 @@ export default function GaleriaProcesso2({ images }) {
         className='w-14 md:w-20 h-fit flex items-center sticky top-14 md:pt-4 shrink-0'
         style={{ writingMode: 'vertical-rl' }}
       >
-        <div className='h-fit text-[11px] md:text-sm px-3 md:px-4  tracking-wider'>
-          <span className='font-stanleybold'>ARQUIVO&ensp;&ensp;</span>
+        <div className='h-fit text-md md:text-md px-3 md:px-4  tracking-widest'>
+          <span className='font-bold'>ARQUIVO&ensp;&ensp;</span>
           <span>IMAGENS DE PERCURSO</span>
         </div>
       </div>
@@ -99,16 +99,22 @@ export default function GaleriaProcesso2({ images }) {
       </ResponsiveMasonry> */}
         {/* <div className='w-full grid grid-cols-12 object-cover gap-0'> */}
 
-        <div className='w-full text-sm md:text-md mb-4 p-4 bg-[hsl(57,20%,80%)] rounded-sm dark:bg-[#633636]'>
-          O diálogo que tivemos com as máquinas geradoras de imagem com IA a
-          partir de textos (text-to-image AI image generators) produziu um
-          arquivo extenso que não foi utilizado nas três composições exibidas na
-          exposição <span className='font-stanleyitalic'>Atos de revolta</span>,
-          e nem impresso na edição extraordinária do{' '}
-          <span className='font-stanleyitalic'>Jornal Pessoal</span>. A seleção
-          abaixo é composta por 200 imagens deste percurso, erros e acertos,
-          criadas com prompts mostrados na seção seguinte. Faça clique em
-          qualquer uma das imagens para vê-las em tela cheia.
+        <div className='w-full text-md md:text-md mb-4 p-6 bg-[hsl(57,20%,80%)] rounded-sm dark:bg-[#633636] leading-relaxed'>
+          <p className='mb-2'>
+            O diálogo que tivemos com as máquinas geradoras de imagem com IA a
+            partir de textos (
+            <span className='italic'>text-to-image AI image generators</span>)
+            produziu um arquivo extenso que não foi utilizado nas três
+            composições exibidas na exposição{' '}
+            <span className='italic'>Atos de revolta</span>, e nem impresso na
+            edição extraordinária do{' '}
+            <span className='italic'>Jornal Pessoal</span>.
+          </p>{' '}
+          <p>
+            A seleção abaixo é composta por 200 imagens deste percurso, erros e
+            acertos, criadas com prompts mostrados na seção seguinte. Faça
+            clique em qualquer uma das imagens para vê-las em tela cheia.
+          </p>
         </div>
 
         <div className='flex flex-wrap gap-1 justify-center'>

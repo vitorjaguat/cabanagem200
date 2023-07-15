@@ -20,22 +20,22 @@ export default function About() {
       </div>
       <div className='max-w-[1000px] px-4 py-20 mx-auto text-justify'>
         <div className='mb-4'>
-          <span className='font-stanleybold'>cabanagem200</span> é um site que
-          mostra de forma permanente arquivos do conjunto de trabalhos{' '}
-          <span className='font-stanleybolditalic'>Nheenga Cabana</span>,
-          apresentando com destaque a edição extraordinária do{' '}
-          <span className='font-stanleybolditalic'>Jornal Pessoal</span> de
-          Lúcio Flávio Pinto, a ficha técnica de todo o projeto, materiais de
+          <span className='font-bold'>cabanagem200</span> é um site que mostra
+          de forma permanente arquivos do conjunto de trabalhos{' '}
+          <span className='italic font-bold'>Nheenga Cabana</span>, apresentando
+          com destaque a edição extraordinária do{' '}
+          <span className='italic font-bold'>Jornal Pessoal</span> de Lúcio
+          Flávio Pinto, a ficha técnica de todo o projeto, materiais de
           imprensa, os arquivos de imagem co-criados com inteligências
           artificiais exibidos no MAM-Rio e também uma seleção de arquivos de
           imagens inéditos.
         </div>
-        <div className=''>
-          <span className='font-stanleyitalic'>Nheenga Cabana</span> é uma série
+        <div className='mb-4'>
+          <span className='italic font-bold'>Nheenga Cabana</span> é uma série
           de obras comissionadas pelo Museu de Arte Moderna do Rio de Janeiro
           para a exposição coletiva{' '}
           <a
-            className='text-slate-700 tracking-tight font-stanleybold hover:underline dark:text-slate-400'
+            className='text-slate-700 tracking-tight font-bold hover:underline dark:text-slate-400'
             href='https://mam.rio/programacao/atos-de-revolta/'
             target='_blank'
             rel='noreferrer'
@@ -53,9 +53,23 @@ export default function About() {
           Inconfidência e do Museu Histórico Nacional; e oito pinturas do
           artista gaúcho Glauco Rodrigues, pertencentes ao acervo do MAM-Rio.
         </div>
+        <div className='mb-8'>
+          <div className='text-start'>
+            Os arquivos mostrados neste site podem ser acessados em alta
+            resolução via IPFS:{' '}
+            <a
+              className='text-slate-700 tracking-tight font-stanleybold hover:underline dark:text-slate-400'
+              href='https://ipfs.io/ipfs/bafybeib4wnj5mkwvcozhbf3bdccz56rlts7q2oz5qwfemrhw6mezxttpgy/'
+              target='_blank'
+              rel='noreferrer'
+            >
+              https://ipfs.io/ipfs/bafybeib4wnj5mkwvcozhbf3bdccz56rlts7q2oz5qwfemrhw6mezxttpgy/
+            </a>
+          </div>
+        </div>
         <div className='text-sm text-left'>
           <div className='mt-20 mb-8'>
-            <div className='font-stanleybold'>cabanagem200.net</div>
+            <div className='font-bold'>cabanagem200.net</div>
             <div className=''>
               Desenvolvimento web:{' '}
               <a
@@ -69,7 +83,7 @@ export default function About() {
             </div>
           </div>
           <div className='mb-8'>
-            <div className='font-stanleybold uppercase'>
+            <div className='font-bold uppercase'>
               Jornal Pessoal Edição Extraordinária
             </div>
             <div className=''>Redação: Lúcio Flávio Pinto</div>
@@ -81,16 +95,16 @@ export default function About() {
             <div className=''>Impressão: Gráfica Rotativa</div>
             <div className=''>Tiragem: 5.000 cópias</div>
           </div>
-          <div className='mb-8 max-w-[600px]'>
-            <div className='font-stanleybold uppercase'>Agradecimentos</div>
+          {/* <div className='mb-8 max-w-[600px]'>
+            <div className='font-bold uppercase'>Agradecimentos</div>
             <div className=''>
               Luiz Pinto, Marilene Pantoja, Natalie Summers, Portas Vilaseca
               Galeria, Vanessa Vasconcelos, família Vasconcelos e toda equipe
               MAM Rio.
             </div>
-          </div>
+          </div> */}
           <div className='mb-8'>
-            <div className='font-stanleybold uppercase'>
+            <div className='font-bold uppercase'>
               Ferramentas de criação de imagem utilizadas
             </div>
             <div className=''>
@@ -149,20 +163,6 @@ export default function About() {
                 https://github.com/AaronFeng753/Waifu2x-Extension-GUI/
               </a>
               ){' '}
-            </div>
-          </div>
-          <div className='mb-8'>
-            <div className=''>
-              Os arquivos mostrados neste site podem ser acessados em alta
-              resolução via IPFS:{' '}
-              <a
-                className='text-slate-700 tracking-tight font-stanleybold hover:underline dark:text-slate-400'
-                href='https://ipfs.io/ipfs/bafybeib4wnj5mkwvcozhbf3bdccz56rlts7q2oz5qwfemrhw6mezxttpgy/'
-                target='_blank'
-                rel='noreferrer'
-              >
-                https://ipfs.io/ipfs/bafybeib4wnj5mkwvcozhbf3bdccz56rlts7q2oz5qwfemrhw6mezxttpgy/
-              </a>
             </div>
           </div>
         </div>

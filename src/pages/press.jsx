@@ -8,7 +8,7 @@ export default function Press() {
     <div className='pt-10 w-full md:pt-12 bg-[#e1e1e1] dark:bg-[#2f2f2f]'>
       <div className='w-full h-[350px] flex justify-center relative'>
         <div className='relative text-3xl md:text-4xl pb-4 h-[350px] w-full max-w-[1000px]'>
-          <div className='absolute w-full bottom-0 right-4 z-[99] flex justify-end text-[#e1e1e1]'>
+          <div className='absolute w-full bottom-0 right-4 z-[99] flex justify-end tracking-wider text-[#e1e1e1]'>
             IMPRENSA
           </div>
         </div>
@@ -40,10 +40,15 @@ export default function Press() {
               target='_blank'
               rel='noopener noreferrer'
             >
-              <p className='text-2xl mb-4'>
-                Atos de revolta | Giseli Vasconcelos e Pedro Victor Brandão -
-                Nheenga Cabana
-              </p>
+              <div className='mb-4'>
+                <p className='text-2xl pb-1'>
+                  Atos de revolta | Giseli Vasconcelos e Pedro Victor Brandão -
+                  Nheenga Cabana
+                </p>
+                <p className='text-xs'>
+                  https://www.youtube.com/watch?v=flvwX8yCCKs&ab_channel=MAMRio
+                </p>
+              </div>
             </a>
             <div className='flex flex-col justify-end'>
               <p className='text-sm text-justify'>
@@ -89,9 +94,14 @@ export default function Press() {
               target='_blank'
               rel='noopener noreferrer'
             >
-              <p className='text-2xl mb-4'>
-                Atos de revolta | panorama da exposição | Pablo Lafuente
-              </p>
+              <div className='mb-4'>
+                <p className='text-2xl pb-1'>
+                  Atos de revolta | panorama da exposição | Pablo Lafuente
+                </p>
+                <p className='text-xs'>
+                  https://www.youtube.com/watch?v=behnWq0W__8&ab_channel=MAMRio
+                </p>
+              </div>
             </a>
             <div className='flex flex-col justify-end'>
               <p className='text-sm text-justify'>
@@ -136,7 +146,14 @@ export default function Press() {
               target='_blank'
               rel='noopener noreferrer'
             >
-              <p className='text-2xl mb-4'>Sem Censura Pará | Nheenga Cabana</p>
+              <div className='mb-4'>
+                <p className='text-2xl pb-1'>
+                  Sem Censura Pará | Nheenga Cabana
+                </p>
+                <p className='text-xs'>
+                  https://www.youtube.com/watch?v=LGoe2cyHdk0
+                </p>
+              </div>
             </a>
             <div className='flex flex-col justify-end'>
               <p className='text-sm text-justify'>

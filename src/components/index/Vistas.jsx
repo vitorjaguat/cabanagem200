@@ -36,38 +36,41 @@ export default function Vistas() {
         className='w-14 md:w-20 h-fit flex items-center sticky top-14 md:pt-4 shrink-0'
         style={{ writingMode: 'vertical-rl' }}
       >
-        <div className='h-fit text-[11px] md:text-sm px-3 md:px-4  tracking-wider'>
-          <span className='font-stanleybold'>EXPOSIÇÃO&ensp;&ensp;</span>
+        <div className='h-fit text-md md:text-md px-3 md:px-4  tracking-widest'>
+          <span className='font-bold'>EXPOSIÇÃO&ensp;&ensp;</span>
           <span>VISTAS</span>
         </div>
       </div>
       <div className='md:mt-4 mr-4'>
-        <div className='mb-4 p-4 bg-[#d6d5c2] rounded-sm text-sm md:text-md w-full dark:bg-[#633636]'>
-          A instalação{' '}
-          <span className='font-stanleyitalic'>Nheenga Cabana</span> foi
-          apresentada em três painéis expográficos no interior do espaço
-          expositivo do MAM-Rio durante a exposição{' '}
-          <span className='font-stanleyitalic'>
-            Atos de Revolta: outros imaginários sobre a independência
-          </span>
-          . Os mobiliários foram desenhados por Juliana Godoy em aço e
-          compensados de madeira. Na frente, visitantes encontravam as imagens
-          de grande formato e exemplares do{' '}
-          <span className='font-stanleyitalic'>
-            Jornal Pessoal - Edição Extraordinária
-          </span>
-          ; e no verso, anotações em acetatos com entradas de textos (
-          <span className='font-stanleyitalic'>prompts</span>) utilizadas no
-          processo de criação destes trabalhos. Veja mais sobre a exposição na
-          seção{' '}
-          <Link
-            className='text-slate-700 tracking-tight font-stanleybold hover:underline dark:text-slate-400'
-            href='/press'
-          >
-            Imprensa
-          </Link>
-          . Fotos de vistas da exposição por Fabio Souza (MAM Rio) e Rafael
-          Salim.
+        <div className='col-span-1 sm:col-span-2 mb-4 p-6 bg-[#d6d5c2] rounded-sm text-md md:text-md w-full dark:bg-[#633636] leading-relaxed'>
+          <p>
+            A instalação <span className='italic'>Nheenga Cabana</span> foi
+            apresentada em três painéis expográficos no interior do espaço
+            expositivo do MAM-Rio durante a exposição{' '}
+            <span className='italic'>
+              Atos de Revolta: outros imaginários sobre a independência
+            </span>
+            . Os mobiliários foram desenhados por Juliana Godoy em aço e
+            compensados de madeira. Na frente, visitantes encontravam as imagens
+            de grande formato e exemplares do{' '}
+            <span className='italic'>
+              Jornal Pessoal - Edição Extraordinária
+            </span>
+            ; e no verso, anotações em acetatos com entradas de textos (
+            <span className='italic'>prompts</span>) utilizadas no processo de
+            criação destes trabalhos. Veja mais sobre a exposição na seção{' '}
+            <Link
+              className='text-slate-700 tracking-tight font-bold hover:underline dark:text-slate-400'
+              href='/press'
+            >
+              Imprensa
+            </Link>
+            .{' '}
+          </p>
+          <p className='pt-2'>
+            Fotos de vistas da exposição por Fabio Souza (MAM Rio) e Rafael
+            Salim.
+          </p>
         </div>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-4'>
           {imgData.map((img, i) => (

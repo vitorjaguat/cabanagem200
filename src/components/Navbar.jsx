@@ -47,12 +47,16 @@ export default function Navbar() {
             <div
               className={
                 !shadow
-                  ? 'w-[100px] md:w-[200px] px-1 text-xl md:text-[19px] lg:text-3xl uppercase tracking-widest md:tracking-[2.5px] duration-700'
-                  : 'w-[100px] md:w-[200px] px-1 text-[14px] lg:text-[15px] uppercase font-stanleybold tracking-widest md:tracking-[2.5px] duration-700'
+                  ? 'w-[100px] md:w-[200px] px-1 text-xl md:text-[23px] font-bold uppercase tracking-widest md:tracking-[2.5px] duration-700'
+                  : 'w-[100px] md:w-[200px] px-1 text-[15px] md:text-[17px] uppercase font-bold tracking-widest md:tracking-[2.5px] duration-700'
               }
             >
               <div className='translate-y-[0px] w-fit'>
-                <div className='w-[90%] mx-auto h-3 relative translate-y-[3px] '>
+                <div
+                  className={`w-[90%] mx-auto h-3 relative transition-all duration-700 ${
+                    shadow ? 'translate-y-[7px]' : 'translate-y-[3px]'
+                  }`}
+                >
                   <Image
                     className='dark:invert duration-700'
                     src='/assets/orn/001.svg'
@@ -66,7 +70,7 @@ export default function Navbar() {
           </Link>
 
           <div className='flex gap-16'>
-            <ul className='hidden items-center md:flex md:justify-between text-xs md:text-[13px] md:gap-3 lg:gap-8 mx-auto tracking-widest'>
+            <ul className='hidden items-center md:flex md:justify-between text-sm md:text-md md:gap-4 lg:gap-8 mx-auto tracking-widest'>
               {/* <div
                 className='p-1 bg-[#d6d5c2] dark:bg-slate-900 rounded-full cursor-pointer'
                 onClick={() => toggleDarkMode}
@@ -74,9 +78,7 @@ export default function Navbar() {
                 <MdDarkMode color='' />
               </div> */}
               <Link href='/#home' scroll={false}>
-                <li className='uppercase hover:text-slate-500'>
-                  {t('navbar.home')}
-                </li>
+                <li className='uppercase hover:text-slate-500'>início</li>
               </Link>
 
               <li className='uppercase group w-fit'>
@@ -198,20 +200,20 @@ export default function Navbar() {
               </div>
             </div> */}
             <div className='h-full flex flex-col justify-center'>
-              <ul className='uppercase select-none outline-none flex flex-col justify-end'>
+              <ul className='uppercase select-none outline-none flex flex-col justify-end text-md'>
                 <Link href='/#home' scroll={false}>
-                  <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                  <li onClick={() => setNav(false)} className='py-4 font-bold'>
                     {t('navbar.home')}
                   </li>
                 </Link>
 
-                <li className='py-4 text-sm group'>
+                <li className='py-4 group'>
                   <Link
                     href='/#paineis'
                     scroll={false}
                     onClick={() => setNav(false)}
                   >
-                    <div className=''>exposição</div>
+                    <div className='font-bold'>exposição</div>
                   </Link>
                   <div className='ml-2'>
                     <Link
@@ -232,18 +234,18 @@ export default function Navbar() {
                 </li>
 
                 <Link href='/#jornal' scroll={false}>
-                  <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                  <li onClick={() => setNav(false)} className='font-bold py-4 '>
                     jornal pessoal
                   </li>
                 </Link>
 
-                <li className='py-4 text-sm group'>
+                <li className='py-4 group'>
                   <Link
                     href='/#arquivo'
                     scroll={false}
                     onClick={() => setNav(false)}
                   >
-                    <div className=''>arquivo</div>
+                    <div className='font-bold'>arquivo</div>
                   </Link>
                   <div className='ml-2'>
                     <Link
@@ -264,12 +266,12 @@ export default function Navbar() {
                 </li>
 
                 <Link href='/press' scroll={false}>
-                  <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                  <li onClick={() => setNav(false)} className='py-4 font-bold'>
                     {t('navbar.press')}
                   </li>
                 </Link>
                 <Link href='/about' scroll={false}>
-                  <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                  <li onClick={() => setNav(false)} className='py-4 font-bold'>
                     {t('navbar.about')}
                   </li>
                 </Link>

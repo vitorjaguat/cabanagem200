@@ -2,6 +2,13 @@ import Navbar from '@/components/Navbar';
 import '@/styles/globals.css';
 import { appWithTranslation } from 'next-i18next';
 import localFont from '@next/font/local';
+import {
+  Lora,
+  Merriweather,
+  Montserrat,
+  Roboto,
+  Roboto_Slab,
+} from '@next/font/google';
 import Head from 'next/head';
 import Footer from '@/components/Footer';
 import { useState } from 'react';
@@ -10,11 +17,11 @@ import React from 'react';
 import { ThemeContext } from '@/context/ThemeContext';
 import Script from 'next/script';
 
-const stanley = localFont({
-  src: '../../public/assets/fonts/stanley-regular.woff2',
-  variable: '--stanley-font',
-  display: 'block',
-});
+// const stanley = localFont({
+//   src: '../../public/assets/fonts/stanley-regular.woff2',
+//   variable: '--stanley-font',
+//   display: 'block',
+// });
 
 const stanleybold = localFont({
   src: '../../public/assets/fonts/stanley-bold.woff2',
@@ -32,6 +39,13 @@ const stanleybolditalic = localFont({
   src: '../../public/assets/fonts/stanley-bolditalic.woff2',
   variable: '--stanleybolditalic-font',
   display: 'block',
+});
+
+const stanley = Lora({
+  variable: '--stanley-font',
+  display: 'block',
+  subsets: ['latin'],
+  weight: ['400', '700'],
 });
 
 const App = ({ Component, pageProps }) => {

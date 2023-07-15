@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <div className='w-full p-6 pb-5 text-xs bg-[#d6d5c2] dark:bg-[#633636]'>
+    <div className='w-full p-6 pb-5 text-[13px] bg-[#d6d5c2] dark:bg-[#633636]'>
       {/* <div className='flex flex-col md:flex-row items-center md:items-end justify-center md:justify-between h-full w-full md:w-[95%] md:mx-auto'>
         <div className='text-center md:text-left'>
           <div className='font-stanleybold'>Nheenga Cabana</div>
@@ -17,9 +17,7 @@ export default function Footer() {
       </div> */}
       <div className='flex flex-col items-center justify-center h-full w-full leading-[16px]'>
         <div className='p-3'>
-          <span className='font-stanleybold tracking-widest'>
-            Nheenga Cabana
-          </span>
+          <span className='font-bold tracking-widest'>Nheenga Cabana</span>
           &nbsp;&nbsp;
           <a
             className='text-slate-700 tracking-tight hover:underline dark:text-slate-400'
@@ -29,10 +27,10 @@ export default function Footer() {
           >
             CC BY-NC
           </a>
-          &nbsp;&nbsp; 2022
+          &nbsp;&nbsp; 2023
         </div>
-        <div className='tracking-widest font-stanleybold'>cabanagem200.net</div>
-        <div className='tracking-wider'>
+        {/* <div className='tracking-widest font-stanleybold'>cabanagem200.net</div> */}
+        {/* <div className='tracking-wider'>
           desenvolvido por{' '}
           <a
             className='text-slate-700 tracking-tight hover:underline dark:text-slate-400'
@@ -42,8 +40,8 @@ export default function Footer() {
           >
             Vitor Butkus
           </a>
-        </div>
-        <div className=''>2023</div>
+        </div> */}
+        {/* <div className=''>2023</div> */}
       </div>
     </div>
   );

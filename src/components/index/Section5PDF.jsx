@@ -128,26 +128,23 @@ export default function Section5PDF() {
     <div className='flex w-full pb-32 md:pb-50 pt-10 md:pt-12' id='jornal'>
       {/* STICKY TITLE */}
       <div
-        className=' w-14 md:w-20 min-h-[350px] md:max-h-full max-h-[350px] md:min-h-[500px] flex items-center sticky top-10 md:top-12 pt-4 md:pt-6 shrink-0 h-full overflow-hidden'
+        className=' w-14 md:w-20 min-h-[350px] md:max-h-full max-h-[420px] md:min-h-[500px] flex items-center sticky top-10 md:top-12 pt-4 md:pt-6 shrink-0 h-full overflow-hidden'
         style={{ writingMode: 'vertical-rl', height: 'calc(100%-20px)' }}
       >
-        <div className='h-screen w-full flex items-center  text-[11px] md:text-sm px-3 md:px-4 sticky  tracking-wider'>
-          <span className='font-stanleybold'>JORNAL PESSOAL&ensp;&ensp;</span>
+        <div className='h-screen w-full flex items-center  text-md md:text-md px-3 md:px-4 sticky whitespace-nowrap tracking-wider'>
+          <span className='font-bold'>JORNAL PESSOAL&ensp;&ensp;</span>
           <span className='uppercase'>Edição Extraordinária</span>
         </div>
       </div>
 
       <div className='flex flex-col justify-center w-full overflow-hidden md:mt-4'>
-        <div className='mr-4 mb-4 p-4 bg-[#d6d5c2] rounded-sm text-sm md:text-md w-[calc(100%-1rem)] dark:bg-[#633636]'>
+        <div className='mr-4 mb-10 p-6 bg-[#d6d5c2] rounded-sm text-md md:text-md w-[calc(100%-1rem)] dark:bg-[#633636]'>
           O{' '}
-          <span className='font-stanleyitalic'>
-            Jornal Pessoal - Edição Extraordinária
-          </span>{' '}
+          <span className='italic'>Jornal Pessoal - Edição Extraordinária</span>{' '}
           é uma edição feita a partir de textos do pesquisador e historiador
           Lúcio Flávio Pinto, contendo também algumas das imagens geradas via
-          inteligência artificial a partir de trechos desses escritos. O jornal
-          teve tiragem de 5000 exemplares e a versão em PDF está disponível
-          abaixo.
+          inteligência artificial a partir de trechos desses escritos. A versão
+          em PDF está disponível abaixo.
         </div>
         <div className='relative flex flex-col md:flex-row justify-center w-full overflow-hidden'>
           {/* <div className='hidden md:block absolute top-4 right-4 text-sm'>
@@ -315,11 +312,11 @@ export default function Section5PDF() {
                 <IoIosArrowForward size={18} />
               </button>
             </div>
-            <div className='mt-6 flex flex-col items-center md:text-xs leading-3 text-[10px]'>
-              <div className='font-stanleybold text-[11px] md:text-[13px]'>
+            <div className='mt-7 flex flex-col items-center md:text-xs leading-4 text-[10px]'>
+              <div className='font-stanleybold text-[12px] md:text-[14px]'>
                 Edição Extraordinária do Jornal Pessoal
               </div>
-              <div className='font-stanleybold text-[11px] md:text-[13px]'>
+              <div className='font-bold text-[12px] md:text-[14px] pb-1'>
                 A Agenda Amazônica de Lúcio Flávio Pinto
               </div>
               <div className=''>Impressão offset</div>
@@ -333,17 +330,17 @@ export default function Section5PDF() {
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                <div className='px-4 py-2 bg-black/20 text-xs'>BAIXAR PDF</div>
+                <div className='px-4 py-2 bg-black/20 text-sm'>BAIXAR PDF</div>
               </a>
             </div>
           </div>
         </div>
         <div className='hidden md:flex flex-col mt-6 justify-center w-full pr-1'>
-          <div className='mt-6 flex flex-col items-center md:text-xs leading-3 text-[10px]'>
-            <div className='font-stanleybold text-[11px] md:text-[13px]'>
+          <div className='mt-6 flex flex-col items-center md:text-sm leading-3 text-[11px]'>
+            <div className='font-bold text-[12px] md:text-[14px]'>
               Edição Extraordinária do Jornal Pessoal
             </div>
-            <div className='font-stanleybold text-[11px] md:text-[13px]'>
+            <div className='font-bold text-[12px] md:text-[14px] pb-1'>
               A Agenda Amazônica de Lúcio Flávio Pinto
             </div>
             <div className=''>Impressão offset</div>
@@ -351,13 +348,13 @@ export default function Section5PDF() {
             <div className=''>Edição de 5000 cópias</div>
             <div className=''>2022</div>
           </div>
-          <div className='flex justify-center mt-8'>
+          <div className='flex justify-center mt-10'>
             <a
               href='/assets/jornal-pessoal-edext.pdf'
               target='_blank'
               rel='noopener noreferrer'
             >
-              <div className='px-4 py-2 bg-black/20 text-xs'>BAIXAR PDF</div>
+              <div className='px-4 py-2 bg-black/20 text-sm'>BAIXAR PDF</div>
             </a>
           </div>
         </div>

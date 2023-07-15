@@ -91,30 +91,32 @@ export default function Section3() {
         className='w-14 md:w-20 min-h-[350px] max-h-full md:max-h-full md:min-h-[500px] flex items-center sticky top-10 md:top-12 pt-4 md:pt-6 shrink-0'
         style={{ writingMode: 'vertical-rl', height: 'calc(100%-20px)' }}
       >
-        <div className='min-h-[350px] max-h-full md:max-h-full md:min-h-[500px] text-[11px] md:text-sm px-3 md:px-4 tracking-wider'>
-          <span className='font-stanleybold'>NHEENGA CABANA</span>&ensp;&ensp;
+        <div className='min-h-[350px] max-h-full md:max-h-full md:min-h-[500px] text-md md:text-md px-3 md:px-4 tracking-widest'>
+          <span className='font-bold'>NHEENGA CABANA</span>&ensp;&ensp;
         </div>
       </div>
 
       <div className='flex flex-col pt-2 md:mt-4'>
-        <div className='flex flex-col mb-2 md:mb-4 p-4 mr-4 bg-[#d6d5c2] rounded-sm dark:bg-[#633636]'>
-          <div className='pb-4 text-sm md:text-md'>
-            Trazemos aqui as três composições que foram criadas a partir da
-            leitura dos textos de Lúcio Flávio Pinto. À esquerda temos as
-            próprias imagens, e à direita, os versos dos painéis mostrados na
-            exposição, com anotações feitas em transparências contendo as
-            entradas de texto utilizadas para geração das imagens.
-          </div>
-          <div className='flex flex-col justify-end leading-3 text-[10px] md:text-xs max-w-[400px]'>
-            <p className='font-stanleybold text-[11px] md:text-[13px]'>
-              Nheenga Cabana
-            </p>
-            <p className=''>
-              Instalação com painéis expográficos, impressões em jato de tinta,
-              transparências com anotações e tiragem offset de jornal
-            </p>
-            <p className='text-[9px] md:text-[11px]'>Dimensões variáveis</p>
-            <p className='text-[9px] md:text-[11px]'>2022</p>
+        <div className='grid grid-cols-5'>
+          <div className='col-span-5 md:col-span-4 flex flex-col mb-2 mr-4 md:mr-0 md:mb-4 p-6  bg-[#d6d5c2] rounded-sm dark:bg-[#633636]'>
+            <div className='pb-6 text-md md:text-md leading-relaxed'>
+              As três composições abaixo foram criadas a partir da leitura dos
+              textos de Lúcio Flávio Pinto. À esquerda temos as próprias
+              imagens, e à direita, os versos dos painéis mostrados na
+              exposição, com anotações feitas em transparências contendo as
+              entradas de texto utilizadas para geração das imagens.
+            </div>
+            <div className='flex flex-col justify-end leading-5 text-[12px] md:text-[13px] max-w-[400px]'>
+              <p className='font-bold text-[13px] md:text-[14px]'>
+                Nheenga Cabana
+              </p>
+              <p className=''>
+                Instalação com painéis expográficos, impressões em jato de
+                tinta, transparências com anotações e tiragem offset de jornal
+              </p>
+              <p className=''>Dimensões variáveis</p>
+              <p className=''>2022</p>
+            </div>
           </div>
         </div>
         <div
@@ -148,7 +150,7 @@ export default function Section3() {
             />
           </div>
           <div className='col-span-1 flex flex-col justify-end leading-3 text-[10px] md:text-xs md:pr-4 text-right md:text-left pl-[40%] md:pl-0'>
-            <p className='font-stanleybold text-[11px] md:text-[13px]'>
+            <p className='font-bold text-[11px] md:text-[13px]'>
               {imgSrcArr[0].title}
             </p>
             <p className=''>{imgSrcArr[0].media.slice(0, 113)}</p>
@@ -189,7 +191,7 @@ export default function Section3() {
             />
           </div>
           <div className='col-span-1 flex flex-col justify-end leading-3 text-[10px] md:text-xs md:pr-4 text-right md:text-left pl-[40%] md:pl-0'>
-            <p className='font-stanleybold text-[11px] md:text-[13px]'>
+            <p className='font-bold text-[11px] md:text-[13px]'>
               {imgSrcArr[2].title}
             </p>
             <p className=''>{imgSrcArr[0].media.slice(0, 113)}</p>
@@ -230,7 +232,7 @@ export default function Section3() {
             />
           </div>
           <div className='col-span-1 flex flex-col justify-end leading-3 text-[10px] md:text-xs md:pr-4 text-right md:text-left pl-[40%] md:pl-0'>
-            <p className='font-stanleybold text-[11px] md:text-[13px]'>
+            <p className='font-bold text-[11px] md:text-[13px]'>
               {imgSrcArr[4].title}
             </p>
             <p className=''>{imgSrcArr[0].media.slice(0, 113)}</p>
