@@ -57,7 +57,7 @@ export default function GaleriaProcesso2({ images }) {
         className='w-14 md:w-20 h-fit flex items-center sticky top-14 md:pt-4 shrink-0'
         style={{ writingMode: 'vertical-rl' }}
       >
-        <div className='h-fit text-md md:text-md px-3 md:px-4  tracking-widest'>
+        <div className='h-fit text-sm md:text-md px-3 md:px-4  tracking-widest'>
           <span className='font-bold'>ARQUIVO&ensp;&ensp;</span>
           <span>IMAGENS DE PERCURSO</span>
         </div>
@@ -99,7 +99,7 @@ export default function GaleriaProcesso2({ images }) {
       </ResponsiveMasonry> */}
         {/* <div className='w-full grid grid-cols-12 object-cover gap-0'> */}
 
-        <div className='w-full text-md md:text-md mb-4 p-6 bg-[hsl(57,20%,80%)] rounded-sm dark:bg-[#633636] leading-relaxed'>
+        <div className='w-full text-md md:text-md mb-4 p-6 bg-[#d6d5c2]/40 rounded-sm dark:bg-[#633636] leading-relaxed'>
           <p className='mb-2'>
             O diálogo que tivemos com as máquinas geradoras de imagem com IA a
             partir de textos (
@@ -113,20 +113,20 @@ export default function GaleriaProcesso2({ images }) {
           <p>
             A seleção abaixo é composta por 200 imagens deste percurso, erros e
             acertos, criadas com prompts mostrados na seção seguinte. Faça
-            clique em qualquer uma das imagens para vê-las em tela cheia.
+            clique em qualquer uma das imagens para vê-la em tela cheia.
           </p>
         </div>
 
-        <div className='flex flex-wrap gap-1 justify-center'>
+        <div className='flex flex-wrap gap-1 justify-center '>
           {imagesData.map((image, index) => (
             <div
               key={image.src_sm}
-              className='hover:z-10 flex items-center justify-center overflow-visible max-h-[4.1rem] max-w-[4.1rem]'
+              className='hover:z-[1000] z-1 flex items-center justify-center max-h-[4.1rem] max-w-[4.1rem] hover:overflow-visible hover:h-24 hover:w-24 duration-300'
             >
               <img
                 src={image.src_sm}
                 alt='Nheenga Cabana | Imagem de processo'
-                className='object-cover w-[4.1rem] h-[4.1rem] hover:w-24 hover:h-24 hover:z-10 object-center duration-200 hover:overflow-visible ease-in-out cursor-pointer'
+                className='object-cover w-[4.1rem] h-[4.1rem] hover:w-24 hover:h-24 hover:z-[1000] object-center duration-300 hover:overflow-visible ease-in-out cursor-pointer'
                 onClick={() => {
                   setCurrentImageIndex(index);
                   setIsOpen(true);

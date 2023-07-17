@@ -86,7 +86,7 @@ export default function Navbar() {
                 <Link href='/#paineis' scroll={false}>
                   <div className='hover:text-slate-500'>exposição</div>
                 </Link>
-                <div className='absolute lowercase overflow-hidden opacity-0 group-hover:opacity-100 ease-in-out transition-all duration-700 bg-[#d6d5c2] dark:bg-[#2f2f2f] p-1 pr-7 text-md rounded-sm translate-x-1'>
+                <div className='absolute lowercase overflow-hidden opacity-0 group-hover:opacity-100 ease-in-out transition-all duration-700 bg-[#d6d5c2] dark:bg-[#2f2f2f] p-1 pr-7 text-md translate-x-1 min-w-[100px] rounded-b-md'>
                   <Link href='/#paineis' scroll={false}>
                     <div className='pt-4 dark:hover:text-slate-400 hover:text-slate-500 pb-4'>
                       painéis
@@ -110,7 +110,7 @@ export default function Navbar() {
                 <Link href='/#arquivo' scroll={false}>
                   <div className='hover:text-slate-500 '>arquivo</div>
                 </Link>
-                <div className='absolute lowercase overflow-hidden opacity-0 group-hover:opacity-100 ease-in-out transition-all duration-700 bg-[#d6d5c2] dark:bg-[#2f2f2f] p-1 pr-7 text-md rounded-sm translate-x-1'>
+                <div className='absolute lowercase overflow-hidden opacity-0 group-hover:opacity-100 ease-in-out transition-all duration-700 bg-[#d6d5c2] dark:bg-[#2f2f2f] p-1 pr-7 text-md translate-x-1 rounded-b-md'>
                   <Link href='/#arquivo' scroll={false}>
                     <div className='pt-4 hover:text-slate-500 pb-4 dark:hover:text-slate-400'>
                       imagens de processo

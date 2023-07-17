@@ -88,17 +88,17 @@ export default function Section3() {
     <div className='flex w-full pt-10 md:pt-12 pb-32 md:pb-50' id='paineis'>
       {/* STICKY TITLE */}
       <div
-        className='w-14 md:w-20 min-h-[350px] max-h-full md:max-h-full md:min-h-[500px] flex items-center sticky top-10 md:top-12 pt-4 md:pt-6 shrink-0'
-        style={{ writingMode: 'vertical-rl', height: 'calc(100%-20px)' }}
+        className='w-14 md:w-20 h-fit flex items-center sticky top-14 md:pt-4 shrink-0'
+        style={{ writingMode: 'vertical-rl' }}
       >
-        <div className='min-h-[350px] max-h-full md:max-h-full md:min-h-[500px] text-md md:text-md px-3 md:px-4 tracking-widest'>
-          <span className='font-bold'>NHEENGA CABANA</span>&ensp;&ensp;
+        <div className='h-fit text-sm md:text-md px-3 md:px-4  tracking-widest'>
+          <span className='font-bold'>NHEENGA CABANA&ensp;&ensp;</span>
         </div>
       </div>
 
-      <div className='flex flex-col pt-2 md:mt-4'>
+      <div className='flex flex-col md:pt-0 md:mt-4'>
         <div className='grid grid-cols-5'>
-          <div className='col-span-5 md:col-span-4 flex flex-col mb-2 mr-4 md:mr-0 md:mb-4 p-6  bg-[#d6d5c2] rounded-sm dark:bg-[#633636]'>
+          <div className='col-span-5 md:col-span-4 flex flex-col mb-2 mr-4 md:mr-0 md:mb-4 p-6  bg-[#d6d5c2]/40 rounded-sm dark:bg-[#633636]'>
             <div className='pb-6 text-md md:text-md leading-relaxed'>
               As três composições abaixo foram criadas a partir da leitura dos
               textos de Lúcio Flávio Pinto. À esquerda temos as próprias

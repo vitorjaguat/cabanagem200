@@ -40,7 +40,7 @@ export default function Section3Item({
       e.target.tagName.toLowerCase() === 'path'
     )
       return;
-    console.log(e.target.tagName);
+    // console.log(e.target.tagName);
     setShowModal(false);
   };
 

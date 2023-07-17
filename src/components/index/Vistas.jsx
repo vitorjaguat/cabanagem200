@@ -36,13 +36,13 @@ export default function Vistas() {
         className='w-14 md:w-20 h-fit flex items-center sticky top-14 md:pt-4 shrink-0'
         style={{ writingMode: 'vertical-rl' }}
       >
-        <div className='h-fit text-md md:text-md px-3 md:px-4  tracking-widest'>
+        <div className='h-fit text-sm md:text-md px-3 md:px-4  tracking-widest'>
           <span className='font-bold'>EXPOSIÇÃO&ensp;&ensp;</span>
           <span>VISTAS</span>
         </div>
       </div>
       <div className='md:mt-4 mr-4'>
-        <div className='col-span-1 sm:col-span-2 mb-4 p-6 bg-[#d6d5c2] rounded-sm text-md md:text-md w-full dark:bg-[#633636] leading-relaxed'>
+        <div className='col-span-1 sm:col-span-2 mb-4 p-6 bg-[#d6d5c2]/40 rounded-sm text-md md:text-md w-full dark:bg-[#633636] leading-relaxed'>
           <p>
             A instalação <span className='italic'>Nheenga Cabana</span> foi
             apresentada em três painéis expográficos no interior do espaço

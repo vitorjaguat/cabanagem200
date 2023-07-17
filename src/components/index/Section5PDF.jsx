@@ -131,14 +131,14 @@ export default function Section5PDF() {
         className=' w-14 md:w-20 min-h-[350px] md:max-h-full max-h-[420px] md:min-h-[500px] flex items-center sticky top-10 md:top-12 pt-4 md:pt-6 shrink-0 h-full overflow-hidden'
         style={{ writingMode: 'vertical-rl', height: 'calc(100%-20px)' }}
       >
-        <div className='h-screen w-full flex items-center  text-md md:text-md px-3 md:px-4 sticky whitespace-nowrap tracking-wider'>
+        <div className='h-screen w-full flex items-center  text-sm md:text-md px-3 md:px-4 sticky whitespace-nowrap tracking-wider'>
           <span className='font-bold'>JORNAL PESSOAL&ensp;&ensp;</span>
           <span className='uppercase'>Edição Extraordinária</span>
         </div>
       </div>
 
-      <div className='flex flex-col justify-center w-full overflow-hidden md:mt-4'>
-        <div className='mr-4 mb-10 p-6 bg-[#d6d5c2] rounded-sm text-md md:text-md w-[calc(100%-1rem)] dark:bg-[#633636]'>
+      <div className='flex flex-col justify-center w-full overflow-hidden mt-4 md:mt-4'>
+        <div className='mr-4 mb-10 p-6 bg-[#d6d5c2]/50 rounded-sm text-md md:text-md w-[calc(100%-1rem)] dark:bg-[#633636]'>
           O{' '}
           <span className='italic'>Jornal Pessoal - Edição Extraordinária</span>{' '}
           é uma edição feita a partir de textos do pesquisador e historiador
@@ -146,48 +146,30 @@ export default function Section5PDF() {
           inteligência artificial a partir de trechos desses escritos. A versão
           em PDF está disponível abaixo.
         </div>
-        <div className='relative flex flex-col md:flex-row justify-center w-full overflow-hidden'>
+        <div className='flex flex-col md:flex-row justify-center items-center w-full overflow-hidden'>
           {/* <div className='hidden md:block absolute top-4 right-4 text-sm'>
           página {pageNumber} de {numPages}
         </div> */}
-          <div className='hidden w-fit md:flex mr-3 h-full flex-col justify-center'>
+          <div className='hidden w-fit md:flex mr-2 h-full flex-col justify-center'>
             <button
-              className='cursor-pointer'
+              className='cursor-pointer rounded-md bg-black/5 hover:bg-black/10 p-2 duration-300'
               disabled={pageNumber <= 0}
               onClick={() => prevPage()}
             >
-              <IoIosArrowBack size={25} />
+              <IoIosArrowBack size={30} />
             </button>
           </div>
 
           {/* PAGES */}
           <div
-            className='h-[467px] md:h-[700px] md:flex overflow-hidden md:overflow-auto'
+            className='mx-auto md:mx-0 h-[467px] md:h-[700px] md:flex overflow-hidden md:overflow-auto'
             style={{
               width:
                 mdMediaQuery && pageNumber !== 0 && pageNumber !== 31
                   ? '1050px'
                   : '525px',
             }}
-            // ref={containerRef}
           >
-            {/* <Document
-            file='/assets/jornal_pessoal_web.pdf'
-            onLoadSuccess={() => {
-              onDocumentLoadSuccess({ numPages: 32 });
-              if (!mdMediaQuery) {
-                // console.log(documentRef);
-                documentRef.current.style.width = '350px';
-                documentRef.current.style.overflow = 'hidden';
-                documentRef.current.style.margin = 0;
-              }
-            }}
-            className='flex'
-            // width={mdMediaQuery ? 550 : 350}
-            inputRef={documentRef}
-            // style={{ display: 'flex', alignItems: 'center' }}
-            // renderMode='svg'
-          > */}
             <Image
               src={imageData[pageNumber].src}
               width={1350}
@@ -205,11 +187,11 @@ export default function Section5PDF() {
                 src={imageData[pageNumber + 1].src}
                 width={1350}
                 height={1800}
-                className='cursor-pointer'
+                className='cursor-pointer h-[466px] md:h-auto w-[330px] md:w-auto'
                 // fill
                 alt={imageData[0].alt}
                 onClick={() => {
-                  setCurrentImageIndex(pageNumber);
+                  setCurrentImageIndex(pageNumber + 1);
                   setIsOpen(true);
                 }}
               />
@@ -235,62 +217,15 @@ export default function Section5PDF() {
                 <Overlay isOpen={isOpen} setIsOpen={setIsOpen} />
               )}
             />
-
-            {/* <Page
-            // width={smScreen ? '200' : '400'}
-            width={mdMediaQuery ? 550 : 350}
-            renderTextLayer={false}
-            renderAnnotationLayer={false}
-            pageNumber={pageNumber}
-            // pageIndex={0}
-            onLoadSuccess={onPageLoadSuccess}
-            onRenderSuccess={onPageRenderSuccess}
-            onRenderError={onPageRenderError}
-            className='overflow-hidden'
-            style={{ overflow: 'hidden' }}
-            loading={''}
-            // className='bg-transparent'
-            // canvasBackground='#a1a1a1'
-            // style={{ display: 'flex', alignItems: 'center' }}
-            // loading={
-
-            // }
-          /> */}
-            {/* {mdMediaQuery && pageNumber !== 1 && pageNumber < numPages && (
-            <Page
-              // width={smScreen ? '200' : '400'}
-              width={mdMediaQuery ? 550 : 350}
-              renderTextLayer={false}
-              renderAnnotationLayer={false}
-              pageNumber={pageNumber + 1}
-              // pageIndex={0}
-              onLoadSuccess={onPageLoadSuccess}
-              onRenderSuccess={onPageRenderSuccess}
-              onRenderError={onPageRenderError}
-              loading={''}
-              // className='bg-transparent'
-              // canvasBackground='#a1a1a1'
-              // style={{ display: 'flex', alignItems: 'center' }}
-              // loading={
-
-              // }
-            />
-          )} */}
-            {/* </Document> */}
-            {/* <iframe
-            src='/assets/jornal-pessoal-edext.pdf'
-            // frameborder='0'
-            className='w-[600px] h-[900px]'
-          ></iframe> */}
           </div>
 
-          <div className='hidden md:flex ml-3 h-full flex-col justify-center'>
+          <div className='hidden md:flex ml-2 h-full items-center'>
             <button
-              className='cursor-pointer'
+              className='cursor-pointer rounded-md bg-black/5 hover:bg-black/10 p-2 duration-300'
               disabled={pageNumber >= numPages}
               onClick={() => nextPage()}
             >
-              <IoIosArrowForward size={25} />
+              <IoIosArrowForward size={30} />
             </button>
           </div>
 
