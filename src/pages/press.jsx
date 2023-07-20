@@ -5,7 +5,7 @@ import imgHeader from '../../public/assets/header_press.jpg';
 
 export default function Press() {
   return (
-    <div className='pt-10 w-full md:pt-12 bg-[#e1e1e1] dark:bg-[#2f2f2f]'>
+    <div className='pt-10 w-full md:pt-12 bg-[#f0efdd] dark:bg-[#2f2f2f]'>
       <div className='w-full h-[350px] flex justify-center relative'>
         <div className='relative text-3xl md:text-4xl pb-4 h-[350px] w-full max-w-[1000px]'>
           <div className='absolute w-full bottom-0 right-4 z-[99] flex justify-end tracking-wider text-[#e1e1e1]'>
@@ -22,7 +22,7 @@ export default function Press() {
       </div>
       <div className='max-w-[1000px] py-20 px-4 mx-auto flex flex-col gap-12'>
         {/* CARD */}
-        <div className='p-5 flex flex-col md:flex-row justify-between gap-6 border-[0.5px] border-black'>
+        <div className='p-5 flex flex-col md:flex-row justify-between gap-6 bg-[#d6d5c2]/40'>
           <div className=' order-last md:order-1 w-[300px] h-[250px] relative md:overflow-hidden shrink-0 mt-auto mx-auto md:mx-0'>
             <iframe
               width='300'
@@ -76,7 +76,7 @@ export default function Press() {
           </div>
         </div>
 
-        <div className='p-5 flex flex-col md:flex-row justify-between gap-6 border-[0.5px] border-black'>
+        <div className='p-5 flex flex-col md:flex-row justify-between gap-6 bg-[#d6d5c2]/40'>
           <div className=' order-last md:order-1 w-[300px] h-[250px] relative md:overflow-hidden shrink-0 mt-auto mx-auto md:mx-0'>
             <iframe
               width='300'
@@ -128,7 +128,7 @@ export default function Press() {
           </div>
         </div>
 
-        <div className='p-5 flex flex-col md:flex-row justify-between gap-6 border-[0.5px] border-black'>
+        <div className='p-5 flex flex-col md:flex-row justify-between gap-6 bg-[#d6d5c2]/40'>
           <div className=' order-last md:order-1 w-[300px] h-[250px] relative md:overflow-hidden shrink-0 mt-auto mx-auto md:mx-0'>
             <iframe
               width='300'

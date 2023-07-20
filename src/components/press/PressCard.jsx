@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function PressCard({ link, img, title, text1, text2 }) {
   return (
     <a href={link} target='_blank' rel='noopener noreferrer'>
-      <div className='p-5 flex flex-col md:flex-row justify-between gap-6 border-[0.5px] border-black'>
+      <div className='p-5 flex flex-col md:flex-row justify-between gap-6 bg-[#d6d5c2]/40'>
         <div className='order-last md:order-1 w-[300px] h-[250px] relative md:overflow-hidden shrink-0 mt-auto mx-auto md:mx-0'>
           <Image src={img} alt={title} className='object-cover object-' fill />
         </div>
