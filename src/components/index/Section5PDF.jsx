@@ -142,7 +142,7 @@ export default function Section5PDF() {
       <div className='flex flex-col justify-center w-full mt-4 md:mt-4'>
         <div
           ref={ref}
-          className={`mr-4 mb-10 p-6 bg-[#d6d5c2]/50 rounded-sm text-md md:text-md w-[calc(100%-1rem)] dark:bg-[#633636] duration-700 ${
+          className={`mr-4 mb-10 p-6 bg-[#d6d5c2]/50 rounded-sm text-md md:text-md w-[calc(100%-5rem)] md:w-[calc(100%-1rem)] dark:bg-[#633636] duration-700 ${
             inView ? 'opacity-100 translate-x-0' : 'translate-x-10 opacity-0'
           }`}
         >
@@ -236,7 +236,7 @@ export default function Section5PDF() {
             </button>
           </div>
 
-          <div className='md:hidden w-full mt-3 flex flex-col items-center'>
+          <div className='md:hidden w-full mt-3 flex flex-col items-center justify-center -ml-10'>
             <div className=' flex gap-10 items-center justify-center py-4'>
               <button
                 className=''

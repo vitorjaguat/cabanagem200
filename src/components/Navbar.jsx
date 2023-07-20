@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
+import { RxHamburgerMenu } from 'react-icons/rx';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { useTranslation } from 'next-i18next';
@@ -175,7 +176,7 @@ export default function Navbar() {
               onClick={handleNav}
               className='flex justify-end md:hidden pl-4 pr-1'
             >
-              <AiOutlineMenu size={26} />
+              <RxHamburgerMenu size={26} />
             </div>
           </div>
         </div>
@@ -281,7 +282,7 @@ export default function Navbar() {
             <div className='right-4 bottom-4 absolute'>
               <div
                 onClick={() => setNav(false)}
-                className='rounded-full bg-black/10 p-2 cursor-pointer'
+                className='rounded-full p-2 cursor-pointer border-black border-[0.5px]'
               >
                 <AiOutlineClose />
               </div>

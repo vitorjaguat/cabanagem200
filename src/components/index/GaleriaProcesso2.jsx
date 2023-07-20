@@ -128,12 +128,12 @@ export default function GaleriaProcesso2({ images }) {
           {imagesData.map((image, index) => (
             <div
               key={image.src_sm}
-              className='z-1 flex items-center justify-center max-h-[4.1rem] max-w-[4.1rem] hover:overflow-visible hover:h-24 hover:w-24 duration-300'
+              className='z-1 flex items-center justify-center max-h-[4.1rem] max-w-[4.1rem] md:hover:overflow-visible md:hover:h-24 md:hover:w-24 duration-300'
             >
               <img
                 src={image.src_sm}
                 alt='Nheenga Cabana | Imagem de processo'
-                className='object-cover w-[4.1rem] h-[4.1rem] hover:w-24 hover:h-24 object-center duration-300 hover:overflow-visible ease-in-out cursor-pointer hover:z-10'
+                className='object-cover w-[4.1rem] h-[4.1rem] md:hover:w-24 md:hover:h-24 object-center duration-300 md:hover:overflow-visible ease-in-out cursor-pointer md:hover:z-10'
                 onClick={() => {
                   setCurrentImageIndex(index);
                   setIsOpen(true);
