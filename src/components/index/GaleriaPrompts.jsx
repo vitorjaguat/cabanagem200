@@ -1,13 +1,8 @@
-import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
-import { TagCloud } from 'react-tagcloud';
-import { Carousel } from 'react-configurable-carousel';
-import {
-  Carousel as Carousel2,
-  ScrollingCarousel,
-} from '@trendyol-js/react-carousel';
+import { ScrollingCarousel } from '@trendyol-js/react-carousel';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import { useMediaQuery } from '@/utils/useMediaQuery';
 import { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 const prompts = [
   'Focal length 16mm. f/11. 1/60s. ISO 100. Film Still POV of an Igapó in the amazonian forest. It is possible to see the river and the sky. Aerial roots can be seen in the margins. Giant exemplars of one samaúma tree, bromélias tocha de fogo, vitórias-régias and aningas de várzea are also present and it is possible to see their flowers. An ocelot-pirarucu makes an appearance. A bunch of cabana coins are blended with brown shaky waters. A fragata is burning in the sky, with fire and flames. Nheenga cabana flag in the center. ',
@@ -323,6 +318,13 @@ export default function GaleriaPrompts() {
   const smMediaQuery = useMediaQuery('sm');
   const [itemsToShow, setItemsToShow] = useState(1);
   const [showCarousel, setShowCarousel] = useState(false);
+  const mdScreen = useMediaQuery('md');
+
+  //intersection observer:
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    rootMargin: mdScreen ? '-200px 0px' : '-250px 0px',
+  });
 
   useEffect(() => {
     setShowCarousel(true);
@@ -344,28 +346,6 @@ export default function GaleriaPrompts() {
     count: Math.floor(Math.random() * 10),
   }));
 
-  // console.log(data);
-
-  //TagCloud custom renderer:
-  // const customRenderer = (tag, size, color) => (
-  //   <span
-  //     key={tag.key}
-  //     style={{
-  //       maxWidth: '200px',
-  //       maxHeight: '200px',
-  //       width: 'content-fit',
-  //       height: 'content-fit',
-  //       padding: '2px',
-  //       fontSize: `${size}px`,
-  //       display: 'block',
-  //     }}
-  //     className='hover:scale-125 hover:text-blue-300 duration-300 hover:bg-black hover:text-[#d1d1d1]'
-  //     // onMouseEnter={}
-  //   >
-  //     {tag.value}
-  //   </span>
-  // );
-
   return (
     <div className='flex pt-8  pb-32 md:pb-80 w-full' id='prompts'>
       {/* STICKY TITLE */}
@@ -378,30 +358,17 @@ export default function GaleriaPrompts() {
           <span>ENTRADAS DE TEXTO</span>
         </div>
       </div>
-      {/* <div className='mr-4 w-full flex justify-center'> */}
-      <div className='pb-20 md:pt-4 w-[calc(100%-4.5rem)] md:w-[calc(100%-6rem)] flex'>
-        {/* <Carousel
-          arrows={true}
-          // dotsNavigation={true}
-          // dotsNavigationInside={true}
-          width={'95%'}
-          height={'400px'}
-          carouselStyle={'3d'}
-          outOfFocusDarken={true}
-        >
-          {data.map((item, i) => (
-            <div
-              className='text-[11px] md:text-sm p-4 md:px-6 h-full flex items-center bg-slate-100'
-              key={i}
-            >
-              {item.value}
-            </div>
-          ))}
-        </Carousel> */}
-
+      <div className='pb-20 md:pt-4 w-[calc(100%-3.5rem)] md:w-[calc(100%-6rem)] flex'>
         {showCarousel && (
           <div className='flex flex-col w-full'>
-            <div className='w-full mb-4 p-6 bg-[#d6d5c2]/40 rounded-sm text-md md:text-md dark:bg-[#633636]'>
+            <div
+              ref={ref}
+              className={`w-[calc(100%-1rem)] md:w-full mb-10 p-6 bg-[#d6d5c2]/40 rounded-sm text-md md:text-md dark:bg-[#633636] md:max-w-[800px]  duration-700 ${
+                inView
+                  ? 'opacity-100 translate-x-0'
+                  : 'translate-x-10 opacity-0'
+              }`}
+            >
               <p className='mb-2'>
                 Nesta seção reunimos 150 entradas de texto criadas a partir do
                 processo de edição e leituras dos escritos de Lúcio Flávio Pinto
@@ -415,9 +382,7 @@ export default function GaleriaPrompts() {
             </div>
             <div className='block'>
               <ScrollingCarousel
-                // style={{ paddingRight: '1rem' }}
                 show={itemsToShow || 3}
-                // slide={150}
                 swiping={true}
                 responsive={true}
                 useArrowKeys={true}

@@ -1,15 +1,21 @@
 // import probe from 'probe-image-size';
-import { useEffect, useState, useMemo, useCallback } from 'react';
-import { Gallery } from 'react-grid-gallery';
-import PhotoAlbum from 'react-photo-album';
+import { useEffect, useState, useMemo } from 'react';
 import Lightbox from 'react-spring-lightbox';
 import { IoIosArrowBack, IoIosArrowForward, IoClose } from 'react-icons/io';
 import Image from 'next/image';
-import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
+import { useInView } from 'react-intersection-observer';
+import { useMediaQuery } from '@/utils/useMediaQuery';
 
 export default function GaleriaProcesso2({ images }) {
   const [isOpen, setIsOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const mdScreen = useMediaQuery('md');
+
+  //intersection observer:
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    rootMargin: mdScreen ? '-200px 0px' : '-250px 0px',
+  });
 
   //constructing image data:
   const [imagesData, setImagesData] = useState([]);
@@ -35,10 +41,6 @@ export default function GaleriaProcesso2({ images }) {
   useEffect(() => {
     setImagesData(imagesDataMemo);
   }, [imagesDataMemo]);
-
-  // const memoTest = useMemo(() => console.log('memo!'), [...imagesData]);
-
-  // console.log(imagesData);
 
   //Lightbox:
   const gotoPrevious = () =>
@@ -99,7 +101,12 @@ export default function GaleriaProcesso2({ images }) {
       </ResponsiveMasonry> */}
         {/* <div className='w-full grid grid-cols-12 object-cover gap-0'> */}
 
-        <div className='w-full text-md md:text-md mb-4 p-6 bg-[#d6d5c2]/40 rounded-sm dark:bg-[#633636] leading-relaxed'>
+        <div
+          ref={ref}
+          className={`w-full text-md md:text-md mb-4 p-6 bg-[#d6d5c2]/40 rounded-sm dark:bg-[#633636] leading-relaxed duration-700 ${
+            inView ? 'opacity-100 translate-x-0' : 'translate-x-10 opacity-0'
+          }`}
+        >
           <p className='mb-2'>
             O diálogo que tivemos com as máquinas geradoras de imagem com IA a
             partir de textos (
@@ -117,16 +124,16 @@ export default function GaleriaProcesso2({ images }) {
           </p>
         </div>
 
-        <div className='flex flex-wrap gap-1 justify-center '>
+        <div className='flex flex-wrap gap-1'>
           {imagesData.map((image, index) => (
             <div
               key={image.src_sm}
-              className='hover:z-[1000] z-1 flex items-center justify-center max-h-[4.1rem] max-w-[4.1rem] hover:overflow-visible hover:h-24 hover:w-24 duration-300'
+              className='z-1 flex items-center justify-center max-h-[4.1rem] max-w-[4.1rem] hover:overflow-visible hover:h-24 hover:w-24 duration-300'
             >
               <img
                 src={image.src_sm}
                 alt='Nheenga Cabana | Imagem de processo'
-                className='object-cover w-[4.1rem] h-[4.1rem] hover:w-24 hover:h-24 hover:z-[1000] object-center duration-300 hover:overflow-visible ease-in-out cursor-pointer'
+                className='object-cover w-[4.1rem] h-[4.1rem] hover:w-24 hover:h-24 object-center duration-300 hover:overflow-visible ease-in-out cursor-pointer hover:z-10'
                 onClick={() => {
                   setCurrentImageIndex(index);
                   setIsOpen(true);

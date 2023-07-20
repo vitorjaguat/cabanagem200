@@ -1,13 +1,9 @@
-import { pdfjs, Document, Page } from 'react-pdf';
 import { useState, useRef, useCallback } from 'react';
-import { GrFormPreviousLink } from 'react-icons/gr';
-import { GrFormNextLink } from 'react-icons/gr';
-import { GrLinkPrevious } from 'react-icons/gr';
-import { GrLinkNext } from 'react-icons/gr';
 import { useMediaQuery } from '@/utils/useMediaQuery';
 import Image from 'next/image';
 import Lightbox from 'react-spring-lightbox';
 import { IoIosArrowBack, IoIosArrowForward, IoIosClose } from 'react-icons/io';
+import { useInView } from 'react-intersection-observer';
 
 // pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 
@@ -18,6 +14,12 @@ export default function Section5PDF() {
   const documentRef = useRef();
   const [isOpen, setIsOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  //intersection observer:
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    rootMargin: mdMediaQuery ? '-200px 0px' : '-250px 0px',
+  });
 
   //new jornal:
   let imageDataArr = [
@@ -128,7 +130,7 @@ export default function Section5PDF() {
     <div className='flex w-full pb-32 md:pb-50 pt-10 md:pt-12' id='jornal'>
       {/* STICKY TITLE */}
       <div
-        className=' w-14 md:w-20 min-h-[350px] md:max-h-full max-h-[420px] md:min-h-[500px] flex items-center sticky top-10 md:top-12 pt-4 md:pt-6 shrink-0 h-full overflow-hidden'
+        className=' w-14 md:w-20 min-h-[350px] md:max-h-full max-h-[420px] md:min-h-[500px] flex items-center sticky top-10 md:top-12 pt-4 md:pt-6 shrink-0 h-full'
         style={{ writingMode: 'vertical-rl', height: 'calc(100%-20px)' }}
       >
         <div className='h-screen w-full flex items-center  text-sm md:text-md px-3 md:px-4 sticky whitespace-nowrap tracking-wider'>
@@ -137,8 +139,13 @@ export default function Section5PDF() {
         </div>
       </div>
 
-      <div className='flex flex-col justify-center w-full overflow-hidden mt-4 md:mt-4'>
-        <div className='mr-4 mb-10 p-6 bg-[#d6d5c2]/50 rounded-sm text-md md:text-md w-[calc(100%-1rem)] dark:bg-[#633636]'>
+      <div className='flex flex-col justify-center w-full mt-4 md:mt-4'>
+        <div
+          ref={ref}
+          className={`mr-4 mb-10 p-6 bg-[#d6d5c2]/50 rounded-sm text-md md:text-md w-[calc(100%-1rem)] dark:bg-[#633636] duration-700 ${
+            inView ? 'opacity-100 translate-x-0' : 'translate-x-10 opacity-0'
+          }`}
+        >
           O{' '}
           <span className='italic'>Jornal Pessoal - Edição Extraordinária</span>{' '}
           é uma edição feita a partir de textos do pesquisador e historiador

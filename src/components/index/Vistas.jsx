@@ -3,10 +3,20 @@ import Lightbox from 'react-spring-lightbox';
 import { IoIosArrowBack, IoIosArrowForward, IoClose } from 'react-icons/io';
 import { useState } from 'react';
 import Link from 'next/link';
+import { useInView } from 'react-intersection-observer';
+import { useMediaQuery } from '@/utils/useMediaQuery';
 
 export default function Vistas() {
   const [isOpen, setIsOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const mdScreen = useMediaQuery('md');
+
+  //intersection observer:
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    rootMargin: mdScreen ? '-200px 0px' : '-250px 0px',
+  });
 
   const imgArr = new Array(9).fill({});
   const imgData = imgArr.map((item, i) => ({
@@ -42,7 +52,12 @@ export default function Vistas() {
         </div>
       </div>
       <div className='md:mt-4 mr-4'>
-        <div className='col-span-1 sm:col-span-2 mb-4 p-6 bg-[#d6d5c2]/40 rounded-sm text-md md:text-md w-full dark:bg-[#633636] leading-relaxed'>
+        <div
+          ref={ref}
+          className={`col-span-1 sm:col-span-2 mb-4 p-6 bg-[#d6d5c2]/40 rounded-sm text-md md:text-md w-full dark:bg-[#633636] leading-relaxed duration-700 ${
+            inView ? 'opacity-100 translate-x-0' : 'translate-x-10 opacity-0'
+          }`}
+        >
           <p>
             A instalação <span className='italic'>Nheenga Cabana</span> foi
             apresentada em três painéis expográficos no interior do espaço

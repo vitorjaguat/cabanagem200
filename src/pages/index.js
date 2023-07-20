@@ -19,7 +19,7 @@ export default function Home({ images }) {
   // console.log(props);
   return (
     <>
-      <main className='bg-[#e1e1e1]'>
+      <main className='bg-[#f0efdd]'>
         <Hero images={images} />
         <Section2 />
         {/* <Deco /> */}

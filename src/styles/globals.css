@@ -28,7 +28,7 @@ body {
 @layer base {
   body,
   main {
-    @apply bg-[#bec4c9] text-[#252525] dark:bg-[#2f2f2f] dark:text-white;
+    @apply bg-[#fff7e8] text-[#252525] dark:bg-[#2f2f2f] dark:text-white;
   }
 
   * {

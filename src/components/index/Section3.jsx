@@ -10,6 +10,8 @@ import Section3Item from './Section3Item';
 import Section3ItemJ from './Section3ItemJ';
 import Lightbox from 'react-spring-lightbox';
 import { IoIosArrowForward, IoClose, IoIosArrowBack } from 'react-icons/io';
+import { useInView } from 'react-intersection-observer';
+import { useMediaQuery } from '@/utils/useMediaQuery';
 
 const imgSrcArr = [
   {
@@ -65,6 +67,13 @@ const imgSrcArr = [
 export default function Section3() {
   const [isOpen, setIsOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const mdScreen = useMediaQuery('md');
+
+  //intersection observer:
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    rootMargin: mdScreen ? '-200px 0px' : '-250px 0px',
+  });
 
   //constructins ImagesData for Lightbox:
   const imagesData = imgSrcArr.map((item) => ({
@@ -98,7 +107,12 @@ export default function Section3() {
 
       <div className='flex flex-col md:pt-0 md:mt-4'>
         <div className='grid grid-cols-5'>
-          <div className='col-span-5 md:col-span-4 flex flex-col mb-2 mr-4 md:mr-0 md:mb-4 p-6  bg-[#d6d5c2]/40 rounded-sm dark:bg-[#633636]'>
+          <div
+            ref={ref}
+            className={`col-span-5 md:col-span-4 flex flex-col mb-2 mr-4 md:mr-0 md:mb-4 p-6  bg-[#d6d5c2]/40 rounded-sm dark:bg-[#633636] duration-700 ${
+              inView ? 'opacity-100 translate-x-0' : 'translate-x-10 opacity-0'
+            }`}
+          >
             <div className='pb-6 text-md md:text-md leading-relaxed'>
               As três composições abaixo foram criadas a partir da leitura dos
               textos de Lúcio Flávio Pinto. À esquerda temos as próprias
