@@ -61,11 +61,16 @@ export default function Hero({ images }) {
 
   return (
     <div
-      className='overflow-hidden h-screen w-full dark:bg-[rgb(38,44,44)] duration-700 transition-all'
+      className='overflow-hidden h-full w-full dark:bg-[rgb(38,44,44)] duration-700 transition-all'
+      style={{ minHeight: '-webkit-fill-available' }}
       id='home'
     >
       <div
-        className='w-full h-screen md:pt-[4.5rem] pt-[3.5rem] flex flex-col dark:bg-[#262C2C]'
+        className='w-full h-[calc(100vh-3.5rem)] md:h-screen md:pt-[4.5rem] pt-[3.5rem] flex flex-col dark:bg-[#262C2C]'
+        style={{
+          minHeight: '-webkit-fill-available',
+          minHeight: 'fill-available',
+        }}
         // style={{ objectPosition: '50% 100%' }}
         // style={{ objectFit: 'cover' }}
       >
