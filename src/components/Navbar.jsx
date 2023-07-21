@@ -202,9 +202,12 @@ export default function Navbar() {
               </div>
             </div> */}
             <div className='h-full flex flex-col justify-center'>
-              <ul className='uppercase select-none outline-none flex flex-col justify-end text-md'>
+              <ul className='uppercase select-none outline-none flex flex-col justify-end text-md tracking-wider text-slate-300'>
                 <Link href='/#home' scroll={false}>
-                  <li onClick={() => setNav(false)} className='py-4 font-bold'>
+                  <li
+                    onClick={() => setNav(false)}
+                    className='py-4 font-bold text-slate-200'
+                  >
                     {t('navbar.home')}
                   </li>
                 </Link>
@@ -215,7 +218,7 @@ export default function Navbar() {
                     scroll={false}
                     onClick={() => setNav(false)}
                   >
-                    <div className='font-bold'>exposição</div>
+                    <div className='font-bold text-slate-200'>exposição</div>
                   </Link>
                   <div className='ml-2'>
                     <Link
@@ -223,20 +226,23 @@ export default function Navbar() {
                       scroll={false}
                       onClick={() => setNav(false)}
                     >
-                      <div className='lowercase'>painéis</div>
+                      <div className='lowercase text-slate-300'>painéis</div>
                     </Link>
                     <Link
                       href='/#vistas'
                       scroll={false}
                       onClick={() => setNav(false)}
                     >
-                      <div className='lowercase'>vistas</div>
+                      <div className='lowercase text-slate-300'>vistas</div>
                     </Link>
                   </div>
                 </li>
 
                 <Link href='/#jornal' scroll={false}>
-                  <li onClick={() => setNav(false)} className='font-bold py-4 '>
+                  <li
+                    onClick={() => setNav(false)}
+                    className='font-bold py-4 text-slate-200'
+                  >
                     jornal pessoal
                   </li>
                 </Link>
@@ -247,7 +253,7 @@ export default function Navbar() {
                     scroll={false}
                     onClick={() => setNav(false)}
                   >
-                    <div className='font-bold'>arquivo</div>
+                    <div className='font-bold text-slate-200'>arquivo</div>
                   </Link>
                   <div className='ml-2'>
                     <Link
@@ -255,25 +261,35 @@ export default function Navbar() {
                       scroll={false}
                       onClick={() => setNav(false)}
                     >
-                      <div className='lowercase'>imagens de processo</div>
+                      <div className='lowercase text-slate-300'>
+                        imagens de processo
+                      </div>
                     </Link>
                     <Link
                       href='/#prompts'
                       scroll={false}
                       onClick={() => setNav(false)}
                     >
-                      <div className='lowercase'>entradas de texto</div>
+                      <div className='lowercase text-slate-300'>
+                        entradas de texto
+                      </div>
                     </Link>
                   </div>
                 </li>
 
                 <Link href='/press' scroll={false}>
-                  <li onClick={() => setNav(false)} className='py-4 font-bold'>
+                  <li
+                    onClick={() => setNav(false)}
+                    className='py-4 font-bold text-slate-200'
+                  >
                     {t('navbar.press')}
                   </li>
                 </Link>
                 <Link href='/about' scroll={false}>
-                  <li onClick={() => setNav(false)} className='py-4 font-bold'>
+                  <li
+                    onClick={() => setNav(false)}
+                    className='py-4 font-bold text-slate-200'
+                  >
                     {t('navbar.about')}
                   </li>
                 </Link>
@@ -284,7 +300,7 @@ export default function Navbar() {
                 onClick={() => setNav(false)}
                 className='rounded-full p-2 cursor-pointer border-black border-[0.5px]'
               >
-                <AiOutlineClose />
+                <AiOutlineClose size={15} />
               </div>
             </div>
           </div>
