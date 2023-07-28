@@ -146,12 +146,17 @@ export default function Section5PDF() {
             inView ? 'opacity-100 translate-x-0' : 'translate-x-10 opacity-0'
           }`}
         >
-          O{' '}
-          <span className='italic'>Jornal Pessoal - Edição Extraordinária</span>{' '}
-          é uma edição feita a partir de textos do pesquisador e historiador
-          Lúcio Flávio Pinto, contendo também algumas das imagens geradas via
-          inteligência artificial a partir de trechos desses escritos. A versão
-          em PDF está disponível abaixo.
+          <p>
+            O{' '}
+            <span className='italic'>
+              Jornal Pessoal - Edição Extraordinária
+            </span>{' '}
+            é uma edição feita a partir de textos do pesquisador e historiador
+            Lúcio Flávio Pinto, contendo também algumas das imagens geradas via
+            inteligência artificial a partir de trechos desses escritos.
+          </p>
+
+          <p className='mt-2'>A versão em PDF está disponível abaixo.</p>
         </div>
         <div className='flex flex-col md:flex-row justify-center items-center w-full overflow-hidden'>
           {/* <div className='hidden md:block absolute top-4 right-4 text-sm'>

@@ -51,6 +51,7 @@ export default function Hero({ images }) {
     setImage7(shuffleImages[7].url_lg.slice(6));
     setImage8(shuffleImages[8].url_lg.slice(6));
   }, [images]);
+  const shuffleImagesArr = images.sort(() => Math.random() - 0.5);
   // console.log(image1);
 
   //Dark mode toggle:
@@ -58,6 +59,7 @@ export default function Hero({ images }) {
   // const currentTheme = theme === 'system' ? systemTheme : theme;
   const { toggleDarkMode, darkMode } = useContext(ThemeContext);
   // console.log(toggleDarkMode);
+  // console.log(images);
 
   return (
     <div
@@ -71,61 +73,77 @@ export default function Hero({ images }) {
           minHeight: '-webkit-fill-available',
           minHeight: 'fill-available',
         }}
-        // style={{ objectPosition: '50% 100%' }}
-        // style={{ objectFit: 'cover' }}
       >
-        <div className='grid grid-rows-2 h-full max-h-[calc(100%-3.5rem)] md:max-h-[calc(100%-4.5rem)] relative dark:bg-[#262C2C]'>
-          {/* <div
-            className='absolute right-4 top-4 p-1 bg-[#d6d5c2] dark:bg-[#262C2C] rounded-full cursor-pointer dark:text-[#F5F9E9]'
-            onClick={() => {
-              toggleDarkMode();
-              console.log('done');
-            }}
-          >
-            <MdDarkMode color={darkMode ? '#d1d1d1' : 'black'} />
-          </div> */}
-          {/* <div className='w-full h-full md:h-[calc(100vh-4.5rem)] row-span-1 md:col-span-1 bg-black/20'>
-              {image1 && <img src='/assets/percurso/171_percurso.png' alt='' />}
-            </div>
-            <div className='w-full h-full md:h-[calc(100vh-4.5rem)] row-span-1 md:col-span-1 bg-black/30'></div>
-            <div className='w-full h-full md:h-[calc(100vh-4.5rem)] row-span-1 md:col-span-1 bg-black/10'></div> */}
+        <div className='grid grid-rows-2 h-full max-h-[calc(100%-3.5rem)] md:max-h-[calc(100%-4.5rem)] dark:bg-[#262C2C]'>
           <div className='row-span-1 grid grid-cols-2'>
             <div className='col-span-1 grid grid-cols-2 shrink-0 overflow-hidden'>
-              <div className=' col-span-1'>
+              {/* <div className='col-span-1'> */}
+              <div className='relative col-span-1 object-cover overflow-hidden min-h-0 min-w-0'>
                 {image1 && (
-                  <img
-                    src={image1}
-                    alt=''
-                    className='h-full object-cover shrink-0'
+                  // <img
+                  //   src={shuffleImagesArr[1].url_lg.slice(6)}
+                  //   alt=''
+                  //   className='h-full object-cover shrink-0'
+                  // />
+                  <Image
+                    src={shuffleImagesArr[1].url_lg.slice(6)}
+                    fill
+                    className='object-cover shrink-0 max-h-full'
+                    placeholder='blur'
+                    blurDataURL={shuffleImagesArr[1].url_sm.slice(6)}
                   />
                 )}
               </div>
-              <div className='col-span-1'>
+              {/* <div className='col-span-1'> */}
+              <div className='relative col-span-1 object-cover overflow-hidden min-h-0 min-w-0'>
                 {image2 && (
-                  <img
-                    src={image2}
-                    alt=''
-                    className='h-full object-cover shrink-0'
+                  // <img
+                  //   src={image2}
+                  //   alt=''
+                  //   className='h-full object-cover shrink-0'
+                  // />
+                  <Image
+                    src={shuffleImagesArr[2].url_lg.slice(6)}
+                    fill
+                    className='object-cover shrink-0 max-h-full'
+                    placeholder='blur'
+                    blurDataURL={shuffleImagesArr[2].url_sm.slice(6)}
                   />
                 )}
               </div>
             </div>
             <div className='col-span-1 grid grid-cols-2 shrink-0'>
-              <div className='col-span-1'>
+              {/* <div className='col-span-1'> */}
+              <div className='relative col-span-1 object-cover overflow-hidden min-h-0 min-w-0'>
                 {image3 && (
-                  <img
-                    src={image3}
-                    alt=''
-                    className='h-full object-cover shrink-0'
+                  // <img
+                  //   src={image3}
+                  //   alt=''
+                  //   className='h-full object-cover shrink-0'
+                  // />
+                  <Image
+                    src={shuffleImagesArr[3].url_lg.slice(6)}
+                    fill
+                    className='object-cover shrink-0 max-h-full'
+                    placeholder='blur'
+                    blurDataURL={shuffleImagesArr[3].url_sm.slice(6)}
                   />
                 )}
               </div>
-              <div className='col-span-1'>
+              {/* <div className='col-span-1'> */}
+              <div className='relative col-span-1 object-cover overflow-hidden min-h-0 min-w-0'>
                 {image4 && (
-                  <img
-                    src={image4}
-                    alt=''
-                    className='h-full object-cover shrink-0'
+                  // <img
+                  //   src={image4}
+                  //   alt=''
+                  //   className='h-full object-cover shrink-0'
+                  // />
+                  <Image
+                    src={shuffleImagesArr[4].url_lg.slice(6)}
+                    fill
+                    className='object-cover shrink-0 max-h-full'
+                    placeholder='blur'
+                    blurDataURL={shuffleImagesArr[4].url_sm.slice(6)}
                   />
                 )}
               </div>
@@ -133,42 +151,74 @@ export default function Hero({ images }) {
           </div>
           <div className='row-span-1 grid grid-cols-2'>
             <div className='col-span-1 grid grid-cols-2 shrink-0'>
-              <div className='col-span-1'>
+              {/* <div className='col-span-1'> */}
+              <div className='relative col-span-1 object-cover overflow-hidden min-h-0 min-w-0'>
                 {image5 && (
-                  <img
-                    src={image5}
-                    alt=''
-                    className='h-full object-cover shrink-0'
+                  // <img
+                  //   src={image5}
+                  //   alt=''
+                  //   className='h-full object-cover shrink-0'
+                  // />
+                  <Image
+                    src={shuffleImagesArr[5].url_lg.slice(6)}
+                    fill
+                    className='object-cover shrink-0 max-h-full'
+                    placeholder='blur'
+                    blurDataURL={shuffleImagesArr[5].url_sm.slice(6)}
                   />
                 )}
               </div>
-              <div className='col-span-1'>
+              {/* <div className='col-span-1'> */}
+              <div className='relative col-span-1 object-cover overflow-hidden min-h-0 min-w-0'>
                 {image6 && (
-                  <img
-                    src={image6}
-                    alt=''
-                    className='h-full object-cover shrink-0'
+                  // <img
+                  //   src={image6}
+                  //   alt=''
+                  //   className='h-full object-cover shrink-0'
+                  // />
+                  <Image
+                    src={shuffleImagesArr[6].url_lg.slice(6)}
+                    fill
+                    className='object-cover shrink-0 max-h-full'
+                    placeholder='blur'
+                    blurDataURL={shuffleImagesArr[6].url_sm.slice(6)}
                   />
                 )}
               </div>
             </div>
             <div className='col-span-1'>
               <div className='col-span-1 h-full grid grid-cols-2 shrink-0'>
-                <div className='col-span-1'>
+                {/* <div className='col-span-1'> */}
+                <div className='relative col-span-1 object-cover overflow-hidden min-h-0 min-w-0'>
                   {image7 && (
-                    <img
-                      src={image7}
-                      alt=''
-                      className='h-full object-cover shrink-0'
+                    // <img
+                    //   src={image7}
+                    //   alt=''
+                    //   className='h-full object-cover shrink-0'
+                    // />
+                    <Image
+                      src={shuffleImagesArr[7].url_lg.slice(6)}
+                      fill
+                      className='object-cover shrink-0 max-h-full'
+                      placeholder='blur'
+                      blurDataURL={shuffleImagesArr[7].url_sm.slice(6)}
                     />
                   )}
                 </div>
-                <div className='col-span-1'>
+                {/* <div className='col-span-1'> */}
+                <div className='relative col-span-1 object-cover overflow-hidden min-h-0 min-w-0'>
                   {image8 && (
-                    <img
-                      src={image8}
-                      alt=''
-                      className='h-full object-cover shrink-0'
+                    // <img
+                    //   src={image8}
+                    //   alt=''
+                    //   className='h-full object-cover shrink-0'
+                    // />
+                    <Image
+                      src={shuffleImagesArr[8].url_lg.slice(6)}
+                      fill
+                      className='object-cover shrink-0 max-h-full'
+                      placeholder='blur'
+                      blurDataURL={shuffleImagesArr[8].url_sm.slice(6)}
                     />
                   )}
                 </div>

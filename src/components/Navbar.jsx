@@ -17,6 +17,14 @@ export default function Navbar() {
   const [shadow, setShadow] = useState(false);
   const { t } = useTranslation('common');
   const { darkMode, toggleDarkMode } = useContext(ThemeContext);
+  const [isLogoVisible, setIsLogoVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLogoVisible(true);
+    }, 500);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     const handleShadow = () => {
@@ -43,7 +51,13 @@ export default function Navbar() {
             : 'fixed w-full h-10 md:h-12 z-[100] ease-in-out duration-700 bg-[#d6d5c2] dark:bg-[#2f2f2f] dark:text-white'
         }
       >
-        <div className='flex justify-between items-center w-full h-full px-1 md:px-4 2xl:px-16 mx-auto'>
+        <div
+          className={`flex justify-between items-center w-full h-full px-1 md:px-4 2xl:px-16 mx-auto ${
+            isLogoVisible
+              ? 'opacity-100 duration-1000 ease-in-out'
+              : 'opacity-0'
+          }`}
+        >
           <Link href='/' scroll={false}>
             <div
               className={
@@ -52,7 +66,7 @@ export default function Navbar() {
                   : 'w-[100px] md:w-[200px] px-1 text-[15px] md:text-[17px] uppercase font-bold tracking-widest md:tracking-[2.5px] duration-700'
               }
             >
-              <div className='translate-y-[0px] w-fit'>
+              <div className={`translate-y-[0px] w-fit`}>
                 <div
                   className={`w-[90%] mx-auto h-3 relative transition-all duration-700 ${
                     shadow ? 'translate-y-[7px]' : 'translate-y-[3px]'
