@@ -195,6 +195,7 @@ export default function Navbar() {
           </div>
         </div>
 
+        {/* overlay */}
         <div
           className={
             nav
@@ -203,6 +204,7 @@ export default function Navbar() {
           }
           onClick={() => setNav(false)}
         >
+          {/* sidebar */}
           <div
             className={
               nav
@@ -216,13 +218,13 @@ export default function Navbar() {
               </div>
             </div> */}
             <div className='h-full flex flex-col justify-center'>
-              <ul className='uppercase select-none outline-none flex flex-col justify-end text-md tracking-wider text-slate-300'>
+              <ul className='uppercase select-none outline-none flex flex-col justify-end text-md tracking-wider dark:text-slate-300'>
                 <Link href='/#home' scroll={false}>
                   <li
                     onClick={() => setNav(false)}
-                    className='py-4 font-bold text-slate-200'
+                    className='py-4 font-bold dark:text-slate-200'
                   >
-                    {t('navbar.home')}
+                    início
                   </li>
                 </Link>
 
@@ -232,7 +234,9 @@ export default function Navbar() {
                     scroll={false}
                     onClick={() => setNav(false)}
                   >
-                    <div className='font-bold text-slate-200'>exposição</div>
+                    <div className='font-bold dark:text-slate-200'>
+                      exposição
+                    </div>
                   </Link>
                   <div className='ml-2'>
                     <Link
@@ -240,14 +244,18 @@ export default function Navbar() {
                       scroll={false}
                       onClick={() => setNav(false)}
                     >
-                      <div className='lowercase text-slate-300'>painéis</div>
+                      <div className='lowercase dark:text-slate-300'>
+                        painéis
+                      </div>
                     </Link>
                     <Link
                       href='/#vistas'
                       scroll={false}
                       onClick={() => setNav(false)}
                     >
-                      <div className='lowercase text-slate-300'>vistas</div>
+                      <div className='lowercase dark:text-slate-300'>
+                        vistas
+                      </div>
                     </Link>
                   </div>
                 </li>
@@ -255,7 +263,7 @@ export default function Navbar() {
                 <Link href='/#jornal' scroll={false}>
                   <li
                     onClick={() => setNav(false)}
-                    className='font-bold py-4 text-slate-200'
+                    className='font-bold py-4 dark:text-slate-200'
                   >
                     jornal pessoal
                   </li>
@@ -267,7 +275,7 @@ export default function Navbar() {
                     scroll={false}
                     onClick={() => setNav(false)}
                   >
-                    <div className='font-bold text-slate-200'>arquivo</div>
+                    <div className='font-bold dark:text-slate-200'>arquivo</div>
                   </Link>
                   <div className='ml-2'>
                     <Link
@@ -275,7 +283,7 @@ export default function Navbar() {
                       scroll={false}
                       onClick={() => setNav(false)}
                     >
-                      <div className='lowercase text-slate-300'>
+                      <div className='lowercase dark:text-slate-300'>
                         imagens de processo
                       </div>
                     </Link>
@@ -284,7 +292,7 @@ export default function Navbar() {
                       scroll={false}
                       onClick={() => setNav(false)}
                     >
-                      <div className='lowercase text-slate-300'>
+                      <div className='lowercase dark:text-slate-300'>
                         entradas de texto
                       </div>
                     </Link>
@@ -294,7 +302,7 @@ export default function Navbar() {
                 <Link href='/press' scroll={false}>
                   <li
                     onClick={() => setNav(false)}
-                    className='py-4 font-bold text-slate-200'
+                    className='py-4 font-bold dark:text-slate-200'
                   >
                     {t('navbar.press')}
                   </li>
@@ -302,7 +310,7 @@ export default function Navbar() {
                 <Link href='/about' scroll={false}>
                   <li
                     onClick={() => setNav(false)}
-                    className='py-4 font-bold text-slate-200'
+                    className='py-4 font-bold dark:text-slate-200'
                   >
                     {t('navbar.about')}
                   </li>
