@@ -74,7 +74,7 @@ export default function About() {
               Desenvolvimento web:{' '}
               <a
                 className='text-slate-700 tracking-tight font-stanleybold hover:underline dark:text-slate-400'
-                href='https://portfolio-vitor.vercel.app/'
+                href='https://uint.vercel.app/'
                 target='_blank'
                 rel='noreferrer'
               >
