@@ -1,6 +1,6 @@
 # cabanagem200.net
 
-![cabanagem200.net](https://user-images.githubusercontent.com/16101096/147869149-43422209-661c-4133-9826-715814414875.png)
+![cabanagem200.net](https://github.com/vitorjaguat/cabanagem200/blob/main/public/img/cabanagem200-sm.png)
 
 ## Summary
 
