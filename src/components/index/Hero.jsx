@@ -1,10 +1,6 @@
 import Image from 'next/image';
-import heroImg from '../../../public/img/hero.jpg';
 import Marquee from 'react-fast-marquee';
 import { useState, useEffect, useContext } from 'react';
-import { useTheme } from 'next-themes';
-import { MdDarkMode } from 'react-icons/md';
-import { ThemeContext } from '@/context/ThemeContext';
 
 const headlines = [
   'estoura insurreição popular na Amazônia durante a madrugada',
@@ -57,7 +53,7 @@ export default function Hero({ images }) {
   //Dark mode toggle:
   // const { systemTheme, theme, setTheme } = useTheme();
   // const currentTheme = theme === 'system' ? systemTheme : theme;
-  const { toggleDarkMode, darkMode } = useContext(ThemeContext);
+  // const { toggleDarkMode, darkMode } = useContext(ThemeContext);
   // console.log(toggleDarkMode);
   // console.log(images);
 
@@ -87,6 +83,7 @@ export default function Hero({ images }) {
                   // />
                   <Image
                     src={shuffleImagesArr[1].url_lg.slice(6)}
+                    alt='cabanagem200.net'
                     fill
                     className='object-cover shrink-0 max-h-full'
                     placeholder='blur'
@@ -104,6 +101,7 @@ export default function Hero({ images }) {
                   // />
                   <Image
                     src={shuffleImagesArr[2].url_lg.slice(6)}
+                    alt='cabanagem200.net'
                     fill
                     className='object-cover shrink-0 max-h-full'
                     placeholder='blur'
@@ -123,6 +121,7 @@ export default function Hero({ images }) {
                   // />
                   <Image
                     src={shuffleImagesArr[3].url_lg.slice(6)}
+                    alt='cabanagem200.net'
                     fill
                     className='object-cover shrink-0 max-h-full'
                     placeholder='blur'
@@ -140,6 +139,7 @@ export default function Hero({ images }) {
                   // />
                   <Image
                     src={shuffleImagesArr[4].url_lg.slice(6)}
+                    alt='cabanagem200.net'
                     fill
                     className='object-cover shrink-0 max-h-full'
                     placeholder='blur'
@@ -161,6 +161,7 @@ export default function Hero({ images }) {
                   // />
                   <Image
                     src={shuffleImagesArr[5].url_lg.slice(6)}
+                    alt='cabanagem200.net'
                     fill
                     className='object-cover shrink-0 max-h-full'
                     placeholder='blur'
@@ -178,6 +179,7 @@ export default function Hero({ images }) {
                   // />
                   <Image
                     src={shuffleImagesArr[6].url_lg.slice(6)}
+                    alt='cabanagem200.net'
                     fill
                     className='object-cover shrink-0 max-h-full'
                     placeholder='blur'
@@ -198,6 +200,7 @@ export default function Hero({ images }) {
                     // />
                     <Image
                       src={shuffleImagesArr[7].url_lg.slice(6)}
+                      alt='cabanagem200.net'
                       fill
                       className='object-cover shrink-0 max-h-full'
                       placeholder='blur'
@@ -215,6 +218,7 @@ export default function Hero({ images }) {
                     // />
                     <Image
                       src={shuffleImagesArr[8].url_lg.slice(6)}
+                      alt='cabanagem200.net'
                       fill
                       className='object-cover shrink-0 max-h-full'
                       placeholder='blur'
