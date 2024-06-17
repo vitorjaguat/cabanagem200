@@ -1,10 +1,10 @@
-## Cabanagem200
+# cabanagem200.net
 
 # Summary
 
 The website serves as a digital archive for the texts, images, and news generated from the Nheenga Cabana project, bringing together reference materials about the Cabanagem Revolt, a popular uprising that took place in the Northern region of Brazil in the 19th century.
 
-# Description
+## Description
 
 cabanagem200 is a website that permanently showcases files from the collection of works Nheenga Cabana, created in 2022 by artists Giseli Vasconcelos and Pedro Victor Brandão. The project was commissioned by MAM-Rio and was part of the exhibition 'Acts of Revolt: alternative imaginaries on independence.' The website functions as a digital archive for the texts, images, and news generated within the scope of the project.
 
@@ -16,7 +16,7 @@ Most of the extensive collection of materials can be accessed on the homepage of
 
 For the design, simplicity and minimalism were chosen to allow the content to stand out over the presentation. Subtle animations were added, and each formal decision was made based on prior discussions with the project authors.
 
-# Technical Specifications
+## Technical Specifications
 
 The project was written in the React 18 syntax, utilizing the pages routing structure of Next.js 13.
 
