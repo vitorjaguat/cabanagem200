@@ -1,6 +1,6 @@
 # cabanagem200.net
 
-# Summary
+## Summary
 
 The website serves as a digital archive for the texts, images, and news generated from the Nheenga Cabana project, bringing together reference materials about the Cabanagem Revolt, a popular uprising that took place in the Northern region of Brazil in the 19th century.
 
